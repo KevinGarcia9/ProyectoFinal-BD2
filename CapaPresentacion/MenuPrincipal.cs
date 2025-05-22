@@ -35,7 +35,7 @@ namespace CapaPresentacion
 
         private void btnClientes_Click(object sender, EventArgs e)
         {
-            PanelSeleccion.Top = btnClientes.Top; // Ajustar la posición de altura
+            /*PanelSeleccion.Top = btnClientes.Top; // Ajustar la posición de altura
             PanelSeleccion.Height = btnClientes.Height; // Ajustar el tamaño
             PanelSeleccion.Visible = true; // hacer visible el boton
 
@@ -49,6 +49,7 @@ namespace CapaPresentacion
                 this.PanelContenedor.Tag = frmClie;
                 frmClie.Show();
             }
+            */
 
 
         }
@@ -72,7 +73,7 @@ namespace CapaPresentacion
 
         private void btnCuentas_Click(object sender, EventArgs e)
         {
-            PanelSeleccion.Top = btnClientes.Top; // Ajustar la posición de altura
+            /*PanelSeleccion.Top = btnClientes.Top; // Ajustar la posición de altura
             PanelSeleccion.Height = btnClientes.Height; // Ajustar el tamaño
             PanelSeleccion.Visible = true; // hacer visible el boton
 
@@ -86,12 +87,13 @@ namespace CapaPresentacion
                 this.PanelContenedor.Tag = frmClie;
                 frmClie.Show();
             }
+            */
 
         }
 
         private void btnRutas_Click(object sender, EventArgs e)
         {
-            PanelSeleccion.Top = btnClientes.Top; // Ajustar la posición de altura
+            /*PanelSeleccion.Top = btnClientes.Top; // Ajustar la posición de altura
             PanelSeleccion.Height = btnClientes.Height; // Ajustar el tamaño
             PanelSeleccion.Visible = true; // hacer visible el boton
 
@@ -105,11 +107,12 @@ namespace CapaPresentacion
                 this.PanelContenedor.Tag = frmClie;
                 frmClie.Show();
             }
+            */
         }
 
         private void btnEstaciones_Click(object sender, EventArgs e)
         {
-            PanelSeleccion.Top = btnClientes.Top; // Ajustar la posición de altura
+            /*PanelSeleccion.Top = btnClientes.Top; // Ajustar la posición de altura
             PanelSeleccion.Height = btnClientes.Height; // Ajustar el tamaño
             PanelSeleccion.Visible = true; // hacer visible el boton
 
@@ -123,6 +126,7 @@ namespace CapaPresentacion
                 this.PanelContenedor.Tag = frmClie;
                 frmClie.Show();
             }
+            */
         }
 
         private void comboBox1_SelectedIndexChanged(object sender, EventArgs e)
@@ -132,7 +136,7 @@ namespace CapaPresentacion
 
         private void btnmantenimiento_Click(object sender, EventArgs e)
         {
-            PanelSeleccion.Top = btnClientes.Top; // Ajustar la posición de altura
+           /* PanelSeleccion.Top = btnClientes.Top; // Ajustar la posición de altura
             PanelSeleccion.Height = btnClientes.Height; // Ajustar el tamaño
             PanelSeleccion.Visible = true; // hacer visible el boton
 
@@ -146,7 +150,37 @@ namespace CapaPresentacion
                 this.PanelContenedor.Tag = frmClie;
                 frmClie.Show();
             }
+           */
 
+        }
+
+        private void cbxAlex_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            string seleccion = cbxAlex.SelectedItem.ToString();
+
+            switch (seleccion)
+            {
+                case "Conductores":
+                    PanelSeleccion.Top = cbxAlex.Top; // Ajustar la posición de altura
+                    PanelSeleccion.Height = cbxAlex.Height; // Ajustar el tamaño
+                    PanelSeleccion.Visible = true; // hacer visible el boton
+
+                    FrmConductores frmClie = new FrmConductores();
+                    if (this.PanelContenedor.Controls.Count > 0)
+                    {
+                        this.PanelContenedor.Controls.RemoveAt(0);
+                        frmClie.TopLevel = false;
+                        frmClie.Dock = DockStyle.Fill;
+                        this.PanelContenedor.Controls.Add(frmClie);
+                        this.PanelContenedor.Tag = frmClie;
+                        frmClie.Show();
+                    }
+                    break;
+
+                default:
+                    MessageBox.Show("Formulario no disponible");
+                    break;
+            }
         }
     }
 }
