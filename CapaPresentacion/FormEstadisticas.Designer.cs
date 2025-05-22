@@ -36,7 +36,6 @@
             this.txtmoneda = new System.Windows.Forms.TextBox();
             this.btnguardar = new System.Windows.Forms.Button();
             this.txtingresototal = new System.Windows.Forms.TextBox();
-            this.btnbuscar = new System.Windows.Forms.Button();
             this.txtpasajerostransp = new System.Windows.Forms.TextBox();
             this.txtfechareporte = new System.Windows.Forms.TextBox();
             this.txtcodigo = new System.Windows.Forms.TextBox();
@@ -51,12 +50,18 @@
             this.dgvestadisticas = new System.Windows.Forms.DataGridView();
             this.btnsalir = new System.Windows.Forms.Button();
             this.btnlimpiar = new System.Windows.Forms.Button();
+            this.iconButton1 = new FontAwesome.Sharp.IconButton();
+            this.btnActualizar = new FontAwesome.Sharp.IconButton();
+            this.btnCancelar = new FontAwesome.Sharp.IconButton();
             this.gboxestadisticos.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgvestadisticas)).BeginInit();
             this.SuspendLayout();
             // 
             // gboxestadisticos
             // 
+            this.gboxestadisticos.Controls.Add(this.iconButton1);
+            this.gboxestadisticos.Controls.Add(this.btnActualizar);
+            this.gboxestadisticos.Controls.Add(this.btnCancelar);
             this.gboxestadisticos.Controls.Add(this.cmbestado);
             this.gboxestadisticos.Controls.Add(this.btneliminar);
             this.gboxestadisticos.Controls.Add(this.txttotalincedentes);
@@ -64,7 +69,6 @@
             this.gboxestadisticos.Controls.Add(this.txtmoneda);
             this.gboxestadisticos.Controls.Add(this.btnguardar);
             this.gboxestadisticos.Controls.Add(this.txtingresototal);
-            this.gboxestadisticos.Controls.Add(this.btnbuscar);
             this.gboxestadisticos.Controls.Add(this.txtpasajerostransp);
             this.gboxestadisticos.Controls.Add(this.txtfechareporte);
             this.gboxestadisticos.Controls.Add(this.txtcodigo);
@@ -142,16 +146,6 @@
             this.txtingresototal.Name = "txtingresototal";
             this.txtingresototal.Size = new System.Drawing.Size(100, 20);
             this.txtingresototal.TabIndex = 11;
-            // 
-            // btnbuscar
-            // 
-            this.btnbuscar.Location = new System.Drawing.Point(771, 22);
-            this.btnbuscar.Name = "btnbuscar";
-            this.btnbuscar.Size = new System.Drawing.Size(75, 23);
-            this.btnbuscar.TabIndex = 2;
-            this.btnbuscar.Text = "Buscar";
-            this.btnbuscar.UseVisualStyleBackColor = true;
-            this.btnbuscar.Click += new System.EventHandler(this.btnbuscar_Click);
             // 
             // txtpasajerostransp
             // 
@@ -254,6 +248,7 @@
             this.dgvestadisticas.Name = "dgvestadisticas";
             this.dgvestadisticas.Size = new System.Drawing.Size(751, 285);
             this.dgvestadisticas.TabIndex = 1;
+            this.dgvestadisticas.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvestadisticas_CellClick);
             // 
             // btnsalir
             // 
@@ -274,6 +269,45 @@
             this.btnlimpiar.UseVisualStyleBackColor = true;
             this.btnlimpiar.Click += new System.EventHandler(this.btnlimpiar_Click);
             // 
+            // iconButton1
+            // 
+            this.iconButton1.IconChar = FontAwesome.Sharp.IconChar.FileUpload;
+            this.iconButton1.IconColor = System.Drawing.Color.Green;
+            this.iconButton1.IconFont = FontAwesome.Sharp.IconFont.Auto;
+            this.iconButton1.IconSize = 30;
+            this.iconButton1.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.iconButton1.Location = new System.Drawing.Point(635, 22);
+            this.iconButton1.Name = "iconButton1";
+            this.iconButton1.Size = new System.Drawing.Size(130, 35);
+            this.iconButton1.TabIndex = 27;
+            this.iconButton1.Text = "Guardar";
+            // 
+            // btnActualizar
+            // 
+            this.btnActualizar.IconChar = FontAwesome.Sharp.IconChar.Edit;
+            this.btnActualizar.IconColor = System.Drawing.Color.DarkOrange;
+            this.btnActualizar.IconFont = FontAwesome.Sharp.IconFont.Auto;
+            this.btnActualizar.IconSize = 30;
+            this.btnActualizar.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnActualizar.Location = new System.Drawing.Point(635, 62);
+            this.btnActualizar.Name = "btnActualizar";
+            this.btnActualizar.Size = new System.Drawing.Size(130, 35);
+            this.btnActualizar.TabIndex = 28;
+            this.btnActualizar.Text = "Actualizar";
+            // 
+            // btnCancelar
+            // 
+            this.btnCancelar.IconChar = FontAwesome.Sharp.IconChar.ThumbsDown;
+            this.btnCancelar.IconColor = System.Drawing.Color.DarkCyan;
+            this.btnCancelar.IconFont = FontAwesome.Sharp.IconFont.Auto;
+            this.btnCancelar.IconSize = 30;
+            this.btnCancelar.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnCancelar.Location = new System.Drawing.Point(635, 102);
+            this.btnCancelar.Name = "btnCancelar";
+            this.btnCancelar.Size = new System.Drawing.Size(130, 35);
+            this.btnCancelar.TabIndex = 29;
+            this.btnCancelar.Text = "Cancelar";
+            // 
             // FormEstadisticas
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -284,6 +318,7 @@
             this.Controls.Add(this.btnsalir);
             this.Controls.Add(this.dgvestadisticas);
             this.Controls.Add(this.gboxestadisticos);
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "FormEstadisticas";
             this.Text = "FormEstadisticas";
             this.Load += new System.EventHandler(this.FormEstadisticas_Load);
@@ -313,11 +348,13 @@
         private System.Windows.Forms.TextBox txtfechareporte;
         private System.Windows.Forms.ComboBox cmbestado;
         private System.Windows.Forms.DataGridView dgvestadisticas;
-        private System.Windows.Forms.Button btnbuscar;
         private System.Windows.Forms.Button btnguardar;
         private System.Windows.Forms.Button btneditar;
         private System.Windows.Forms.Button btneliminar;
         private System.Windows.Forms.Button btnsalir;
         private System.Windows.Forms.Button btnlimpiar;
+        private FontAwesome.Sharp.IconButton iconButton1;
+        private FontAwesome.Sharp.IconButton btnActualizar;
+        private FontAwesome.Sharp.IconButton btnCancelar;
     }
 }

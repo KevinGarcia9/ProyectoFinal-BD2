@@ -119,6 +119,22 @@ namespace CapaPresentacion
         {
 
         }
+
+        private void dgvestadisticas_CellClick(object sender, DataGridViewCellEventArgs e)
+        {
+
+            if (e.RowIndex >= 0)
+            {
+                DataGridViewRow fila = dgvestadisticas.Rows[e.RowIndex];
+                txtcodigo.Text = fila.Cells["CodigoMant"].Value.ToString();
+                txt.Text = fila.Cells["CodigoTransporte"].Value.ToString();
+                txtfechaingreso.Text = fila.Cells["FechaIngreso"].Value.ToString();
+                txtfechasalida.Text = fila.Cells["FechaSalida"].Value.ToString();
+                txtcosto.Text = fila.Cells["Costo"].Value.ToString();
+                txtmoneda.Text = fila.Cells["Moneda"].Value.ToString();
+                cmbestado.Text = fila.Cells["Estado"].Value.ToString();
+            }
+        }
     }
 }
 

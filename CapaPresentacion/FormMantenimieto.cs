@@ -117,10 +117,10 @@ namespace CapaPresentacion
             if (e.RowIndex >= 0)
             {
                 DataGridViewRow fila = dgvmatenimiento.Rows[e.RowIndex];
-                txtcodigomant.Text = fila.Cells["CodigoMantenimiento"].Value.ToString();
+                txtcodigomant.Text = fila.Cells["CodigoMant"].Value.ToString();
                 txtcodigotransp.Text = fila.Cells["CodigoTransporte"].Value.ToString();
-                txtfechaingreso.Text = fila.Cells["Fecha Ingreso"].Value.ToString();
-                txtfechasalida.Text = fila.Cells["Fecha Salida"].Value.ToString();
+                txtfechaingreso.Text = fila.Cells["FechaIngreso"].Value.ToString();
+                txtfechasalida.Text = fila.Cells["FechaSalida"].Value.ToString();
                 txtcosto.Text = fila.Cells["Costo"].Value.ToString();
                 txtmoneda.Text = fila.Cells["Moneda"].Value.ToString();
                 cmbestado.Text = fila.Cells["Estado"].Value.ToString();
