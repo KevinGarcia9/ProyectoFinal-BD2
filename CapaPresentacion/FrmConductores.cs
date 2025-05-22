@@ -120,5 +120,15 @@ namespace CapaPresentacion
                 cmbEstado.Text = fila.Cells["Estado"].Value.ToString();
             }
         }
+
+        private void gboxConductores_Enter(object sender, EventArgs e)
+        {
+
+        }
+
+        private void dgvConductores_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        {
+
+        }
     }
 }

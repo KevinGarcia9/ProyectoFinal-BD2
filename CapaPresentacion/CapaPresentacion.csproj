@@ -53,6 +53,30 @@
     <Reference Include="WindowsBase" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="FormEstadisticas.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormEstadisticas.Designer.cs">
+      <DependentUpon>FormEstadisticas.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FormIncidentes.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormIncidentes.Designer.cs">
+      <DependentUpon>FormIncidentes.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FormMantenimieto.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormMantenimieto.Designer.cs">
+      <DependentUpon>FormMantenimieto.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FormTarjetasdetransportes.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormTarjetasdetransportes.Designer.cs">
+      <DependentUpon>FormTarjetasdetransportes.cs</DependentUpon>
+    </Compile>
     <Compile Include="FrmConductores.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -91,6 +115,18 @@
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <EmbeddedResource Include="FormEstadisticas.resx">
+      <DependentUpon>FormEstadisticas.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormIncidentes.resx">
+      <DependentUpon>FormIncidentes.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormMantenimieto.resx">
+      <DependentUpon>FormMantenimieto.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormTarjetasdetransportes.resx">
+      <DependentUpon>FormTarjetasdetransportes.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="FrmConductores.resx">
       <DependentUpon>FrmConductores.cs</DependentUpon>
     </EmbeddedResource>
