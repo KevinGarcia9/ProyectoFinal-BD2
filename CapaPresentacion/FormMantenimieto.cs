@@ -47,10 +47,10 @@ namespace CapaPresentacion
 
 
                 cd_mantenimiento.MtInsertarMantenimiento(
-                 int.Parse(   txtcodigotransp.Text),
+                 int.Parse(txtcodigotransp.Text),
                     txtfechaingreso.Text,
                     txtfechasalida.Text,
-                   decimal.Parse( txtcosto.Text),
+                   decimal.Parse(txtcosto.Text),
                     txtmoneda.Text,
                     cmbestado.Text
                 );
@@ -70,7 +70,7 @@ namespace CapaPresentacion
             {
                 cd_mantenimiento.MtActualizarMantenimiento(
                     int.Parse(txtcodigomant.Text),
-                   int.Parse( txtcodigotransp.Text),
+                   int.Parse(txtcodigotransp.Text),
                     txtfechaingreso.Text,
                     txtfechasalida.Text,
                     decimal.Parse(txtcosto.Text),
@@ -111,6 +111,25 @@ namespace CapaPresentacion
         {
             MtdLimpiarCampos();
         }
+
+        private void dgvmatenimiento_CellClick(object sender, DataGridViewCellEventArgs e)
+        {
+            if (e.RowIndex >= 0)
+            {
+                DataGridViewRow fila = dgvmatenimiento.Rows[e.RowIndex];
+                txtcodigomant.Text = fila.Cells["CodigoMantenimiento"].Value.ToString();
+                txtcodigotransp.Text = fila.Cells["CodigoTransporte"].Value.ToString();
+                txtfechaingreso.Text = fila.Cells["Fecha Ingreso"].Value.ToString();
+                txtfechasalida.Text = fila.Cells["Fecha Salida"].Value.ToString();
+                txtcosto.Text = fila.Cells["Costo"].Value.ToString();
+                txtmoneda.Text = fila.Cells["Moneda"].Value.ToString();
+                cmbestado.Text = fila.Cells["Estado"].Value.ToString();
+            }
+        }
+
+        private void label1_Click(object sender, EventArgs e)
+        {
+
+        }
     }
-    
 }
