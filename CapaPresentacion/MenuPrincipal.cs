@@ -83,7 +83,7 @@ namespace CapaPresentacion
             }
         }
 
-        private void btnAlex_Click(object sender, EventArgs e)
+        private void btngAlexander_Click(object sender, EventArgs e)
         {
             mostrarSubmenu(panelAlex);
         }

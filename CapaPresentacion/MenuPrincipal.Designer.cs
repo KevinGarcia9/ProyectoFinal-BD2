@@ -35,7 +35,7 @@
             this.btnOcultarMenu = new FontAwesome.Sharp.IconButton();
             this.PanelContenedor = new System.Windows.Forms.Panel();
             this.lblMensajeMenu = new System.Windows.Forms.Label();
-            this.btnAlex = new Guna.UI2.WinForms.Guna2GradientButton();
+            this.btngAlexander = new Guna.UI2.WinForms.Guna2GradientButton();
             this.panelAlex = new System.Windows.Forms.Panel();
             this.btnAlex1 = new Guna.UI2.WinForms.Guna2Button();
             this.btnAlex2 = new Guna.UI2.WinForms.Guna2Button();
@@ -46,7 +46,7 @@
             this.btnSay3 = new Guna.UI2.WinForms.Guna2Button();
             this.btnSay2 = new Guna.UI2.WinForms.Guna2Button();
             this.btnSay1 = new Guna.UI2.WinForms.Guna2Button();
-            this.btnSeleidy = new Guna.UI2.WinForms.Guna2GradientButton();
+            this.btngSeleidy = new Guna.UI2.WinForms.Guna2GradientButton();
             this.panelJosvin = new System.Windows.Forms.Panel();
             this.btnJosvin4 = new Guna.UI2.WinForms.Guna2Button();
             this.btnJosvin3 = new Guna.UI2.WinForms.Guna2Button();
@@ -68,9 +68,9 @@
             this.PanelMenu.Controls.Add(this.panelJosvin);
             this.PanelMenu.Controls.Add(this.btnJosvin);
             this.PanelMenu.Controls.Add(this.panelSay);
-            this.PanelMenu.Controls.Add(this.btnSeleidy);
+            this.PanelMenu.Controls.Add(this.btngSeleidy);
             this.PanelMenu.Controls.Add(this.panelAlex);
-            this.PanelMenu.Controls.Add(this.btnAlex);
+            this.PanelMenu.Controls.Add(this.btngAlexander);
             this.PanelMenu.Controls.Add(this.PanelMenuSuperior);
             this.PanelMenu.Dock = System.Windows.Forms.DockStyle.Left;
             this.PanelMenu.Location = new System.Drawing.Point(0, 0);
@@ -157,27 +157,27 @@
             this.lblMensajeMenu.Text = "Bienvenido Menu Principal";
             this.lblMensajeMenu.Click += new System.EventHandler(this.lblMensajeMenu_Click);
             // 
-            // btnAlex
+            // btngAlexander
             // 
-            this.btnAlex.Animated = true;
-            this.btnAlex.AutoRoundedCorners = true;
-            this.btnAlex.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
-            this.btnAlex.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
-            this.btnAlex.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
-            this.btnAlex.DisabledState.FillColor2 = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
-            this.btnAlex.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
-            this.btnAlex.Dock = System.Windows.Forms.DockStyle.Top;
-            this.btnAlex.FillColor = System.Drawing.Color.Blue;
-            this.btnAlex.FillColor2 = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
-            this.btnAlex.Font = new System.Drawing.Font("Segoe UI", 16.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnAlex.ForeColor = System.Drawing.Color.White;
-            this.btnAlex.Location = new System.Drawing.Point(0, 97);
-            this.btnAlex.Name = "btnAlex";
-            this.btnAlex.Size = new System.Drawing.Size(246, 67);
-            this.btnAlex.TabIndex = 2;
-            this.btnAlex.Text = "Alexander";
-            this.btnAlex.TextAlign = System.Windows.Forms.HorizontalAlignment.Left;
-            this.btnAlex.Click += new System.EventHandler(this.btnAlex_Click);
+            this.btngAlexander.Animated = true;
+            this.btngAlexander.AutoRoundedCorners = true;
+            this.btngAlexander.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
+            this.btngAlexander.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
+            this.btngAlexander.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
+            this.btngAlexander.DisabledState.FillColor2 = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
+            this.btngAlexander.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
+            this.btngAlexander.Dock = System.Windows.Forms.DockStyle.Top;
+            this.btngAlexander.FillColor = System.Drawing.Color.Blue;
+            this.btngAlexander.FillColor2 = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
+            this.btngAlexander.Font = new System.Drawing.Font("Segoe UI", 16.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btngAlexander.ForeColor = System.Drawing.Color.White;
+            this.btngAlexander.Location = new System.Drawing.Point(0, 97);
+            this.btngAlexander.Name = "btngAlexander";
+            this.btngAlexander.Size = new System.Drawing.Size(246, 67);
+            this.btngAlexander.TabIndex = 2;
+            this.btngAlexander.Text = "Alexander";
+            this.btngAlexander.TextAlign = System.Windows.Forms.HorizontalAlignment.Left;
+            this.btngAlexander.Click += new System.EventHandler(this.btngAlexander_Click);
             // 
             // panelAlex
             // 
@@ -353,26 +353,26 @@
             this.btnSay1.TabIndex = 0;
             this.btnSay1.Text = "Transportes";
             // 
-            // btnSeleidy
+            // btngSeleidy
             // 
-            this.btnSeleidy.Animated = true;
-            this.btnSeleidy.AutoRoundedCorners = true;
-            this.btnSeleidy.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
-            this.btnSeleidy.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
-            this.btnSeleidy.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
-            this.btnSeleidy.DisabledState.FillColor2 = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
-            this.btnSeleidy.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
-            this.btnSeleidy.Dock = System.Windows.Forms.DockStyle.Top;
-            this.btnSeleidy.FillColor = System.Drawing.Color.Blue;
-            this.btnSeleidy.FillColor2 = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
-            this.btnSeleidy.Font = new System.Drawing.Font("Segoe UI", 16.2F, System.Drawing.FontStyle.Bold);
-            this.btnSeleidy.ForeColor = System.Drawing.Color.White;
-            this.btnSeleidy.Location = new System.Drawing.Point(0, 357);
-            this.btnSeleidy.Name = "btnSeleidy";
-            this.btnSeleidy.Size = new System.Drawing.Size(246, 67);
-            this.btnSeleidy.TabIndex = 4;
-            this.btnSeleidy.Text = "Seleidy";
-            this.btnSeleidy.TextAlign = System.Windows.Forms.HorizontalAlignment.Left;
+            this.btngSeleidy.Animated = true;
+            this.btngSeleidy.AutoRoundedCorners = true;
+            this.btngSeleidy.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
+            this.btngSeleidy.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
+            this.btngSeleidy.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
+            this.btngSeleidy.DisabledState.FillColor2 = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
+            this.btngSeleidy.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
+            this.btngSeleidy.Dock = System.Windows.Forms.DockStyle.Top;
+            this.btngSeleidy.FillColor = System.Drawing.Color.Blue;
+            this.btngSeleidy.FillColor2 = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
+            this.btngSeleidy.Font = new System.Drawing.Font("Segoe UI", 16.2F, System.Drawing.FontStyle.Bold);
+            this.btngSeleidy.ForeColor = System.Drawing.Color.White;
+            this.btngSeleidy.Location = new System.Drawing.Point(0, 357);
+            this.btngSeleidy.Name = "btngSeleidy";
+            this.btngSeleidy.Size = new System.Drawing.Size(246, 67);
+            this.btngSeleidy.TabIndex = 4;
+            this.btngSeleidy.Text = "Seleidy";
+            this.btngSeleidy.TextAlign = System.Windows.Forms.HorizontalAlignment.Left;
             // 
             // panelJosvin
             // 
@@ -517,7 +517,7 @@
         private System.Windows.Forms.Label lblUsuario;
         private System.Windows.Forms.Panel panelAlex;
         private Guna.UI2.WinForms.Guna2Button btnAlex1;
-        private Guna.UI2.WinForms.Guna2GradientButton btnAlex;
+        private Guna.UI2.WinForms.Guna2GradientButton btngAlexander;
         private Guna.UI2.WinForms.Guna2Button btnAlex4;
         private Guna.UI2.WinForms.Guna2Button btnAlex3;
         private Guna.UI2.WinForms.Guna2Button btnAlex2;
@@ -526,7 +526,7 @@
         private Guna.UI2.WinForms.Guna2Button btnSay3;
         private Guna.UI2.WinForms.Guna2Button btnSay2;
         private Guna.UI2.WinForms.Guna2Button btnSay1;
-        private Guna.UI2.WinForms.Guna2GradientButton btnSeleidy;
+        private Guna.UI2.WinForms.Guna2GradientButton btngSeleidy;
         private System.Windows.Forms.Panel panelJosvin;
         private Guna.UI2.WinForms.Guna2Button btnJosvin4;
         private Guna.UI2.WinForms.Guna2Button btnJosvin3;
