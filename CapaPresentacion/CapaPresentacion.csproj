@@ -95,17 +95,41 @@
     <Compile Include="FrmEstaciones.Designer.cs">
       <DependentUpon>FrmEstaciones.cs</DependentUpon>
     </Compile>
+    <Compile Include="FrmHorarios.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FrmHorarios.Designer.cs">
+      <DependentUpon>FrmHorarios.cs</DependentUpon>
+    </Compile>
     <Compile Include="FrmLogin.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="FrmLogin.Designer.cs">
       <DependentUpon>FrmLogin.cs</DependentUpon>
     </Compile>
+    <Compile Include="FrmPagos.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FrmPagos.Designer.cs">
+      <DependentUpon>FrmPagos.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FrmPasajeros.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FrmPasajeros.Designer.cs">
+      <DependentUpon>FrmPasajeros.cs</DependentUpon>
+    </Compile>
     <Compile Include="FrmRutas.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="FrmRutas.Designer.cs">
       <DependentUpon>FrmRutas.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FrmTarifas.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FrmTarifas.Designer.cs">
+      <DependentUpon>FrmTarifas.cs</DependentUpon>
     </Compile>
     <Compile Include="FrmTransportes.cs">
       <SubType>Form</SubType>
@@ -139,11 +163,23 @@
     <EmbeddedResource Include="FrmEstaciones.resx">
       <DependentUpon>FrmEstaciones.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="FrmHorarios.resx">
+      <DependentUpon>FrmHorarios.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="FrmLogin.resx">
       <DependentUpon>FrmLogin.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="FrmPagos.resx">
+      <DependentUpon>FrmPagos.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FrmPasajeros.resx">
+      <DependentUpon>FrmPasajeros.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="FrmRutas.resx">
       <DependentUpon>FrmRutas.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FrmTarifas.resx">
+      <DependentUpon>FrmTarifas.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="FrmTransportes.resx">
       <DependentUpon>FrmTransportes.cs</DependentUpon>

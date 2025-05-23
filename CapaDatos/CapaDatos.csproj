@@ -58,9 +58,13 @@
     <Compile Include="CD_Conductores.cs" />
     <Compile Include="CD_Estaciones.cs" />
     <Compile Include="CD_Estadisticas.cs" />
+    <Compile Include="CD_Horarios.cs" />
     <Compile Include="CD_Incidentes.cs" />
     <Compile Include="CD_Mantenimiento.cs" />
+    <Compile Include="CD_Pagos.cs" />
+    <Compile Include="CD_Pasajeros.cs" />
     <Compile Include="CD_Rutas.cs" />
+    <Compile Include="CD_Tarifas.cs" />
     <Compile Include="CD_TarjetasDeTransporte.cs" />
     <Compile Include="CD_Transportes.cs" />
     <Compile Include="CD_Conexion.cs" />
