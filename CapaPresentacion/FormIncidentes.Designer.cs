@@ -36,7 +36,6 @@
             this.txtfecha = new System.Windows.Forms.TextBox();
             this.btnguardar = new System.Windows.Forms.Button();
             this.txtdescripcion = new System.Windows.Forms.TextBox();
-            this.btnbuscar = new System.Windows.Forms.Button();
             this.txtcodigoconductor = new System.Windows.Forms.TextBox();
             this.txtcodigotransporte = new System.Windows.Forms.TextBox();
             this.txtcodigoincidente = new System.Windows.Forms.TextBox();
@@ -48,7 +47,6 @@
             this.label2 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
             this.dgvincidentes = new System.Windows.Forms.DataGridView();
-            this.btnsalir = new System.Windows.Forms.Button();
             this.btnlimpiar = new System.Windows.Forms.Button();
             this.gboxincidentes.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgvincidentes)).BeginInit();
@@ -56,6 +54,7 @@
             // 
             // gboxincidentes
             // 
+            this.gboxincidentes.Controls.Add(this.btnlimpiar);
             this.gboxincidentes.Controls.Add(this.cmbestado);
             this.gboxincidentes.Controls.Add(this.btneliminar);
             this.gboxincidentes.Controls.Add(this.txthora);
@@ -63,7 +62,6 @@
             this.gboxincidentes.Controls.Add(this.txtfecha);
             this.gboxincidentes.Controls.Add(this.btnguardar);
             this.gboxincidentes.Controls.Add(this.txtdescripcion);
-            this.gboxincidentes.Controls.Add(this.btnbuscar);
             this.gboxincidentes.Controls.Add(this.txtcodigoconductor);
             this.gboxincidentes.Controls.Add(this.txtcodigotransporte);
             this.gboxincidentes.Controls.Add(this.txtcodigoincidente);
@@ -91,7 +89,7 @@
             // 
             // btneliminar
             // 
-            this.btneliminar.Location = new System.Drawing.Point(617, 123);
+            this.btneliminar.Location = new System.Drawing.Point(617, 77);
             this.btneliminar.Name = "btneliminar";
             this.btneliminar.Size = new System.Drawing.Size(75, 23);
             this.btneliminar.TabIndex = 5;
@@ -108,7 +106,7 @@
             // 
             // btneditar
             // 
-            this.btneditar.Location = new System.Drawing.Point(617, 86);
+            this.btneditar.Location = new System.Drawing.Point(617, 48);
             this.btneditar.Name = "btneditar";
             this.btneditar.Size = new System.Drawing.Size(75, 23);
             this.btneditar.TabIndex = 4;
@@ -125,7 +123,7 @@
             // 
             // btnguardar
             // 
-            this.btnguardar.Location = new System.Drawing.Point(617, 53);
+            this.btnguardar.Location = new System.Drawing.Point(617, 19);
             this.btnguardar.Name = "btnguardar";
             this.btnguardar.Size = new System.Drawing.Size(75, 23);
             this.btnguardar.TabIndex = 3;
@@ -139,15 +137,6 @@
             this.txtdescripcion.Name = "txtdescripcion";
             this.txtdescripcion.Size = new System.Drawing.Size(457, 20);
             this.txtdescripcion.TabIndex = 10;
-            // 
-            // btnbuscar
-            // 
-            this.btnbuscar.Location = new System.Drawing.Point(617, 24);
-            this.btnbuscar.Name = "btnbuscar";
-            this.btnbuscar.Size = new System.Drawing.Size(75, 23);
-            this.btnbuscar.TabIndex = 2;
-            this.btnbuscar.Text = "Buscar";
-            this.btnbuscar.UseVisualStyleBackColor = true;
             // 
             // txtcodigoconductor
             // 
@@ -240,19 +229,11 @@
             this.dgvincidentes.Name = "dgvincidentes";
             this.dgvincidentes.Size = new System.Drawing.Size(717, 148);
             this.dgvincidentes.TabIndex = 1;
-            // 
-            // btnsalir
-            // 
-            this.btnsalir.Location = new System.Drawing.Point(653, 363);
-            this.btnsalir.Name = "btnsalir";
-            this.btnsalir.Size = new System.Drawing.Size(75, 23);
-            this.btnsalir.TabIndex = 6;
-            this.btnsalir.Text = "Salir";
-            this.btnsalir.UseVisualStyleBackColor = true;
+            this.dgvincidentes.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvincidentes_CellClick);
             // 
             // btnlimpiar
             // 
-            this.btnlimpiar.Location = new System.Drawing.Point(538, 363);
+            this.btnlimpiar.Location = new System.Drawing.Point(617, 106);
             this.btnlimpiar.Name = "btnlimpiar";
             this.btnlimpiar.Size = new System.Drawing.Size(75, 23);
             this.btnlimpiar.TabIndex = 7;
@@ -265,8 +246,6 @@
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(800, 450);
-            this.Controls.Add(this.btnlimpiar);
-            this.Controls.Add(this.btnsalir);
             this.Controls.Add(this.dgvincidentes);
             this.Controls.Add(this.gboxincidentes);
             this.Name = "FormIncidentes";
@@ -297,11 +276,9 @@
         private System.Windows.Forms.TextBox txtcodigoconductor;
         private System.Windows.Forms.TextBox txtcodigotransporte;
         private System.Windows.Forms.TextBox txtcodigoincidente;
-        private System.Windows.Forms.Button btnbuscar;
         private System.Windows.Forms.Button btnguardar;
         private System.Windows.Forms.Button btneditar;
         private System.Windows.Forms.Button btneliminar;
-        private System.Windows.Forms.Button btnsalir;
         private System.Windows.Forms.Button btnlimpiar;
     }
 }

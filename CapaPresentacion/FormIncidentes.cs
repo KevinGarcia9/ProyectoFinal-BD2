@@ -106,6 +106,21 @@ namespace CapaPresentacion
         {
             MtdLimpiarCampos();
         }
+
+        private void dgvincidentes_CellClick(object sender, DataGridViewCellEventArgs e)
+        {
+            if (e.RowIndex >= 0)
+            {
+                DataGridViewRow fila = dgvincidentes.Rows[e.RowIndex];
+                txtcodigoincidente.Text = fila.Cells["CodigoIncidente"].Value.ToString();
+                txtcodigotransporte.Text = fila.Cells["CodigoTransporte"].Value.ToString();
+                txtcodigoconductor.Text = fila.Cells["CodigoConductor"].Value.ToString();
+                txtdescripcion.Text = fila.Cells["Descripcion"].Value.ToString();
+                txtfecha.Text = fila.Cells["Fecha"].Value.ToString();
+                txthora.Text = fila.Cells["Hora"].Value.ToString();
+                cmbestado.Text = fila.Cells["Estado"].Value.ToString();
+            }
+        }
     }
 
 }

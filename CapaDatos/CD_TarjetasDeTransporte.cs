@@ -21,7 +21,7 @@ namespace CapaDatos
         }
 
 
-        public void MtInsertarTarjetadeTransporte (int CodigoPasajero, string FechaEmision, decimal Saldo,string Moneda, string Estado)
+        public void MtInsertarTarjetadeTransporte (int CodigoPasajero, string FechaEmision, decimal Saldo,string Moneda,string TipoTarjeta, string Estado)
         {
             SqlCommand cmd = new SqlCommand("Usp_TarjetadeTransporte_Agregar", db_conexion.MtdAbrirConexion());
             cmd.CommandType = CommandType.StoredProcedure;
@@ -29,12 +29,13 @@ namespace CapaDatos
             cmd.Parameters.AddWithValue("@FechaEmision", FechaEmision);
             cmd.Parameters.AddWithValue("@Saldo", Saldo);
             cmd.Parameters.AddWithValue("@Moneda", Moneda);
+            cmd.Parameters.AddWithValue("@TipoTarjeta", TipoTarjeta);
             cmd.Parameters.AddWithValue("@Estado", Estado);
             cmd.ExecuteNonQuery();
             cmd.Parameters.Clear();
         }
 
-        public void MtActualizarTarjetadeTransporte(int CodigoTarjeta,int CodigoPasajero, string FechaEmision, decimal Saldo, string Moneda, string Estado)
+        public void MtActualizarTarjetadeTransporte(int CodigoTarjeta,int CodigoPasajero, string FechaEmision, decimal Saldo, string Moneda,string TipoTarjeta, string Estado)
         {
             SqlCommand cmd = new SqlCommand("Usp_TarjetadeTransporte_Actualizar", db_conexion.MtdAbrirConexion());
             cmd.CommandType = CommandType.StoredProcedure;
@@ -43,6 +44,7 @@ namespace CapaDatos
             cmd.Parameters.AddWithValue("@FechaEmision", FechaEmision);
             cmd.Parameters.AddWithValue("@Saldo", Saldo);
             cmd.Parameters.AddWithValue("@Moneda", Moneda);
+            cmd.Parameters.AddWithValue("@TipoTarjeta", TipoTarjeta);
             cmd.Parameters.AddWithValue("@Estado", Estado);
             cmd.Parameters.Clear();
         }

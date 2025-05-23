@@ -126,14 +126,19 @@ namespace CapaPresentacion
             if (e.RowIndex >= 0)
             {
                 DataGridViewRow fila = dgvestadisticas.Rows[e.RowIndex];
-                txtcodigo.Text = fila.Cells["CodigoMant"].Value.ToString();
-                txt.Text = fila.Cells["CodigoTransporte"].Value.ToString();
-                txtfechaingreso.Text = fila.Cells["FechaIngreso"].Value.ToString();
-                txtfechasalida.Text = fila.Cells["FechaSalida"].Value.ToString();
-                txtcosto.Text = fila.Cells["Costo"].Value.ToString();
+                txtcodigo.Text = fila.Cells["Codigo"].Value.ToString();
+                txtfechareporte.Text = fila.Cells["FechaReporte"].Value.ToString();
+                txtpasajerostransp.Text = fila.Cells["PasajerosTransportados"].Value.ToString();
+                txtingresototal.Text = fila.Cells["IngresoTotal"].Value.ToString();
                 txtmoneda.Text = fila.Cells["Moneda"].Value.ToString();
+                txttotalincedentes.Text = fila.Cells["TotalIncidentes"].Value.ToString();
                 cmbestado.Text = fila.Cells["Estado"].Value.ToString();
             }
+        }
+
+        private void dgvestadisticas_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        {
+
         }
     }
 }
