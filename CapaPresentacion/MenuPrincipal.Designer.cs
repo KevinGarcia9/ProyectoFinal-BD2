@@ -29,80 +29,55 @@
         private void InitializeComponent()
         {
             this.PanelMenu = new System.Windows.Forms.Panel();
-            this.PanelSeleccion = new System.Windows.Forms.Panel();
-            this.PanelMenuInferior = new System.Windows.Forms.Panel();
-            this.btnConfiguracion = new FontAwesome.Sharp.IconButton();
             this.PanelMenuSuperior = new System.Windows.Forms.Panel();
             this.PanelSuperior = new System.Windows.Forms.Panel();
             this.lblUsuario = new System.Windows.Forms.Label();
             this.btnOcultarMenu = new FontAwesome.Sharp.IconButton();
             this.PanelContenedor = new System.Windows.Forms.Panel();
             this.lblMensajeMenu = new System.Windows.Forms.Label();
-            this.cbxJosvin = new System.Windows.Forms.ComboBox();
-            this.cbxAlex = new System.Windows.Forms.ComboBox();
-            this.comboBox1 = new System.Windows.Forms.ComboBox();
+            this.btnAlex = new Guna.UI2.WinForms.Guna2GradientButton();
+            this.panelAlex = new System.Windows.Forms.Panel();
+            this.btnAlex1 = new Guna.UI2.WinForms.Guna2Button();
+            this.btnAlex2 = new Guna.UI2.WinForms.Guna2Button();
+            this.btnAlex3 = new Guna.UI2.WinForms.Guna2Button();
+            this.btnAlex4 = new Guna.UI2.WinForms.Guna2Button();
+            this.panelSay = new System.Windows.Forms.Panel();
+            this.btnSay4 = new Guna.UI2.WinForms.Guna2Button();
+            this.btnSay3 = new Guna.UI2.WinForms.Guna2Button();
+            this.btnSay2 = new Guna.UI2.WinForms.Guna2Button();
+            this.btnSay1 = new Guna.UI2.WinForms.Guna2Button();
+            this.btnSeleidy = new Guna.UI2.WinForms.Guna2GradientButton();
+            this.panelJosvin = new System.Windows.Forms.Panel();
+            this.btnJosvin4 = new Guna.UI2.WinForms.Guna2Button();
+            this.btnJosvin3 = new Guna.UI2.WinForms.Guna2Button();
+            this.btnJosvin2 = new Guna.UI2.WinForms.Guna2Button();
+            this.btnJosvin1 = new Guna.UI2.WinForms.Guna2Button();
+            this.btnJosvin = new Guna.UI2.WinForms.Guna2GradientButton();
             this.PanelMenu.SuspendLayout();
-            this.PanelMenuInferior.SuspendLayout();
             this.PanelSuperior.SuspendLayout();
             this.PanelContenedor.SuspendLayout();
+            this.panelAlex.SuspendLayout();
+            this.panelSay.SuspendLayout();
+            this.panelJosvin.SuspendLayout();
             this.SuspendLayout();
             // 
             // PanelMenu
             // 
             this.PanelMenu.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
             this.PanelMenu.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.PanelMenu.Controls.Add(this.comboBox1);
-            this.PanelMenu.Controls.Add(this.cbxAlex);
-            this.PanelMenu.Controls.Add(this.cbxJosvin);
-            this.PanelMenu.Controls.Add(this.PanelSeleccion);
-            this.PanelMenu.Controls.Add(this.PanelMenuInferior);
+            this.PanelMenu.Controls.Add(this.panelJosvin);
+            this.PanelMenu.Controls.Add(this.btnJosvin);
+            this.PanelMenu.Controls.Add(this.panelSay);
+            this.PanelMenu.Controls.Add(this.btnSeleidy);
+            this.PanelMenu.Controls.Add(this.panelAlex);
+            this.PanelMenu.Controls.Add(this.btnAlex);
             this.PanelMenu.Controls.Add(this.PanelMenuSuperior);
             this.PanelMenu.Dock = System.Windows.Forms.DockStyle.Left;
             this.PanelMenu.Location = new System.Drawing.Point(0, 0);
             this.PanelMenu.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.PanelMenu.Name = "PanelMenu";
-            this.PanelMenu.Size = new System.Drawing.Size(199, 709);
+            this.PanelMenu.Size = new System.Drawing.Size(248, 946);
             this.PanelMenu.TabIndex = 0;
-            // 
-            // PanelSeleccion
-            // 
-            this.PanelSeleccion.BackColor = System.Drawing.Color.White;
-            this.PanelSeleccion.Location = new System.Drawing.Point(1, 132);
-            this.PanelSeleccion.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.PanelSeleccion.Name = "PanelSeleccion";
-            this.PanelSeleccion.Size = new System.Drawing.Size(5, 46);
-            this.PanelSeleccion.TabIndex = 9;
-            // 
-            // PanelMenuInferior
-            // 
-            this.PanelMenuInferior.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.PanelMenuInferior.Controls.Add(this.btnConfiguracion);
-            this.PanelMenuInferior.Dock = System.Windows.Forms.DockStyle.Bottom;
-            this.PanelMenuInferior.Location = new System.Drawing.Point(0, 595);
-            this.PanelMenuInferior.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.PanelMenuInferior.Name = "PanelMenuInferior";
-            this.PanelMenuInferior.Size = new System.Drawing.Size(197, 112);
-            this.PanelMenuInferior.TabIndex = 1;
-            // 
-            // btnConfiguracion
-            // 
-            this.btnConfiguracion.FlatAppearance.BorderSize = 0;
-            this.btnConfiguracion.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnConfiguracion.Font = new System.Drawing.Font("Calisto MT", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnConfiguracion.ForeColor = System.Drawing.Color.White;
-            this.btnConfiguracion.IconChar = FontAwesome.Sharp.IconChar.ScrewdriverWrench;
-            this.btnConfiguracion.IconColor = System.Drawing.Color.Black;
-            this.btnConfiguracion.IconFont = FontAwesome.Sharp.IconFont.Auto;
-            this.btnConfiguracion.IconSize = 35;
-            this.btnConfiguracion.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnConfiguracion.Location = new System.Drawing.Point(1, 2);
-            this.btnConfiguracion.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.btnConfiguracion.Name = "btnConfiguracion";
-            this.btnConfiguracion.Size = new System.Drawing.Size(195, 108);
-            this.btnConfiguracion.TabIndex = 9;
-            this.btnConfiguracion.Text = "Configuración";
-            this.btnConfiguracion.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
-            this.btnConfiguracion.UseVisualStyleBackColor = true;
             // 
             // PanelMenuSuperior
             // 
@@ -112,7 +87,7 @@
             this.PanelMenuSuperior.Location = new System.Drawing.Point(0, 0);
             this.PanelMenuSuperior.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.PanelMenuSuperior.Name = "PanelMenuSuperior";
-            this.PanelMenuSuperior.Size = new System.Drawing.Size(197, 97);
+            this.PanelMenuSuperior.Size = new System.Drawing.Size(246, 97);
             this.PanelMenuSuperior.TabIndex = 0;
             // 
             // PanelSuperior
@@ -122,10 +97,10 @@
             this.PanelSuperior.Controls.Add(this.lblUsuario);
             this.PanelSuperior.Controls.Add(this.btnOcultarMenu);
             this.PanelSuperior.Dock = System.Windows.Forms.DockStyle.Top;
-            this.PanelSuperior.Location = new System.Drawing.Point(199, 0);
+            this.PanelSuperior.Location = new System.Drawing.Point(248, 0);
             this.PanelSuperior.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.PanelSuperior.Name = "PanelSuperior";
-            this.PanelSuperior.Size = new System.Drawing.Size(1172, 43);
+            this.PanelSuperior.Size = new System.Drawing.Size(1123, 43);
             this.PanelSuperior.TabIndex = 1;
             // 
             // lblUsuario
@@ -164,10 +139,10 @@
             this.PanelContenedor.BackColor = System.Drawing.Color.DimGray;
             this.PanelContenedor.Controls.Add(this.lblMensajeMenu);
             this.PanelContenedor.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.PanelContenedor.Location = new System.Drawing.Point(199, 43);
+            this.PanelContenedor.Location = new System.Drawing.Point(248, 43);
             this.PanelContenedor.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.PanelContenedor.Name = "PanelContenedor";
-            this.PanelContenedor.Size = new System.Drawing.Size(1172, 666);
+            this.PanelContenedor.Size = new System.Drawing.Size(1123, 903);
             this.PanelContenedor.TabIndex = 3;
             // 
             // lblMensajeMenu
@@ -182,50 +157,335 @@
             this.lblMensajeMenu.Text = "Bienvenido Menu Principal";
             this.lblMensajeMenu.Click += new System.EventHandler(this.lblMensajeMenu_Click);
             // 
-            // cbxJosvin
+            // btnAlex
             // 
-            this.cbxJosvin.FormattingEnabled = true;
-            this.cbxJosvin.Items.AddRange(new object[] {
-            "Tabla1",
-            "Tabla2",
-            "Tabla3"});
-            this.cbxJosvin.Location = new System.Drawing.Point(12, 231);
-            this.cbxJosvin.Name = "cbxJosvin";
-            this.cbxJosvin.Size = new System.Drawing.Size(121, 24);
-            this.cbxJosvin.TabIndex = 12;
-            this.cbxJosvin.Text = "Josvin";
+            this.btnAlex.Animated = true;
+            this.btnAlex.AutoRoundedCorners = true;
+            this.btnAlex.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
+            this.btnAlex.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
+            this.btnAlex.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
+            this.btnAlex.DisabledState.FillColor2 = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
+            this.btnAlex.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
+            this.btnAlex.Dock = System.Windows.Forms.DockStyle.Top;
+            this.btnAlex.FillColor = System.Drawing.Color.Blue;
+            this.btnAlex.FillColor2 = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
+            this.btnAlex.Font = new System.Drawing.Font("Segoe UI", 16.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnAlex.ForeColor = System.Drawing.Color.White;
+            this.btnAlex.Location = new System.Drawing.Point(0, 97);
+            this.btnAlex.Name = "btnAlex";
+            this.btnAlex.Size = new System.Drawing.Size(246, 67);
+            this.btnAlex.TabIndex = 2;
+            this.btnAlex.Text = "Alexander";
+            this.btnAlex.TextAlign = System.Windows.Forms.HorizontalAlignment.Left;
+            this.btnAlex.Click += new System.EventHandler(this.btnAlex_Click);
             // 
-            // cbxAlex
+            // panelAlex
             // 
-            this.cbxAlex.FormattingEnabled = true;
-            this.cbxAlex.Items.AddRange(new object[] {
-            "Conductores"});
-            this.cbxAlex.Location = new System.Drawing.Point(12, 123);
-            this.cbxAlex.Name = "cbxAlex";
-            this.cbxAlex.Size = new System.Drawing.Size(165, 24);
-            this.cbxAlex.TabIndex = 13;
-            this.cbxAlex.Text = "Alexander";
-            this.cbxAlex.SelectedIndexChanged += new System.EventHandler(this.cbxAlex_SelectedIndexChanged);
+            this.panelAlex.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(255)))), ((int)(((byte)(192)))));
+            this.panelAlex.Controls.Add(this.btnAlex4);
+            this.panelAlex.Controls.Add(this.btnAlex3);
+            this.panelAlex.Controls.Add(this.btnAlex2);
+            this.panelAlex.Controls.Add(this.btnAlex1);
+            this.panelAlex.Dock = System.Windows.Forms.DockStyle.Top;
+            this.panelAlex.Location = new System.Drawing.Point(0, 164);
+            this.panelAlex.Name = "panelAlex";
+            this.panelAlex.Size = new System.Drawing.Size(246, 193);
+            this.panelAlex.TabIndex = 3;
             // 
-            // comboBox1
+            // btnAlex1
             // 
-            this.comboBox1.FormattingEnabled = true;
-            this.comboBox1.Items.AddRange(new object[] {
-            "Tabla1",
-            "Tabla2",
-            "Tabla3"});
-            this.comboBox1.Location = new System.Drawing.Point(12, 179);
-            this.comboBox1.Name = "comboBox1";
-            this.comboBox1.Size = new System.Drawing.Size(121, 24);
-            this.comboBox1.TabIndex = 14;
-            this.comboBox1.Text = "Seleidy";
+            this.btnAlex1.Animated = true;
+            this.btnAlex1.AutoRoundedCorners = true;
+            this.btnAlex1.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
+            this.btnAlex1.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
+            this.btnAlex1.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
+            this.btnAlex1.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
+            this.btnAlex1.Dock = System.Windows.Forms.DockStyle.Top;
+            this.btnAlex1.FillColor = System.Drawing.SystemColors.GradientActiveCaption;
+            this.btnAlex1.Font = new System.Drawing.Font("Segoe UI", 10.2F, System.Drawing.FontStyle.Bold);
+            this.btnAlex1.ForeColor = System.Drawing.Color.Black;
+            this.btnAlex1.Location = new System.Drawing.Point(0, 0);
+            this.btnAlex1.Name = "btnAlex1";
+            this.btnAlex1.Size = new System.Drawing.Size(246, 45);
+            this.btnAlex1.TabIndex = 0;
+            this.btnAlex1.Text = "Transportes";
+            this.btnAlex1.Click += new System.EventHandler(this.btnAlex1_Click);
+            // 
+            // btnAlex2
+            // 
+            this.btnAlex2.Animated = true;
+            this.btnAlex2.AutoRoundedCorners = true;
+            this.btnAlex2.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
+            this.btnAlex2.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
+            this.btnAlex2.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
+            this.btnAlex2.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
+            this.btnAlex2.Dock = System.Windows.Forms.DockStyle.Top;
+            this.btnAlex2.FillColor = System.Drawing.SystemColors.GradientActiveCaption;
+            this.btnAlex2.Font = new System.Drawing.Font("Segoe UI", 10.2F, System.Drawing.FontStyle.Bold);
+            this.btnAlex2.ForeColor = System.Drawing.Color.Black;
+            this.btnAlex2.Location = new System.Drawing.Point(0, 45);
+            this.btnAlex2.Name = "btnAlex2";
+            this.btnAlex2.Size = new System.Drawing.Size(246, 45);
+            this.btnAlex2.TabIndex = 1;
+            this.btnAlex2.Text = "Conductores";
+            this.btnAlex2.Click += new System.EventHandler(this.btnAlex2_Click);
+            // 
+            // btnAlex3
+            // 
+            this.btnAlex3.Animated = true;
+            this.btnAlex3.AutoRoundedCorners = true;
+            this.btnAlex3.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
+            this.btnAlex3.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
+            this.btnAlex3.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
+            this.btnAlex3.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
+            this.btnAlex3.Dock = System.Windows.Forms.DockStyle.Top;
+            this.btnAlex3.FillColor = System.Drawing.SystemColors.GradientActiveCaption;
+            this.btnAlex3.Font = new System.Drawing.Font("Segoe UI", 10.2F, System.Drawing.FontStyle.Bold);
+            this.btnAlex3.ForeColor = System.Drawing.Color.Black;
+            this.btnAlex3.Location = new System.Drawing.Point(0, 90);
+            this.btnAlex3.Name = "btnAlex3";
+            this.btnAlex3.Size = new System.Drawing.Size(246, 45);
+            this.btnAlex3.TabIndex = 2;
+            this.btnAlex3.Text = "Rutas";
+            this.btnAlex3.Click += new System.EventHandler(this.btnAlex3_Click);
+            // 
+            // btnAlex4
+            // 
+            this.btnAlex4.Animated = true;
+            this.btnAlex4.AutoRoundedCorners = true;
+            this.btnAlex4.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
+            this.btnAlex4.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
+            this.btnAlex4.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
+            this.btnAlex4.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
+            this.btnAlex4.Dock = System.Windows.Forms.DockStyle.Top;
+            this.btnAlex4.FillColor = System.Drawing.SystemColors.GradientActiveCaption;
+            this.btnAlex4.Font = new System.Drawing.Font("Segoe UI", 10.2F, System.Drawing.FontStyle.Bold);
+            this.btnAlex4.ForeColor = System.Drawing.Color.Black;
+            this.btnAlex4.Location = new System.Drawing.Point(0, 135);
+            this.btnAlex4.Name = "btnAlex4";
+            this.btnAlex4.Size = new System.Drawing.Size(246, 45);
+            this.btnAlex4.TabIndex = 3;
+            this.btnAlex4.Text = "Estaciones";
+            this.btnAlex4.Click += new System.EventHandler(this.btnAlex4_Click);
+            // 
+            // panelSay
+            // 
+            this.panelSay.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(255)))), ((int)(((byte)(192)))));
+            this.panelSay.Controls.Add(this.btnSay4);
+            this.panelSay.Controls.Add(this.btnSay3);
+            this.panelSay.Controls.Add(this.btnSay2);
+            this.panelSay.Controls.Add(this.btnSay1);
+            this.panelSay.Dock = System.Windows.Forms.DockStyle.Top;
+            this.panelSay.Location = new System.Drawing.Point(0, 424);
+            this.panelSay.Name = "panelSay";
+            this.panelSay.Size = new System.Drawing.Size(246, 193);
+            this.panelSay.TabIndex = 5;
+            // 
+            // btnSay4
+            // 
+            this.btnSay4.Animated = true;
+            this.btnSay4.AutoRoundedCorners = true;
+            this.btnSay4.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
+            this.btnSay4.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
+            this.btnSay4.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
+            this.btnSay4.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
+            this.btnSay4.Dock = System.Windows.Forms.DockStyle.Top;
+            this.btnSay4.FillColor = System.Drawing.SystemColors.GradientActiveCaption;
+            this.btnSay4.Font = new System.Drawing.Font("Segoe UI", 10.2F, System.Drawing.FontStyle.Bold);
+            this.btnSay4.ForeColor = System.Drawing.Color.Black;
+            this.btnSay4.Location = new System.Drawing.Point(0, 135);
+            this.btnSay4.Name = "btnSay4";
+            this.btnSay4.Size = new System.Drawing.Size(246, 45);
+            this.btnSay4.TabIndex = 3;
+            this.btnSay4.Text = "Estaciones";
+            // 
+            // btnSay3
+            // 
+            this.btnSay3.Animated = true;
+            this.btnSay3.AutoRoundedCorners = true;
+            this.btnSay3.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
+            this.btnSay3.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
+            this.btnSay3.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
+            this.btnSay3.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
+            this.btnSay3.Dock = System.Windows.Forms.DockStyle.Top;
+            this.btnSay3.FillColor = System.Drawing.SystemColors.GradientActiveCaption;
+            this.btnSay3.Font = new System.Drawing.Font("Segoe UI", 10.2F, System.Drawing.FontStyle.Bold);
+            this.btnSay3.ForeColor = System.Drawing.Color.Black;
+            this.btnSay3.Location = new System.Drawing.Point(0, 90);
+            this.btnSay3.Name = "btnSay3";
+            this.btnSay3.Size = new System.Drawing.Size(246, 45);
+            this.btnSay3.TabIndex = 2;
+            this.btnSay3.Text = "Rutas";
+            // 
+            // btnSay2
+            // 
+            this.btnSay2.Animated = true;
+            this.btnSay2.AutoRoundedCorners = true;
+            this.btnSay2.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
+            this.btnSay2.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
+            this.btnSay2.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
+            this.btnSay2.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
+            this.btnSay2.Dock = System.Windows.Forms.DockStyle.Top;
+            this.btnSay2.FillColor = System.Drawing.SystemColors.GradientActiveCaption;
+            this.btnSay2.Font = new System.Drawing.Font("Segoe UI", 10.2F, System.Drawing.FontStyle.Bold);
+            this.btnSay2.ForeColor = System.Drawing.Color.Black;
+            this.btnSay2.Location = new System.Drawing.Point(0, 45);
+            this.btnSay2.Name = "btnSay2";
+            this.btnSay2.Size = new System.Drawing.Size(246, 45);
+            this.btnSay2.TabIndex = 1;
+            this.btnSay2.Text = "Conductores";
+            // 
+            // btnSay1
+            // 
+            this.btnSay1.Animated = true;
+            this.btnSay1.AutoRoundedCorners = true;
+            this.btnSay1.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
+            this.btnSay1.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
+            this.btnSay1.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
+            this.btnSay1.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
+            this.btnSay1.Dock = System.Windows.Forms.DockStyle.Top;
+            this.btnSay1.FillColor = System.Drawing.SystemColors.GradientActiveCaption;
+            this.btnSay1.Font = new System.Drawing.Font("Segoe UI", 10.2F, System.Drawing.FontStyle.Bold);
+            this.btnSay1.ForeColor = System.Drawing.Color.Black;
+            this.btnSay1.Location = new System.Drawing.Point(0, 0);
+            this.btnSay1.Name = "btnSay1";
+            this.btnSay1.Size = new System.Drawing.Size(246, 45);
+            this.btnSay1.TabIndex = 0;
+            this.btnSay1.Text = "Transportes";
+            // 
+            // btnSeleidy
+            // 
+            this.btnSeleidy.Animated = true;
+            this.btnSeleidy.AutoRoundedCorners = true;
+            this.btnSeleidy.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
+            this.btnSeleidy.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
+            this.btnSeleidy.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
+            this.btnSeleidy.DisabledState.FillColor2 = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
+            this.btnSeleidy.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
+            this.btnSeleidy.Dock = System.Windows.Forms.DockStyle.Top;
+            this.btnSeleidy.FillColor = System.Drawing.Color.Blue;
+            this.btnSeleidy.FillColor2 = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
+            this.btnSeleidy.Font = new System.Drawing.Font("Segoe UI", 16.2F, System.Drawing.FontStyle.Bold);
+            this.btnSeleidy.ForeColor = System.Drawing.Color.White;
+            this.btnSeleidy.Location = new System.Drawing.Point(0, 357);
+            this.btnSeleidy.Name = "btnSeleidy";
+            this.btnSeleidy.Size = new System.Drawing.Size(246, 67);
+            this.btnSeleidy.TabIndex = 4;
+            this.btnSeleidy.Text = "Seleidy";
+            this.btnSeleidy.TextAlign = System.Windows.Forms.HorizontalAlignment.Left;
+            // 
+            // panelJosvin
+            // 
+            this.panelJosvin.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(255)))), ((int)(((byte)(192)))));
+            this.panelJosvin.Controls.Add(this.btnJosvin4);
+            this.panelJosvin.Controls.Add(this.btnJosvin3);
+            this.panelJosvin.Controls.Add(this.btnJosvin2);
+            this.panelJosvin.Controls.Add(this.btnJosvin1);
+            this.panelJosvin.Dock = System.Windows.Forms.DockStyle.Top;
+            this.panelJosvin.Location = new System.Drawing.Point(0, 684);
+            this.panelJosvin.Name = "panelJosvin";
+            this.panelJosvin.Size = new System.Drawing.Size(246, 193);
+            this.panelJosvin.TabIndex = 7;
+            // 
+            // btnJosvin4
+            // 
+            this.btnJosvin4.Animated = true;
+            this.btnJosvin4.AutoRoundedCorners = true;
+            this.btnJosvin4.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
+            this.btnJosvin4.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
+            this.btnJosvin4.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
+            this.btnJosvin4.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
+            this.btnJosvin4.Dock = System.Windows.Forms.DockStyle.Top;
+            this.btnJosvin4.FillColor = System.Drawing.SystemColors.GradientActiveCaption;
+            this.btnJosvin4.Font = new System.Drawing.Font("Segoe UI", 10.2F, System.Drawing.FontStyle.Bold);
+            this.btnJosvin4.ForeColor = System.Drawing.Color.Black;
+            this.btnJosvin4.Location = new System.Drawing.Point(0, 135);
+            this.btnJosvin4.Name = "btnJosvin4";
+            this.btnJosvin4.Size = new System.Drawing.Size(246, 45);
+            this.btnJosvin4.TabIndex = 3;
+            this.btnJosvin4.Text = "Estaciones";
+            // 
+            // btnJosvin3
+            // 
+            this.btnJosvin3.Animated = true;
+            this.btnJosvin3.AutoRoundedCorners = true;
+            this.btnJosvin3.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
+            this.btnJosvin3.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
+            this.btnJosvin3.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
+            this.btnJosvin3.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
+            this.btnJosvin3.Dock = System.Windows.Forms.DockStyle.Top;
+            this.btnJosvin3.FillColor = System.Drawing.SystemColors.GradientActiveCaption;
+            this.btnJosvin3.Font = new System.Drawing.Font("Segoe UI", 10.2F, System.Drawing.FontStyle.Bold);
+            this.btnJosvin3.ForeColor = System.Drawing.Color.Black;
+            this.btnJosvin3.Location = new System.Drawing.Point(0, 90);
+            this.btnJosvin3.Name = "btnJosvin3";
+            this.btnJosvin3.Size = new System.Drawing.Size(246, 45);
+            this.btnJosvin3.TabIndex = 2;
+            this.btnJosvin3.Text = "Rutas";
+            // 
+            // btnJosvin2
+            // 
+            this.btnJosvin2.Animated = true;
+            this.btnJosvin2.AutoRoundedCorners = true;
+            this.btnJosvin2.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
+            this.btnJosvin2.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
+            this.btnJosvin2.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
+            this.btnJosvin2.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
+            this.btnJosvin2.Dock = System.Windows.Forms.DockStyle.Top;
+            this.btnJosvin2.FillColor = System.Drawing.SystemColors.GradientActiveCaption;
+            this.btnJosvin2.Font = new System.Drawing.Font("Segoe UI", 10.2F, System.Drawing.FontStyle.Bold);
+            this.btnJosvin2.ForeColor = System.Drawing.Color.Black;
+            this.btnJosvin2.Location = new System.Drawing.Point(0, 45);
+            this.btnJosvin2.Name = "btnJosvin2";
+            this.btnJosvin2.Size = new System.Drawing.Size(246, 45);
+            this.btnJosvin2.TabIndex = 1;
+            this.btnJosvin2.Text = "Conductores";
+            // 
+            // btnJosvin1
+            // 
+            this.btnJosvin1.Animated = true;
+            this.btnJosvin1.AutoRoundedCorners = true;
+            this.btnJosvin1.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
+            this.btnJosvin1.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
+            this.btnJosvin1.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
+            this.btnJosvin1.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
+            this.btnJosvin1.Dock = System.Windows.Forms.DockStyle.Top;
+            this.btnJosvin1.FillColor = System.Drawing.SystemColors.GradientActiveCaption;
+            this.btnJosvin1.Font = new System.Drawing.Font("Segoe UI", 10.2F, System.Drawing.FontStyle.Bold);
+            this.btnJosvin1.ForeColor = System.Drawing.Color.Black;
+            this.btnJosvin1.Location = new System.Drawing.Point(0, 0);
+            this.btnJosvin1.Name = "btnJosvin1";
+            this.btnJosvin1.Size = new System.Drawing.Size(246, 45);
+            this.btnJosvin1.TabIndex = 0;
+            this.btnJosvin1.Text = "Transportes";
+            // 
+            // btnJosvin
+            // 
+            this.btnJosvin.Animated = true;
+            this.btnJosvin.AutoRoundedCorners = true;
+            this.btnJosvin.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
+            this.btnJosvin.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
+            this.btnJosvin.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
+            this.btnJosvin.DisabledState.FillColor2 = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
+            this.btnJosvin.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
+            this.btnJosvin.Dock = System.Windows.Forms.DockStyle.Top;
+            this.btnJosvin.FillColor = System.Drawing.Color.Blue;
+            this.btnJosvin.FillColor2 = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
+            this.btnJosvin.Font = new System.Drawing.Font("Segoe UI", 16.2F, System.Drawing.FontStyle.Bold);
+            this.btnJosvin.ForeColor = System.Drawing.Color.White;
+            this.btnJosvin.Location = new System.Drawing.Point(0, 617);
+            this.btnJosvin.Name = "btnJosvin";
+            this.btnJosvin.Size = new System.Drawing.Size(246, 67);
+            this.btnJosvin.TabIndex = 6;
+            this.btnJosvin.Text = "Josvin";
+            this.btnJosvin.TextAlign = System.Windows.Forms.HorizontalAlignment.Left;
             // 
             // FrmMenuPrincipal
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.White;
-            this.ClientSize = new System.Drawing.Size(1371, 709);
+            this.ClientSize = new System.Drawing.Size(1371, 946);
             this.Controls.Add(this.PanelContenedor);
             this.Controls.Add(this.PanelSuperior);
             this.Controls.Add(this.PanelMenu);
@@ -235,11 +495,13 @@
             this.Text = "MenuPrincipal";
             this.Load += new System.EventHandler(this.FrmMenuPrincipal_Load);
             this.PanelMenu.ResumeLayout(false);
-            this.PanelMenuInferior.ResumeLayout(false);
             this.PanelSuperior.ResumeLayout(false);
             this.PanelSuperior.PerformLayout();
             this.PanelContenedor.ResumeLayout(false);
             this.PanelContenedor.PerformLayout();
+            this.panelAlex.ResumeLayout(false);
+            this.panelSay.ResumeLayout(false);
+            this.panelJosvin.ResumeLayout(false);
             this.ResumeLayout(false);
 
         }
@@ -247,17 +509,29 @@
         #endregion
 
         private System.Windows.Forms.Panel PanelMenu;
-        private System.Windows.Forms.Panel PanelMenuInferior;
         private System.Windows.Forms.Panel PanelMenuSuperior;
         private System.Windows.Forms.Panel PanelSuperior;
-        private FontAwesome.Sharp.IconButton btnConfiguracion;
         private FontAwesome.Sharp.IconButton btnOcultarMenu;
-        private System.Windows.Forms.Panel PanelSeleccion;
         private System.Windows.Forms.Panel PanelContenedor;
         private System.Windows.Forms.Label lblMensajeMenu;
         private System.Windows.Forms.Label lblUsuario;
-        private System.Windows.Forms.ComboBox cbxJosvin;
-        private System.Windows.Forms.ComboBox cbxAlex;
-        private System.Windows.Forms.ComboBox comboBox1;
+        private System.Windows.Forms.Panel panelAlex;
+        private Guna.UI2.WinForms.Guna2Button btnAlex1;
+        private Guna.UI2.WinForms.Guna2GradientButton btnAlex;
+        private Guna.UI2.WinForms.Guna2Button btnAlex4;
+        private Guna.UI2.WinForms.Guna2Button btnAlex3;
+        private Guna.UI2.WinForms.Guna2Button btnAlex2;
+        private System.Windows.Forms.Panel panelSay;
+        private Guna.UI2.WinForms.Guna2Button btnSay4;
+        private Guna.UI2.WinForms.Guna2Button btnSay3;
+        private Guna.UI2.WinForms.Guna2Button btnSay2;
+        private Guna.UI2.WinForms.Guna2Button btnSay1;
+        private Guna.UI2.WinForms.Guna2GradientButton btnSeleidy;
+        private System.Windows.Forms.Panel panelJosvin;
+        private Guna.UI2.WinForms.Guna2Button btnJosvin4;
+        private Guna.UI2.WinForms.Guna2Button btnJosvin3;
+        private Guna.UI2.WinForms.Guna2Button btnJosvin2;
+        private Guna.UI2.WinForms.Guna2Button btnJosvin1;
+        private Guna.UI2.WinForms.Guna2GradientButton btnJosvin;
     }
 }

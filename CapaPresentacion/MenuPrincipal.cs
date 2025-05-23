@@ -15,11 +15,11 @@ namespace CapaPresentacion
         public FrmMenuPrincipal()
         {
             InitializeComponent();
-            PanelSeleccion.Visible = false;
+            diseño();
         }
 
 
-        FrmLogin frmLogin = new FrmLogin(); 
+        FrmLogin frmLogin = new FrmLogin();
 
         private void btnOcultarMenu_Click(object sender, EventArgs e)
         {
@@ -33,31 +33,7 @@ namespace CapaPresentacion
             }
         }
 
-        private void btnClientes_Click(object sender, EventArgs e)
-        {
-            /*PanelSeleccion.Top = btnClientes.Top; // Ajustar la posición de altura
-            PanelSeleccion.Height = btnClientes.Height; // Ajustar el tamaño
-            PanelSeleccion.Visible = true; // hacer visible el boton
-
-            FrmTransportes frmClie = new FrmTransportes();
-            if (this.PanelContenedor.Controls.Count > 0)
-            {
-                this.PanelContenedor.Controls.RemoveAt(0);
-                frmClie.TopLevel = false;
-                frmClie.Dock = DockStyle.Fill;
-                this.PanelContenedor.Controls.Add(frmClie);
-                this.PanelContenedor.Tag = frmClie;
-                frmClie.Show();
-            }
-            */
-
-
-        }
-
-        private void btnInicio_Click(object sender, EventArgs e)
-        {
-
-        }
+   
 
         FrmLogin frm = new FrmLogin();
 
@@ -71,12 +47,66 @@ namespace CapaPresentacion
 
         }
 
-        private void btnCuentas_Click(object sender, EventArgs e)
+        private void diseño()
         {
-            /*PanelSeleccion.Top = btnClientes.Top; // Ajustar la posición de altura
-            PanelSeleccion.Height = btnClientes.Height; // Ajustar el tamaño
-            PanelSeleccion.Visible = true; // hacer visible el boton
+            panelAlex.Visible = false;
+            panelSay.Visible = false;
+            panelJosvin.Visible = false;
+        }
 
+        private void ocultarSubmenu()
+        {
+            if (panelAlex.Visible == true)
+            {
+                panelAlex.Visible = false;
+            }
+            if (panelSay.Visible == true)
+            {
+                panelSay.Visible = false;
+            }
+            if (panelJosvin.Visible == true)
+            {
+                panelJosvin.Visible = false;
+            }
+        }
+
+        private void mostrarSubmenu(Panel submenu)
+        {
+            if (submenu.Visible == false)
+            {
+                ocultarSubmenu();
+                submenu.Visible = true;
+            }
+            else
+            {
+                submenu.Visible = false;
+            }
+        }
+
+        private void btnAlex_Click(object sender, EventArgs e)
+        {
+            mostrarSubmenu(panelAlex);
+        }
+
+        private void btnAlex1_Click(object sender, EventArgs e)
+        {
+           
+            FrmTransportes frmClie = new FrmTransportes();
+            if (this.PanelContenedor.Controls.Count > 0)
+            {
+                this.PanelContenedor.Controls.RemoveAt(0);
+                frmClie.TopLevel = false;
+                frmClie.Dock = DockStyle.Fill;
+                this.PanelContenedor.Controls.Add(frmClie);
+                this.PanelContenedor.Tag = frmClie;
+                frmClie.Show();
+            }
+
+            ocultarSubmenu();
+        }
+
+        private void btnAlex2_Click(object sender, EventArgs e)
+        {
             FrmConductores frmClie = new FrmConductores();
             if (this.PanelContenedor.Controls.Count > 0)
             {
@@ -87,16 +117,12 @@ namespace CapaPresentacion
                 this.PanelContenedor.Tag = frmClie;
                 frmClie.Show();
             }
-            */
 
+            ocultarSubmenu();
         }
 
-        private void btnRutas_Click(object sender, EventArgs e)
+        private void btnAlex3_Click(object sender, EventArgs e)
         {
-            /*PanelSeleccion.Top = btnClientes.Top; // Ajustar la posición de altura
-            PanelSeleccion.Height = btnClientes.Height; // Ajustar el tamaño
-            PanelSeleccion.Visible = true; // hacer visible el boton
-
             FrmRutas frmClie = new FrmRutas();
             if (this.PanelContenedor.Controls.Count > 0)
             {
@@ -107,15 +133,12 @@ namespace CapaPresentacion
                 this.PanelContenedor.Tag = frmClie;
                 frmClie.Show();
             }
-            */
+
+            ocultarSubmenu();
         }
 
-        private void btnEstaciones_Click(object sender, EventArgs e)
+        private void btnAlex4_Click(object sender, EventArgs e)
         {
-            /*PanelSeleccion.Top = btnClientes.Top; // Ajustar la posición de altura
-            PanelSeleccion.Height = btnClientes.Height; // Ajustar el tamaño
-            PanelSeleccion.Visible = true; // hacer visible el boton
-
             FrmEstaciones frmClie = new FrmEstaciones();
             if (this.PanelContenedor.Controls.Count > 0)
             {
@@ -126,61 +149,8 @@ namespace CapaPresentacion
                 this.PanelContenedor.Tag = frmClie;
                 frmClie.Show();
             }
-            */
-        }
 
-        private void comboBox1_SelectedIndexChanged(object sender, EventArgs e)
-        {
-
-        }
-
-        private void btnmantenimiento_Click(object sender, EventArgs e)
-        {
-           /* PanelSeleccion.Top = btnClientes.Top; // Ajustar la posición de altura
-            PanelSeleccion.Height = btnClientes.Height; // Ajustar el tamaño
-            PanelSeleccion.Visible = true; // hacer visible el boton
-
-            FormMantenimieto frmClie = new FormMantenimieto();
-            if (this.PanelContenedor.Controls.Count > 0)
-            {
-                this.PanelContenedor.Controls.RemoveAt(0);
-                frmClie.TopLevel = false;
-                frmClie.Dock = DockStyle.Fill;
-                this.PanelContenedor.Controls.Add(frmClie);
-                this.PanelContenedor.Tag = frmClie;
-                frmClie.Show();
-            }
-           */
-
-        }
-
-        private void cbxAlex_SelectedIndexChanged(object sender, EventArgs e)
-        {
-            string seleccion = cbxAlex.SelectedItem.ToString();
-
-            switch (seleccion)
-            {
-                case "Conductores":
-                    PanelSeleccion.Top = cbxAlex.Top; // Ajustar la posición de altura
-                    PanelSeleccion.Height = cbxAlex.Height; // Ajustar el tamaño
-                    PanelSeleccion.Visible = true; // hacer visible el boton
-
-                    FrmConductores frmClie = new FrmConductores();
-                    if (this.PanelContenedor.Controls.Count > 0)
-                    {
-                        this.PanelContenedor.Controls.RemoveAt(0);
-                        frmClie.TopLevel = false;
-                        frmClie.Dock = DockStyle.Fill;
-                        this.PanelContenedor.Controls.Add(frmClie);
-                        this.PanelContenedor.Tag = frmClie;
-                        frmClie.Show();
-                    }
-                    break;
-
-                default:
-                    MessageBox.Show("Formulario no disponible");
-                    break;
-            }
+            ocultarSubmenu();
         }
     }
 }
