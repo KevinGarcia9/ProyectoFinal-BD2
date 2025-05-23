@@ -152,5 +152,30 @@ namespace CapaPresentacion
 
             ocultarSubmenu();
         }
+
+        private void btnJosvin_Click(object sender, EventArgs e)
+        {
+            mostrarSubmenu(panelJosvin);
+        }
+
+        private void btnJosvin1_Click(object sender, EventArgs e)
+        {
+            ocultarSubmenu();
+        }
+
+        private void btnJosvin2_Click(object sender, EventArgs e)
+        {
+            ocultarSubmenu();
+        }
+
+        private void btnJosvin3_Click(object sender, EventArgs e)
+        {
+            ocultarSubmenu();
+        }
+
+        private void btnJosvin4_Click(object sender, EventArgs e)
+        {
+            ocultarSubmenu();
+        }
     }
 }
