@@ -74,9 +74,9 @@
             this.PanelMenu.Controls.Add(this.PanelMenuSuperior);
             this.PanelMenu.Dock = System.Windows.Forms.DockStyle.Left;
             this.PanelMenu.Location = new System.Drawing.Point(0, 0);
-            this.PanelMenu.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.PanelMenu.Margin = new System.Windows.Forms.Padding(2, 1, 2, 1);
             this.PanelMenu.Name = "PanelMenu";
-            this.PanelMenu.Size = new System.Drawing.Size(279, 1050);
+            this.PanelMenu.Size = new System.Drawing.Size(187, 487);
             this.PanelMenu.TabIndex = 0;
             // 
             // panelJosvin
@@ -87,10 +87,10 @@
             this.panelJosvin.Controls.Add(this.btnJosvin2);
             this.panelJosvin.Controls.Add(this.btnJosvin1);
             this.panelJosvin.Dock = System.Windows.Forms.DockStyle.Top;
-            this.panelJosvin.Location = new System.Drawing.Point(0, 855);
-            this.panelJosvin.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.panelJosvin.Location = new System.Drawing.Point(0, 558);
+            this.panelJosvin.Margin = new System.Windows.Forms.Padding(2, 3, 2, 3);
             this.panelJosvin.Name = "panelJosvin";
-            this.panelJosvin.Size = new System.Drawing.Size(277, 241);
+            this.panelJosvin.Size = new System.Drawing.Size(185, 157);
             this.panelJosvin.TabIndex = 7;
             // 
             // btnJosvin4
@@ -105,10 +105,10 @@
             this.btnJosvin4.FillColor = System.Drawing.SystemColors.GradientActiveCaption;
             this.btnJosvin4.Font = new System.Drawing.Font("Segoe UI", 10.2F, System.Drawing.FontStyle.Bold);
             this.btnJosvin4.ForeColor = System.Drawing.Color.Black;
-            this.btnJosvin4.Location = new System.Drawing.Point(0, 168);
-            this.btnJosvin4.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.btnJosvin4.Location = new System.Drawing.Point(0, 108);
+            this.btnJosvin4.Margin = new System.Windows.Forms.Padding(2, 3, 2, 3);
             this.btnJosvin4.Name = "btnJosvin4";
-            this.btnJosvin4.Size = new System.Drawing.Size(277, 56);
+            this.btnJosvin4.Size = new System.Drawing.Size(185, 36);
             this.btnJosvin4.TabIndex = 3;
             this.btnJosvin4.Text = "Horarios";
             this.btnJosvin4.Click += new System.EventHandler(this.btnJosvin4_Click);
@@ -125,10 +125,10 @@
             this.btnJosvin3.FillColor = System.Drawing.SystemColors.GradientActiveCaption;
             this.btnJosvin3.Font = new System.Drawing.Font("Segoe UI", 10.2F, System.Drawing.FontStyle.Bold);
             this.btnJosvin3.ForeColor = System.Drawing.Color.Black;
-            this.btnJosvin3.Location = new System.Drawing.Point(0, 112);
-            this.btnJosvin3.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.btnJosvin3.Location = new System.Drawing.Point(0, 72);
+            this.btnJosvin3.Margin = new System.Windows.Forms.Padding(2, 3, 2, 3);
             this.btnJosvin3.Name = "btnJosvin3";
-            this.btnJosvin3.Size = new System.Drawing.Size(277, 56);
+            this.btnJosvin3.Size = new System.Drawing.Size(185, 36);
             this.btnJosvin3.TabIndex = 2;
             this.btnJosvin3.Text = "Tarifas";
             this.btnJosvin3.Click += new System.EventHandler(this.btnJosvin3_Click);
@@ -145,10 +145,10 @@
             this.btnJosvin2.FillColor = System.Drawing.SystemColors.GradientActiveCaption;
             this.btnJosvin2.Font = new System.Drawing.Font("Segoe UI", 10.2F, System.Drawing.FontStyle.Bold);
             this.btnJosvin2.ForeColor = System.Drawing.Color.Black;
-            this.btnJosvin2.Location = new System.Drawing.Point(0, 56);
-            this.btnJosvin2.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.btnJosvin2.Location = new System.Drawing.Point(0, 36);
+            this.btnJosvin2.Margin = new System.Windows.Forms.Padding(2, 3, 2, 3);
             this.btnJosvin2.Name = "btnJosvin2";
-            this.btnJosvin2.Size = new System.Drawing.Size(277, 56);
+            this.btnJosvin2.Size = new System.Drawing.Size(185, 36);
             this.btnJosvin2.TabIndex = 1;
             this.btnJosvin2.Text = "Pasajeros";
             this.btnJosvin2.Click += new System.EventHandler(this.btnJosvin2_Click);
@@ -166,9 +166,9 @@
             this.btnJosvin1.Font = new System.Drawing.Font("Segoe UI", 10.2F, System.Drawing.FontStyle.Bold);
             this.btnJosvin1.ForeColor = System.Drawing.Color.Black;
             this.btnJosvin1.Location = new System.Drawing.Point(0, 0);
-            this.btnJosvin1.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.btnJosvin1.Margin = new System.Windows.Forms.Padding(2, 3, 2, 3);
             this.btnJosvin1.Name = "btnJosvin1";
-            this.btnJosvin1.Size = new System.Drawing.Size(277, 56);
+            this.btnJosvin1.Size = new System.Drawing.Size(185, 36);
             this.btnJosvin1.TabIndex = 0;
             this.btnJosvin1.Text = "Pagos";
             this.btnJosvin1.Click += new System.EventHandler(this.btnJosvin1_Click);
@@ -187,10 +187,10 @@
             this.btnJosvin.FillColor2 = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
             this.btnJosvin.Font = new System.Drawing.Font("Segoe UI", 16.2F, System.Drawing.FontStyle.Bold);
             this.btnJosvin.ForeColor = System.Drawing.Color.White;
-            this.btnJosvin.Location = new System.Drawing.Point(0, 771);
-            this.btnJosvin.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.btnJosvin.Location = new System.Drawing.Point(0, 503);
+            this.btnJosvin.Margin = new System.Windows.Forms.Padding(2, 3, 2, 3);
             this.btnJosvin.Name = "btnJosvin";
-            this.btnJosvin.Size = new System.Drawing.Size(277, 84);
+            this.btnJosvin.Size = new System.Drawing.Size(185, 55);
             this.btnJosvin.TabIndex = 6;
             this.btnJosvin.Text = "Josvin";
             this.btnJosvin.TextAlign = System.Windows.Forms.HorizontalAlignment.Left;
@@ -204,10 +204,10 @@
             this.panelSay.Controls.Add(this.btnSay2);
             this.panelSay.Controls.Add(this.btnSay1);
             this.panelSay.Dock = System.Windows.Forms.DockStyle.Top;
-            this.panelSay.Location = new System.Drawing.Point(0, 530);
-            this.panelSay.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.panelSay.Location = new System.Drawing.Point(0, 346);
+            this.panelSay.Margin = new System.Windows.Forms.Padding(2, 3, 2, 3);
             this.panelSay.Name = "panelSay";
-            this.panelSay.Size = new System.Drawing.Size(277, 241);
+            this.panelSay.Size = new System.Drawing.Size(185, 157);
             this.panelSay.TabIndex = 5;
             // 
             // btnSay4
@@ -222,12 +222,13 @@
             this.btnSay4.FillColor = System.Drawing.SystemColors.GradientActiveCaption;
             this.btnSay4.Font = new System.Drawing.Font("Segoe UI", 10.2F, System.Drawing.FontStyle.Bold);
             this.btnSay4.ForeColor = System.Drawing.Color.Black;
-            this.btnSay4.Location = new System.Drawing.Point(0, 168);
-            this.btnSay4.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.btnSay4.Location = new System.Drawing.Point(0, 108);
+            this.btnSay4.Margin = new System.Windows.Forms.Padding(2, 3, 2, 3);
             this.btnSay4.Name = "btnSay4";
-            this.btnSay4.Size = new System.Drawing.Size(277, 56);
+            this.btnSay4.Size = new System.Drawing.Size(185, 36);
             this.btnSay4.TabIndex = 3;
-            this.btnSay4.Text = "Estaciones";
+            this.btnSay4.Text = "Tarjeta de Transporte";
+            this.btnSay4.Click += new System.EventHandler(this.btnSay4_Click);
             // 
             // btnSay3
             // 
@@ -241,12 +242,13 @@
             this.btnSay3.FillColor = System.Drawing.SystemColors.GradientActiveCaption;
             this.btnSay3.Font = new System.Drawing.Font("Segoe UI", 10.2F, System.Drawing.FontStyle.Bold);
             this.btnSay3.ForeColor = System.Drawing.Color.Black;
-            this.btnSay3.Location = new System.Drawing.Point(0, 112);
-            this.btnSay3.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.btnSay3.Location = new System.Drawing.Point(0, 72);
+            this.btnSay3.Margin = new System.Windows.Forms.Padding(2, 3, 2, 3);
             this.btnSay3.Name = "btnSay3";
-            this.btnSay3.Size = new System.Drawing.Size(277, 56);
+            this.btnSay3.Size = new System.Drawing.Size(185, 36);
             this.btnSay3.TabIndex = 2;
-            this.btnSay3.Text = "Rutas";
+            this.btnSay3.Text = "Estadisticas";
+            this.btnSay3.Click += new System.EventHandler(this.btnSay3_Click);
             // 
             // btnSay2
             // 
@@ -260,12 +262,13 @@
             this.btnSay2.FillColor = System.Drawing.SystemColors.GradientActiveCaption;
             this.btnSay2.Font = new System.Drawing.Font("Segoe UI", 10.2F, System.Drawing.FontStyle.Bold);
             this.btnSay2.ForeColor = System.Drawing.Color.Black;
-            this.btnSay2.Location = new System.Drawing.Point(0, 56);
-            this.btnSay2.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.btnSay2.Location = new System.Drawing.Point(0, 36);
+            this.btnSay2.Margin = new System.Windows.Forms.Padding(2, 3, 2, 3);
             this.btnSay2.Name = "btnSay2";
-            this.btnSay2.Size = new System.Drawing.Size(277, 56);
+            this.btnSay2.Size = new System.Drawing.Size(185, 36);
             this.btnSay2.TabIndex = 1;
-            this.btnSay2.Text = "Conductores";
+            this.btnSay2.Text = "Incidentes";
+            this.btnSay2.Click += new System.EventHandler(this.btnSay2_Click);
             // 
             // btnSay1
             // 
@@ -280,11 +283,12 @@
             this.btnSay1.Font = new System.Drawing.Font("Segoe UI", 10.2F, System.Drawing.FontStyle.Bold);
             this.btnSay1.ForeColor = System.Drawing.Color.Black;
             this.btnSay1.Location = new System.Drawing.Point(0, 0);
-            this.btnSay1.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.btnSay1.Margin = new System.Windows.Forms.Padding(2, 3, 2, 3);
             this.btnSay1.Name = "btnSay1";
-            this.btnSay1.Size = new System.Drawing.Size(277, 56);
+            this.btnSay1.Size = new System.Drawing.Size(185, 36);
             this.btnSay1.TabIndex = 0;
-            this.btnSay1.Text = "Transportes";
+            this.btnSay1.Text = "Mantenimiento";
+            this.btnSay1.Click += new System.EventHandler(this.btnSay1_Click);
             // 
             // btngSeleidy
             // 
@@ -300,13 +304,14 @@
             this.btngSeleidy.FillColor2 = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
             this.btngSeleidy.Font = new System.Drawing.Font("Segoe UI", 16.2F, System.Drawing.FontStyle.Bold);
             this.btngSeleidy.ForeColor = System.Drawing.Color.White;
-            this.btngSeleidy.Location = new System.Drawing.Point(0, 446);
-            this.btngSeleidy.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.btngSeleidy.Location = new System.Drawing.Point(0, 291);
+            this.btngSeleidy.Margin = new System.Windows.Forms.Padding(2, 3, 2, 3);
             this.btngSeleidy.Name = "btngSeleidy";
-            this.btngSeleidy.Size = new System.Drawing.Size(277, 84);
+            this.btngSeleidy.Size = new System.Drawing.Size(185, 55);
             this.btngSeleidy.TabIndex = 4;
             this.btngSeleidy.Text = "Seleidy";
             this.btngSeleidy.TextAlign = System.Windows.Forms.HorizontalAlignment.Left;
+            this.btngSeleidy.Click += new System.EventHandler(this.btngSeleidy_Click);
             // 
             // panelAlex
             // 
@@ -316,10 +321,10 @@
             this.panelAlex.Controls.Add(this.btnAlex2);
             this.panelAlex.Controls.Add(this.btnAlex1);
             this.panelAlex.Dock = System.Windows.Forms.DockStyle.Top;
-            this.panelAlex.Location = new System.Drawing.Point(0, 205);
-            this.panelAlex.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.panelAlex.Location = new System.Drawing.Point(0, 134);
+            this.panelAlex.Margin = new System.Windows.Forms.Padding(2, 3, 2, 3);
             this.panelAlex.Name = "panelAlex";
-            this.panelAlex.Size = new System.Drawing.Size(277, 241);
+            this.panelAlex.Size = new System.Drawing.Size(185, 157);
             this.panelAlex.TabIndex = 3;
             // 
             // btnAlex4
@@ -334,10 +339,10 @@
             this.btnAlex4.FillColor = System.Drawing.SystemColors.GradientActiveCaption;
             this.btnAlex4.Font = new System.Drawing.Font("Segoe UI", 10.2F, System.Drawing.FontStyle.Bold);
             this.btnAlex4.ForeColor = System.Drawing.Color.Black;
-            this.btnAlex4.Location = new System.Drawing.Point(0, 168);
-            this.btnAlex4.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.btnAlex4.Location = new System.Drawing.Point(0, 108);
+            this.btnAlex4.Margin = new System.Windows.Forms.Padding(2, 3, 2, 3);
             this.btnAlex4.Name = "btnAlex4";
-            this.btnAlex4.Size = new System.Drawing.Size(277, 56);
+            this.btnAlex4.Size = new System.Drawing.Size(185, 36);
             this.btnAlex4.TabIndex = 3;
             this.btnAlex4.Text = "Estaciones";
             this.btnAlex4.Click += new System.EventHandler(this.btnAlex4_Click);
@@ -354,10 +359,10 @@
             this.btnAlex3.FillColor = System.Drawing.SystemColors.GradientActiveCaption;
             this.btnAlex3.Font = new System.Drawing.Font("Segoe UI", 10.2F, System.Drawing.FontStyle.Bold);
             this.btnAlex3.ForeColor = System.Drawing.Color.Black;
-            this.btnAlex3.Location = new System.Drawing.Point(0, 112);
-            this.btnAlex3.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.btnAlex3.Location = new System.Drawing.Point(0, 72);
+            this.btnAlex3.Margin = new System.Windows.Forms.Padding(2, 3, 2, 3);
             this.btnAlex3.Name = "btnAlex3";
-            this.btnAlex3.Size = new System.Drawing.Size(277, 56);
+            this.btnAlex3.Size = new System.Drawing.Size(185, 36);
             this.btnAlex3.TabIndex = 2;
             this.btnAlex3.Text = "Rutas";
             this.btnAlex3.Click += new System.EventHandler(this.btnAlex3_Click);
@@ -374,10 +379,10 @@
             this.btnAlex2.FillColor = System.Drawing.SystemColors.GradientActiveCaption;
             this.btnAlex2.Font = new System.Drawing.Font("Segoe UI", 10.2F, System.Drawing.FontStyle.Bold);
             this.btnAlex2.ForeColor = System.Drawing.Color.Black;
-            this.btnAlex2.Location = new System.Drawing.Point(0, 56);
-            this.btnAlex2.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.btnAlex2.Location = new System.Drawing.Point(0, 36);
+            this.btnAlex2.Margin = new System.Windows.Forms.Padding(2, 3, 2, 3);
             this.btnAlex2.Name = "btnAlex2";
-            this.btnAlex2.Size = new System.Drawing.Size(277, 56);
+            this.btnAlex2.Size = new System.Drawing.Size(185, 36);
             this.btnAlex2.TabIndex = 1;
             this.btnAlex2.Text = "Conductores";
             this.btnAlex2.Click += new System.EventHandler(this.btnAlex2_Click);
@@ -395,9 +400,9 @@
             this.btnAlex1.Font = new System.Drawing.Font("Segoe UI", 10.2F, System.Drawing.FontStyle.Bold);
             this.btnAlex1.ForeColor = System.Drawing.Color.Black;
             this.btnAlex1.Location = new System.Drawing.Point(0, 0);
-            this.btnAlex1.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.btnAlex1.Margin = new System.Windows.Forms.Padding(2, 3, 2, 3);
             this.btnAlex1.Name = "btnAlex1";
-            this.btnAlex1.Size = new System.Drawing.Size(277, 56);
+            this.btnAlex1.Size = new System.Drawing.Size(185, 36);
             this.btnAlex1.TabIndex = 0;
             this.btnAlex1.Text = "Transportes";
             this.btnAlex1.Click += new System.EventHandler(this.btnAlex1_Click);
@@ -416,10 +421,10 @@
             this.btngAlexander.FillColor2 = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
             this.btngAlexander.Font = new System.Drawing.Font("Segoe UI", 16.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btngAlexander.ForeColor = System.Drawing.Color.White;
-            this.btngAlexander.Location = new System.Drawing.Point(0, 121);
-            this.btngAlexander.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.btngAlexander.Location = new System.Drawing.Point(0, 79);
+            this.btngAlexander.Margin = new System.Windows.Forms.Padding(2, 3, 2, 3);
             this.btngAlexander.Name = "btngAlexander";
-            this.btngAlexander.Size = new System.Drawing.Size(277, 84);
+            this.btngAlexander.Size = new System.Drawing.Size(185, 55);
             this.btngAlexander.TabIndex = 2;
             this.btngAlexander.Text = "Alexander";
             this.btngAlexander.TextAlign = System.Windows.Forms.HorizontalAlignment.Left;
@@ -431,9 +436,9 @@
             this.PanelMenuSuperior.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.PanelMenuSuperior.Dock = System.Windows.Forms.DockStyle.Top;
             this.PanelMenuSuperior.Location = new System.Drawing.Point(0, 0);
-            this.PanelMenuSuperior.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.PanelMenuSuperior.Margin = new System.Windows.Forms.Padding(2, 1, 2, 1);
             this.PanelMenuSuperior.Name = "PanelMenuSuperior";
-            this.PanelMenuSuperior.Size = new System.Drawing.Size(277, 121);
+            this.PanelMenuSuperior.Size = new System.Drawing.Size(185, 79);
             this.PanelMenuSuperior.TabIndex = 0;
             // 
             // PanelSuperior
@@ -443,19 +448,20 @@
             this.PanelSuperior.Controls.Add(this.lblUsuario);
             this.PanelSuperior.Controls.Add(this.btnOcultarMenu);
             this.PanelSuperior.Dock = System.Windows.Forms.DockStyle.Top;
-            this.PanelSuperior.Location = new System.Drawing.Point(279, 0);
-            this.PanelSuperior.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.PanelSuperior.Location = new System.Drawing.Point(187, 0);
+            this.PanelSuperior.Margin = new System.Windows.Forms.Padding(2, 1, 2, 1);
             this.PanelSuperior.Name = "PanelSuperior";
-            this.PanelSuperior.Size = new System.Drawing.Size(1263, 53);
+            this.PanelSuperior.Size = new System.Drawing.Size(726, 36);
             this.PanelSuperior.TabIndex = 1;
             // 
             // lblUsuario
             // 
             this.lblUsuario.AutoSize = true;
             this.lblUsuario.Font = new System.Drawing.Font("Calisto MT", 10.2F);
-            this.lblUsuario.Location = new System.Drawing.Point(66, 11);
+            this.lblUsuario.Location = new System.Drawing.Point(44, 7);
+            this.lblUsuario.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.lblUsuario.Name = "lblUsuario";
-            this.lblUsuario.Size = new System.Drawing.Size(64, 24);
+            this.lblUsuario.Size = new System.Drawing.Size(42, 16);
             this.lblUsuario.TabIndex = 14;
             this.lblUsuario.Text = "label1";
             // 
@@ -472,9 +478,9 @@
             this.btnOcultarMenu.IconSize = 30;
             this.btnOcultarMenu.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.btnOcultarMenu.Location = new System.Drawing.Point(0, 0);
-            this.btnOcultarMenu.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.btnOcultarMenu.Margin = new System.Windows.Forms.Padding(2, 1, 2, 1);
             this.btnOcultarMenu.Name = "btnOcultarMenu";
-            this.btnOcultarMenu.Size = new System.Drawing.Size(58, 49);
+            this.btnOcultarMenu.Size = new System.Drawing.Size(39, 32);
             this.btnOcultarMenu.TabIndex = 11;
             this.btnOcultarMenu.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
             this.btnOcultarMenu.UseVisualStyleBackColor = true;
@@ -485,10 +491,10 @@
             this.PanelContenedor.BackColor = System.Drawing.Color.DimGray;
             this.PanelContenedor.Controls.Add(this.lblMensajeMenu);
             this.PanelContenedor.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.PanelContenedor.Location = new System.Drawing.Point(279, 53);
-            this.PanelContenedor.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.PanelContenedor.Location = new System.Drawing.Point(187, 36);
+            this.PanelContenedor.Margin = new System.Windows.Forms.Padding(2, 1, 2, 1);
             this.PanelContenedor.Name = "PanelContenedor";
-            this.PanelContenedor.Size = new System.Drawing.Size(1263, 997);
+            this.PanelContenedor.Size = new System.Drawing.Size(726, 451);
             this.PanelContenedor.TabIndex = 3;
             // 
             // lblMensajeMenu
@@ -496,23 +502,24 @@
             this.lblMensajeMenu.AutoSize = true;
             this.lblMensajeMenu.Font = new System.Drawing.Font("Microsoft Sans Serif", 24F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblMensajeMenu.ForeColor = System.Drawing.Color.White;
-            this.lblMensajeMenu.Location = new System.Drawing.Point(384, 254);
+            this.lblMensajeMenu.Location = new System.Drawing.Point(256, 165);
+            this.lblMensajeMenu.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.lblMensajeMenu.Name = "lblMensajeMenu";
-            this.lblMensajeMenu.Size = new System.Drawing.Size(592, 55);
+            this.lblMensajeMenu.Size = new System.Drawing.Size(393, 37);
             this.lblMensajeMenu.TabIndex = 0;
             this.lblMensajeMenu.Text = "Bienvenido Menu Principal";
             this.lblMensajeMenu.Click += new System.EventHandler(this.lblMensajeMenu_Click);
             // 
             // FrmMenuPrincipal
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.White;
-            this.ClientSize = new System.Drawing.Size(1542, 1050);
+            this.ClientSize = new System.Drawing.Size(913, 487);
             this.Controls.Add(this.PanelContenedor);
             this.Controls.Add(this.PanelSuperior);
             this.Controls.Add(this.PanelMenu);
-            this.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.Margin = new System.Windows.Forms.Padding(2, 1, 2, 1);
             this.Name = "FrmMenuPrincipal";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "MenuPrincipal";

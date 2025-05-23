@@ -177,5 +177,75 @@ namespace CapaPresentacion
         {
             ocultarSubmenu();
         }
+
+        private void btngSeleidy_Click(object sender, EventArgs e)
+        {
+            mostrarSubmenu(panelSay);
+        }
+
+        private void btnSay1_Click(object sender, EventArgs e)
+        {
+            FormMantenimieto frmClie = new FormMantenimieto();
+            if (this.PanelContenedor.Controls.Count > 0)
+            {
+                this.PanelContenedor.Controls.RemoveAt(0);
+                frmClie.TopLevel = false;
+                frmClie.Dock = DockStyle.Fill;
+                this.PanelContenedor.Controls.Add(frmClie);
+                this.PanelContenedor.Tag = frmClie;
+                frmClie.Show();
+            }
+
+            ocultarSubmenu();
+        }
+
+        private void btnSay2_Click(object sender, EventArgs e)
+        {
+            FormIncidentes frmClie = new FormIncidentes();
+            if (this.PanelContenedor.Controls.Count > 0)
+            {
+                this.PanelContenedor.Controls.RemoveAt(0);
+                frmClie.TopLevel = false;
+                frmClie.Dock = DockStyle.Fill;
+                this.PanelContenedor.Controls.Add(frmClie);
+                this.PanelContenedor.Tag = frmClie;
+                frmClie.Show();
+            }
+
+            ocultarSubmenu();
+
+        }
+
+        private void btnSay3_Click(object sender, EventArgs e)
+        {
+            FormEstadisticas frmClie = new FormEstadisticas();
+            if (this.PanelContenedor.Controls.Count > 0)
+            {
+                this.PanelContenedor.Controls.RemoveAt(0);
+                frmClie.TopLevel = false;
+                frmClie.Dock = DockStyle.Fill;
+                this.PanelContenedor.Controls.Add(frmClie);
+                this.PanelContenedor.Tag = frmClie;
+                frmClie.Show();
+            }
+
+            ocultarSubmenu();
+        }
+
+        private void btnSay4_Click(object sender, EventArgs e)
+        {
+            FormTarjetasdetransportes frmClie = new FormTarjetasdetransportes();
+            if (this.PanelContenedor.Controls.Count > 0)
+            {
+                this.PanelContenedor.Controls.RemoveAt(0);
+                frmClie.TopLevel = false;
+                frmClie.Dock = DockStyle.Fill;
+                this.PanelContenedor.Controls.Add(frmClie);
+                this.PanelContenedor.Tag = frmClie;
+                frmClie.Show();
+            }
+
+            ocultarSubmenu();
+        }
     }
 }
