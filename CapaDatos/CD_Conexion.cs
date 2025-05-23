@@ -11,9 +11,11 @@ namespace CapaDatos
     internal class CD_Conexion
     {
 
-        private SqlConnection db_conexion = new SqlConnection("Data Source=DESKTOP-9QF8HLG\\SQLEXPRESS;" +
+        // DESKTOP-9QF8HLG\\SQLEXPRESS Seleidy
+        //DESKTOP-TGA3FFT\\SQLEXPRESS  Alexander
+        private SqlConnection db_conexion = new SqlConnection("Data Source=DESKTOP-TGA3FFT\\SQLEXPRESS;" +
             "Initial Catalog=ElIngeVeloz;" +
-            "Integrated Security=True;Encrypt=False");
+            "Integrated Security=True;Encrypt=False") ;
 
         public SqlConnection MtdAbrirConexion()
         {

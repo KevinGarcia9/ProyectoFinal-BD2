@@ -122,7 +122,7 @@ namespace CapaPresentacion
 
         private void dgvestadisticas_CellClick(object sender, DataGridViewCellEventArgs e)
         {
-
+            /*
             if (e.RowIndex >= 0)
             {
                 DataGridViewRow fila = dgvestadisticas.Rows[e.RowIndex];
@@ -134,6 +134,7 @@ namespace CapaPresentacion
                 txttotalincedentes.Text = fila.Cells["TotalIncidentes"].Value.ToString();
                 cmbestado.Text = fila.Cells["Estado"].Value.ToString();
             }
+            */
         }
 
         private void dgvestadisticas_CellContentClick(object sender, DataGridViewCellEventArgs e)
