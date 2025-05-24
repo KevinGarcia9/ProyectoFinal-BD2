@@ -61,5 +61,30 @@ namespace CapaPresentacion
         {
             this.Hide();
         }
+
+        private void CargarPagos()
+        {
+            dtgvTarifas.DataSource = TAR.mtdMostrarTarifas();
+        }
+
+        private void dtgvTarifas_CellClick(object sender, DataGridViewCellEventArgs e)
+        {
+            if (e.RowIndex >= 0)
+            {
+                DataGridViewRow fila = dtgvTarifas.Rows[e.RowIndex];
+                txtCodigoTarifa.Text = fila.Cells["CodigoTarifa"].Value.ToString();
+                txtCodigoRuta.Text = fila.Cells["CodigoRuta"].Value.ToString();
+                txtMonto.Text = fila.Cells["Monto"].Value.ToString();
+                cboxMoneda.Text = fila.Cells["Moneda"].Value.ToString();
+                cboxEstado.Text = fila.Cells["Estado"].Value.ToString();
+                datetimeFechaVigencia.Text = fila.Cells["FechaVigencia"].Value.ToString();
+                datetimeFechaVencimiento.Text = fila.Cells["FechaVencimiento"].Value.ToString();
+            }
+        }
+
+        private void FrmTarifas_Load(object sender, EventArgs e)
+        {
+            CargarPagos();
+        }
     }
 }

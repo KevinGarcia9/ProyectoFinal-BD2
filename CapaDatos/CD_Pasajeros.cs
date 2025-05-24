@@ -72,5 +72,17 @@ namespace CapaDatos
             da.Fill(tabla);
             return tabla;
         }
+
+        public DataTable mtdMostrarPasajeros()
+        {
+            SqlCommand comando = new SqlCommand("Usp_Mostrar_Pasajeros", conexion);
+            comando.CommandType = CommandType.StoredProcedure;
+
+            SqlDataAdapter adaptador = new SqlDataAdapter(comando);
+            DataTable tabla = new DataTable();
+
+            adaptador.Fill(tabla);
+            return tabla;
+        }
     }
 }

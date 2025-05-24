@@ -72,6 +72,7 @@
             this.dtgvHorarios.RowTemplate.Height = 28;
             this.dtgvHorarios.Size = new System.Drawing.Size(1054, 247);
             this.dtgvHorarios.TabIndex = 25;
+            this.dtgvHorarios.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dtgvHorarios_CellClick);
             // 
             // groupBox1
             // 
@@ -207,6 +208,7 @@
             // 
             // datetimeHoraLLegada
             // 
+            this.datetimeHoraLLegada.Format = System.Windows.Forms.DateTimePickerFormat.Time;
             this.datetimeHoraLLegada.Location = new System.Drawing.Point(482, 93);
             this.datetimeHoraLLegada.Name = "datetimeHoraLLegada";
             this.datetimeHoraLLegada.Size = new System.Drawing.Size(316, 26);
@@ -223,6 +225,7 @@
             // 
             // datetimeHoraSalida
             // 
+            this.datetimeHoraSalida.Format = System.Windows.Forms.DateTimePickerFormat.Time;
             this.datetimeHoraSalida.Location = new System.Drawing.Point(482, 35);
             this.datetimeHoraSalida.Name = "datetimeHoraSalida";
             this.datetimeHoraSalida.Size = new System.Drawing.Size(316, 26);
@@ -264,6 +267,7 @@
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "FrmHorarios";
             this.Text = "FrmHorarios";
+            this.Load += new System.EventHandler(this.FrmHorarios_Load);
             ((System.ComponentModel.ISupportInitialize)(this.dtgvHorarios)).EndInit();
             this.groupBox1.ResumeLayout(false);
             this.groupBox1.PerformLayout();

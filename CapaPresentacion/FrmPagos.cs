@@ -72,5 +72,20 @@ namespace CapaPresentacion
         {
             CargarPagos();
         }
+
+        private void dtgvPagos_CellClick(object sender, DataGridViewCellEventArgs e)
+        {
+            if (e.RowIndex >= 0)
+            {
+                DataGridViewRow fila = dtgvPagos.Rows[e.RowIndex];
+                txtCodigoPago.Text = fila.Cells["CodigoPago"].Value.ToString();
+                txtCodigoPasajero.Text = fila.Cells["CodigoPasajero"].Value.ToString();
+                txtCodigoTarifa.Text = fila.Cells["CodigoTarifa"].Value.ToString();
+                cboxEstado.Text = fila.Cells["Estado"].Value.ToString();
+                cboxTipoPago.Text = fila.Cells["TipoPago"].Value.ToString();
+                txtBanco.Text = fila.Cells["Banco"].Value.ToString();
+                datetimeFechaPago.Text = fila.Cells["FechaPago"].Value.ToString();
+            }
+        }
     }
 }

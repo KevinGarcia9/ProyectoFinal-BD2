@@ -262,6 +262,7 @@
             this.dtgvPasajeros.RowTemplate.Height = 28;
             this.dtgvPasajeros.Size = new System.Drawing.Size(738, 202);
             this.dtgvPasajeros.TabIndex = 32;
+            this.dtgvPasajeros.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dtgvPasajeros_CellClick);
             // 
             // FrmPasajeros
             // 
@@ -275,6 +276,7 @@
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "FrmPasajeros";
             this.Text = "FrmPasajeros";
+            this.Load += new System.EventHandler(this.FrmPasajeros_Load_1);
             this.groupBox1.ResumeLayout(false);
             this.groupBox1.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dtgvPasajeros)).EndInit();

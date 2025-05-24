@@ -73,5 +73,28 @@ namespace CapaPresentacion
         {
             dtgvPasajeros.DataSource = PAS.BuscarPasajero(txtBuscar.Text);
         }
+        private void CargarPagos()
+        {
+            dtgvPasajeros.DataSource = PAS.mtdMostrarPasajeros();
+        }
+        private void dtgvPasajeros_CellClick(object sender, DataGridViewCellEventArgs e)
+        {
+            if (e.RowIndex >= 0)
+            {
+                DataGridViewRow fila = dtgvPasajeros.Rows[e.RowIndex];
+                txtCodigo.Text = fila.Cells["CodigoPasajero"].Value.ToString();
+                txtNombre.Text = fila.Cells["Nombre"].Value.ToString();
+                txtDpi.Text = fila.Cells["Dpi"].Value.ToString();
+                txtNit.Text = fila.Cells["Nit"].Value.ToString();
+                txtTelefono.Text = fila.Cells["Telefono"].Value.ToString();
+                cboxEstado.Text = fila.Cells["Estado"].Value.ToString();
+                datetimeFechaAlta.Text = fila.Cells["FechaAlta"].Value.ToString();
+            }
+        }
+
+        private void FrmPasajeros_Load_1(object sender, EventArgs e)
+        {
+            CargarPagos();
+        }
     }
 }

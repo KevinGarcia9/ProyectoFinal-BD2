@@ -71,5 +71,17 @@ namespace CapaDatos
             da.Fill(tabla);
             return tabla;
         }
+
+        public DataTable mtdMostrarHorarios()
+        {
+            SqlCommand comando = new SqlCommand("Usp_Mostar_Horarios", conexion);
+            comando.CommandType = CommandType.StoredProcedure;
+
+            SqlDataAdapter adaptador = new SqlDataAdapter(comando);
+            DataTable tabla = new DataTable();
+
+            adaptador.Fill(tabla);
+            return tabla;
+        }
     }
 }

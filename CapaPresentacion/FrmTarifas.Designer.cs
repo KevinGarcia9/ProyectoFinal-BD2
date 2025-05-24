@@ -72,6 +72,7 @@
             this.dtgvTarifas.RowTemplate.Height = 28;
             this.dtgvTarifas.Size = new System.Drawing.Size(1054, 273);
             this.dtgvTarifas.TabIndex = 25;
+            this.dtgvTarifas.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dtgvTarifas_CellClick);
             // 
             // groupBox1
             // 
@@ -269,6 +270,7 @@
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "FrmTarifas";
             this.Text = "FrmTarifas";
+            this.Load += new System.EventHandler(this.FrmTarifas_Load);
             ((System.ComponentModel.ISupportInitialize)(this.dtgvTarifas)).EndInit();
             this.groupBox1.ResumeLayout(false);
             this.groupBox1.PerformLayout();

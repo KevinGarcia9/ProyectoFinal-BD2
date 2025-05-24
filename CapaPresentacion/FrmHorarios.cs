@@ -65,5 +65,29 @@ namespace CapaPresentacion
         {
             this.Hide();
         }
+
+        private void dtgvHorarios_CellClick(object sender, DataGridViewCellEventArgs e)
+        {
+            if (e.RowIndex >= 0)
+            {
+                DataGridViewRow fila = dtgvHorarios.Rows[e.RowIndex];
+                txtCodigoHorario.Text = fila.Cells["CodigoHorario"].Value.ToString();
+                txtCodigoEstacion.Text = fila.Cells["CodigoEstacion"].Value.ToString();
+                cboxEstado.Text = fila.Cells["Estado"].Value.ToString();
+                datetimeHoraLLegada.Text = fila.Cells["HoraLlegada"].Value.ToString();
+                datetimeHoraSalida.Text = fila.Cells["HoraSalida"].Value.ToString();
+                datetimeFechaFin.Text = fila.Cells["FechaFin"].Value.ToString();
+                datetimeFechaInicio.Text = fila.Cells["FechaInicio"].Value.ToString();
+            }
+        }
+        private void CargarPagos()
+        {
+            dtgvHorarios.DataSource = HOR.mtdMostrarHorarios();
+        }
+
+        private void FrmHorarios_Load(object sender, EventArgs e)
+        {
+            CargarPagos();
+        }
     }
 }
