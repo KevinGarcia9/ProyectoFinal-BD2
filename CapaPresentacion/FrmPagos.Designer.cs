@@ -266,6 +266,7 @@
             this.Controls.Add(this.btnSalir);
             this.Controls.Add(this.dtgvPagos);
             this.Controls.Add(this.groupBox1);
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "FrmPagos";
             this.Text = "FrmPagos";
             ((System.ComponentModel.ISupportInitialize)(this.dtgvPagos)).EndInit();

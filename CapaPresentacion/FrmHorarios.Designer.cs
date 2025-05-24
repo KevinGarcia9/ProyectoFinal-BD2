@@ -261,6 +261,7 @@
             this.Controls.Add(this.btnSalir);
             this.Controls.Add(this.dtgvHorarios);
             this.Controls.Add(this.groupBox1);
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "FrmHorarios";
             this.Text = "FrmHorarios";
             ((System.ComponentModel.ISupportInitialize)(this.dtgvHorarios)).EndInit();

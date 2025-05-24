@@ -62,5 +62,15 @@ namespace CapaPresentacion
         {
             this.Hide();
         }
+
+        private void FrmPagos_Load(object sender, EventArgs e)
+        {
+            CargarPagos();
+        }
+
+        private void CargarPagos()
+        {
+            dtgvPagos.DataSource = PAG.mtdMostrarPagos();
+        }
     }
 }

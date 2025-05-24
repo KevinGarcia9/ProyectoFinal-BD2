@@ -266,6 +266,7 @@
             this.Controls.Add(this.btnSalir);
             this.Controls.Add(this.dtgvTarifas);
             this.Controls.Add(this.groupBox1);
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "FrmTarifas";
             this.Text = "FrmTarifas";
             ((System.ComponentModel.ISupportInitialize)(this.dtgvTarifas)).EndInit();

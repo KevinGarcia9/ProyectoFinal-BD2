@@ -272,6 +272,7 @@
             this.Controls.Add(this.btnSalir);
             this.Controls.Add(this.groupBox1);
             this.Controls.Add(this.dtgvPasajeros);
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "FrmPasajeros";
             this.Text = "FrmPasajeros";
             this.groupBox1.ResumeLayout(false);
