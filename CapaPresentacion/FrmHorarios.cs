@@ -60,5 +60,10 @@ namespace CapaPresentacion
         {
             dtgvHorarios.DataSource = HOR.BuscarHorarios(int.Parse(txtCodigoEstacion.Text));
         }
+
+        private void btnSalir_Click(object sender, EventArgs e)
+        {
+            this.Hide();
+        }
     }
 }

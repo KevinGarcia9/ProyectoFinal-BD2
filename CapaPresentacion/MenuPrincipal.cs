@@ -160,21 +160,61 @@ namespace CapaPresentacion
 
         private void btnJosvin1_Click(object sender, EventArgs e)
         {
+            FrmPagos frmClie = new FrmPagos();
+            if (this.PanelContenedor.Controls.Count > 0)
+            {
+                this.PanelContenedor.Controls.RemoveAt(0);
+                frmClie.TopLevel = false;
+                frmClie.Dock = DockStyle.Fill;
+                this.PanelContenedor.Controls.Add(frmClie);
+                this.PanelContenedor.Tag = frmClie;
+                frmClie.Show();
+            }
             ocultarSubmenu();
         }
 
         private void btnJosvin2_Click(object sender, EventArgs e)
         {
+            FrmPasajeros frmClie = new FrmPasajeros();
+            if (this.PanelContenedor.Controls.Count > 0)
+            {
+                this.PanelContenedor.Controls.RemoveAt(0);
+                frmClie.TopLevel = false;
+                frmClie.Dock = DockStyle.Fill;
+                this.PanelContenedor.Controls.Add(frmClie);
+                this.PanelContenedor.Tag = frmClie;
+                frmClie.Show();
+            }
             ocultarSubmenu();
         }
 
         private void btnJosvin3_Click(object sender, EventArgs e)
         {
+            FrmTarifas frmClie = new FrmTarifas();
+            if (this.PanelContenedor.Controls.Count > 0)
+            {
+                this.PanelContenedor.Controls.RemoveAt(0);
+                frmClie.TopLevel = false;
+                frmClie.Dock = DockStyle.Fill;
+                this.PanelContenedor.Controls.Add(frmClie);
+                this.PanelContenedor.Tag = frmClie;
+                frmClie.Show();
+            }
             ocultarSubmenu();
         }
 
         private void btnJosvin4_Click(object sender, EventArgs e)
         {
+            FrmHorarios frmClie = new FrmHorarios();
+            if (this.PanelContenedor.Controls.Count > 0)
+            {
+                this.PanelContenedor.Controls.RemoveAt(0);
+                frmClie.TopLevel = false;
+                frmClie.Dock = DockStyle.Fill;
+                this.PanelContenedor.Controls.Add(frmClie);
+                this.PanelContenedor.Tag = frmClie;
+                frmClie.Show();
+            }
             ocultarSubmenu();
         }
 

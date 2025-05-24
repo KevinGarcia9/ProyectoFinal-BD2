@@ -57,5 +57,10 @@ namespace CapaPresentacion
         {
             dtgvPagos.DataSource = PAG.mtdBuscarPagosPorPasajero(int.Parse(txtCodigoPasajero.Text));
         }
+
+        private void btnSalir_Click(object sender, EventArgs e)
+        {
+            this.Hide();
+        }
     }
 }
