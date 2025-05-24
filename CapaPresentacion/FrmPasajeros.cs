@@ -36,33 +36,8 @@ namespace CapaPresentacion
                 cboxEstado.Text
             );
             MessageBox.Show("Pasajero agregado.");
-            Refresh();
+            CargarPagos();
         }
-
-        private void btnActualizar_Click(object sender, EventArgs e)
-        {
-            int codigo = int.Parse(txtCodigo.Text);
-            PAS.mtdActualizarPasajero(
-                codigo,
-                txtNombre.Text,
-                txtDpi.Text,
-                txtNit.Text,
-                datetimeFechaAlta.Value,
-                txtTelefono.Text,
-                cboxEstado.Text
-            );
-            MessageBox.Show("Pasajero actualizado.");
-            Refresh();
-        }
-
-        private void btnEliminar_Click(object sender, EventArgs e)
-        {
-            int codigo = int.Parse(txtCodigo.Text);
-            PAS.mtdEliminarPasajero(codigo);
-            MessageBox.Show("Pasajero eliminado.");
-            Refresh();
-        }
-
 
         private void btnSalir_Click(object sender, EventArgs e)
         {
@@ -71,7 +46,7 @@ namespace CapaPresentacion
 
         private void btnBuscar_Click_1(object sender, EventArgs e)
         {
-            dtgvPasajeros.DataSource = PAS.BuscarPasajero(txtBuscar.Text);
+            dtgvPasajeros.DataSource = PAS.mtdBuscarPasajero(txtBuscar.Text);
         }
         private void CargarPagos()
         {
@@ -94,6 +69,30 @@ namespace CapaPresentacion
 
         private void FrmPasajeros_Load_1(object sender, EventArgs e)
         {
+            CargarPagos();
+        }
+
+        private void btnActualizar_Click_1(object sender, EventArgs e)
+        {
+            int codigo = int.Parse(txtCodigo.Text);
+            PAS.mtdActualizarPasajero(
+                codigo,
+                txtNombre.Text,
+                txtDpi.Text,
+                txtNit.Text,
+                datetimeFechaAlta.Value,
+                txtTelefono.Text,
+                cboxEstado.Text
+            );
+            MessageBox.Show("Pasajero actualizado.");
+            CargarPagos();
+        }
+
+        private void btnEliminar_Click_1(object sender, EventArgs e)
+        {
+            int codigo = int.Parse(txtCodigo.Text);
+            PAS.mtdEliminarPasajero(codigo);
+            MessageBox.Show("Pasajero eliminado.");
             CargarPagos();
         }
     }

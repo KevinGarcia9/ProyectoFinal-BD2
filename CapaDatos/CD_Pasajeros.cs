@@ -61,7 +61,7 @@ namespace CapaDatos
             conexion.Close();
         }
 
-        public DataTable BuscarPasajero(string filtro)
+        public DataTable mtdBuscarPasajero(string filtro)
         {
             SqlCommand cmd = new SqlCommand("Usp_Buscar_Pasajero", conexion);
             cmd.CommandType = CommandType.StoredProcedure;

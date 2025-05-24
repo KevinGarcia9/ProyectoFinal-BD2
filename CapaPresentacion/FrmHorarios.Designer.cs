@@ -125,6 +125,7 @@
             this.btnEliminar.TabIndex = 29;
             this.btnEliminar.Text = "Eliminar";
             this.btnEliminar.UseVisualStyleBackColor = true;
+            this.btnEliminar.Click += new System.EventHandler(this.btnEliminar_Click_1);
             // 
             // btnBuscar
             // 
@@ -134,6 +135,7 @@
             this.btnBuscar.TabIndex = 28;
             this.btnBuscar.Text = "Buscar";
             this.btnBuscar.UseVisualStyleBackColor = true;
+            this.btnBuscar.Click += new System.EventHandler(this.btnBuscar_Click_1);
             // 
             // btnActualizarHrs
             // 
@@ -143,6 +145,7 @@
             this.btnActualizarHrs.TabIndex = 27;
             this.btnActualizarHrs.Text = "Actualizar Hrs";
             this.btnActualizarHrs.UseVisualStyleBackColor = true;
+            this.btnActualizarHrs.Click += new System.EventHandler(this.btnActualizarHrs_Click_1);
             // 
             // btnAgregarHorario
             // 

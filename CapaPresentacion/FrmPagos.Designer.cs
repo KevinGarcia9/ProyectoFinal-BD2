@@ -131,6 +131,7 @@
             this.btnEliminar.TabIndex = 21;
             this.btnEliminar.Text = "Eliminar";
             this.btnEliminar.UseVisualStyleBackColor = true;
+            this.btnEliminar.Click += new System.EventHandler(this.btnEliminar_Click_1);
             // 
             // btnBuscar
             // 
@@ -152,6 +153,7 @@
             this.btnActualizar.TabIndex = 19;
             this.btnActualizar.Text = "Actualizar";
             this.btnActualizar.UseVisualStyleBackColor = true;
+            this.btnActualizar.Click += new System.EventHandler(this.btnActualizar_Click_1);
             // 
             // btnRegistroPago
             // 
@@ -162,6 +164,7 @@
             this.btnRegistroPago.TabIndex = 18;
             this.btnRegistroPago.Text = "Registrar Pago";
             this.btnRegistroPago.UseVisualStyleBackColor = true;
+            this.btnRegistroPago.Click += new System.EventHandler(this.btnRegistroPago_Click_1);
             // 
             // datetimeFechaPago
             // 

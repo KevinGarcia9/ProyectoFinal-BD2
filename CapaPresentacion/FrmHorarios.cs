@@ -31,34 +31,7 @@ namespace CapaPresentacion
                 cboxEstado.Text
             );
             MessageBox.Show("Horario agregado.");
-            Refresh();
-        }
-
-        private void btnActualizarHrs_Click(object sender, EventArgs e)
-        {
-            HOR.mtdActualizarHorario(
-              int.Parse(txtCodigoHorario.Text),
-              int.Parse(txtCodigoEstacion.Text),
-              TimeSpan.Parse(datetimeHoraSalida.Text),
-              TimeSpan.Parse(datetimeHoraLLegada.Text),
-              datetimeFechaInicio.Value,
-              datetimeFechaFin.Value,
-              cboxEstado.Text
-          );
-            MessageBox.Show("Horario actualizado.");
-            Refresh();
-        }
-
-        private void btnEliminar_Click(object sender, EventArgs e)
-        {
-            HOR.mtdEliminarHorario(int.Parse(txtCodigoHorario.Text));
-            MessageBox.Show("Horario eliminado.");
-            Refresh();
-        }
-
-        private void btnBuscar_Click(object sender, EventArgs e)
-        {
-            dtgvHorarios.DataSource = HOR.BuscarHorarios(int.Parse(txtCodigoEstacion.Text));
+            CargarPagos();
         }
 
         private void btnSalir_Click(object sender, EventArgs e)
@@ -87,6 +60,49 @@ namespace CapaPresentacion
 
         private void FrmHorarios_Load(object sender, EventArgs e)
         {
+            CargarPagos();
+        }
+
+        private void btnBuscar_Click_1(object sender, EventArgs e)
+        {
+
+            if (string.IsNullOrWhiteSpace(txtCodigoEstacion.Text))
+            {
+                dtgvHorarios.DataSource = HOR.mtdMostrarHorarios(); 
+            }
+            else
+            {
+                int codigoEstacion;
+                if (int.TryParse(txtCodigoEstacion.Text, out codigoEstacion))
+                {
+                    dtgvHorarios.DataSource = HOR.BuscarHorarios(codigoEstacion);
+                }
+                else
+                {
+                    MessageBox.Show("Por favor, ingresa un número válido para el código de estación.");
+                }
+            }
+        }
+
+        private void btnActualizarHrs_Click_1(object sender, EventArgs e)
+        {
+            HOR.mtdActualizarHorario(
+              int.Parse(txtCodigoHorario.Text),
+              int.Parse(txtCodigoEstacion.Text),
+              TimeSpan.Parse(datetimeHoraSalida.Text),
+              TimeSpan.Parse(datetimeHoraLLegada.Text),
+              datetimeFechaInicio.Value,
+              datetimeFechaFin.Value,
+              cboxEstado.Text
+          );
+            MessageBox.Show("Horario actualizado.");
+            CargarPagos();
+        }
+
+        private void btnEliminar_Click_1(object sender, EventArgs e)
+        {
+            HOR.mtdEliminarHorario(int.Parse(txtCodigoHorario.Text));
+            MessageBox.Show("Horario eliminado.");
             CargarPagos();
         }
     }

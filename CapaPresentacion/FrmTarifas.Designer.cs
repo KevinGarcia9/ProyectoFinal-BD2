@@ -162,6 +162,7 @@
             this.btnEliminar.TabIndex = 29;
             this.btnEliminar.Text = "Eliminar";
             this.btnEliminar.UseVisualStyleBackColor = true;
+            this.btnEliminar.Click += new System.EventHandler(this.btnEliminar_Click_1);
             // 
             // btnBuscar
             // 
@@ -171,6 +172,7 @@
             this.btnBuscar.TabIndex = 28;
             this.btnBuscar.Text = "Buscar";
             this.btnBuscar.UseVisualStyleBackColor = true;
+            this.btnBuscar.Click += new System.EventHandler(this.btnBuscar_Click_1);
             // 
             // btnActualizarTarifa
             // 
@@ -180,6 +182,7 @@
             this.btnActualizarTarifa.TabIndex = 27;
             this.btnActualizarTarifa.Text = "Actualizar Tarifa";
             this.btnActualizarTarifa.UseVisualStyleBackColor = true;
+            this.btnActualizarTarifa.Click += new System.EventHandler(this.btnActualizarTarifa_Click_1);
             // 
             // btnAgregarTarifa
             // 

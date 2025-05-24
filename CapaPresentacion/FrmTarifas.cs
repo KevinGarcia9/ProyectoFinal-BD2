@@ -30,31 +30,7 @@ namespace CapaPresentacion
                cboxEstado.Text
            );
             MessageBox.Show("Tarifa agregada correctamente.");
-        }
-
-        private void btnActualizarTarifa_Click(object sender, EventArgs e)
-        {
-            TAR.mtdActualizarTarifa(
-               int.Parse(txtCodigoTarifa.Text),
-               int.Parse(txtCodigoRuta.Text),
-               decimal.Parse(txtMonto.Text),
-               cboxMoneda.Text,
-               datetimeFechaVigencia.Value,
-               datetimeFechaVencimiento.Value,
-               cboxEstado.Text
-           );
-            MessageBox.Show("Tarifa actualizada correctamente.");
-        }
-
-        private void btnEliminar_Click(object sender, EventArgs e)
-        {
-            TAR.mtdEliminarTarifa(int.Parse(txtCodigoTarifa.Text));
-            MessageBox.Show("Tarifa eliminada correctamente.");
-        }
-
-        private void btnBuscar_Click(object sender, EventArgs e)
-        {
-            dtgvTarifas.DataSource = TAR.mtdBuscarTarifasPorRuta(int.Parse(txtCodigoRuta.Text));
+            CargarPagos();
         }
 
         private void btnSalir_Click(object sender, EventArgs e)
@@ -85,6 +61,49 @@ namespace CapaPresentacion
         private void FrmTarifas_Load(object sender, EventArgs e)
         {
             CargarPagos();
+        }
+
+        private void btnActualizarTarifa_Click_1(object sender, EventArgs e)
+        {
+            TAR.mtdActualizarTarifa(
+               int.Parse(txtCodigoTarifa.Text),
+               int.Parse(txtCodigoRuta.Text),
+               decimal.Parse(txtMonto.Text),
+               cboxMoneda.Text,
+               datetimeFechaVigencia.Value,
+               datetimeFechaVencimiento.Value,
+               cboxEstado.Text
+           );
+            MessageBox.Show("Tarifa actualizada correctamente.");
+            CargarPagos();
+        }
+
+        private void btnEliminar_Click_1(object sender, EventArgs e)
+        {
+            TAR.mtdEliminarTarifa(int.Parse(txtCodigoTarifa.Text));
+            MessageBox.Show("Tarifa eliminada correctamente.");
+            CargarPagos();
+        }
+
+        private void btnBuscar_Click_1(object sender, EventArgs e)
+        {
+            if (string.IsNullOrWhiteSpace(txtCodigoRuta.Text))
+            {
+                // Si el campo está vacío, muestra todo
+                dtgvTarifas.DataSource = TAR.mtdMostrarTarifas(); // <-- Asegúrate de tener este método
+            }
+            else
+            {
+                int codigoRuta;
+                if (int.TryParse(txtCodigoRuta.Text, out codigoRuta))
+                {
+                    dtgvTarifas.DataSource = TAR.mtdBuscarTarifasPorRuta(codigoRuta);
+                }
+                else
+                {
+                    MessageBox.Show("Por favor ingresa un número válido para el código de ruta.");
+                }
+            }
         }
     }
 }

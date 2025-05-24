@@ -20,42 +20,25 @@ namespace CapaPresentacion
             InitializeComponent();
         }
 
-        private void btnRegistroPago_Click(object sender, EventArgs e)
-        {
-            PAG.mtdAgregarPago(
-                int.Parse(txtCodigoPasajero.Text),
-                int.Parse(txtCodigoTarifa.Text),
-                datetimeFechaPago.Value,
-                cboxTipoPago.Text,
-                txtBanco.Text,
-                cboxEstado.Text
-            );
-            MessageBox.Show("Pago agregado correctamente.");
-        }
-
-        private void btnActualizar_Click(object sender, EventArgs e)
-        {
-            PAG.mtdActualizarPago(
-                int.Parse(txtCodigoPago.Text),
-                int.Parse(txtCodigoPasajero.Text),
-                int.Parse(txtCodigoTarifa.Text),
-                datetimeFechaPago.Value,
-                cboxTipoPago.Text,
-                txtBanco.Text,
-                cboxEstado.Text
-            );
-            MessageBox.Show("Pago actualizado correctamente.");
-        }
-
-        private void btnEliminar_Click(object sender, EventArgs e)
-        {
-            PAG.mtdEliminarPago(int.Parse(txtCodigoPago.Text));
-            MessageBox.Show("Pago eliminado.");
-        }
-
         private void btnBuscar_Click(object sender, EventArgs e)
         {
-            dtgvPagos.DataSource = PAG.mtdBuscarPagosPorPasajero(int.Parse(txtCodigoPasajero.Text));
+
+            if (string.IsNullOrWhiteSpace(txtCodigoPasajero.Text))
+            {
+                dtgvPagos.DataSource = PAG.mtdMostrarPagos(); 
+            }
+            else
+            {
+                int codigoPasajero;
+                if (int.TryParse(txtCodigoPasajero.Text, out codigoPasajero))
+                {
+                    dtgvPagos.DataSource = PAG.mtdBuscarPagosPorPasajero(codigoPasajero);
+                }
+                else
+                {
+                    MessageBox.Show("Por favor ingresa un número válido para el código de pasajero.");
+                }
+            }
         }
 
         private void btnSalir_Click(object sender, EventArgs e)
@@ -86,6 +69,42 @@ namespace CapaPresentacion
                 txtBanco.Text = fila.Cells["Banco"].Value.ToString();
                 datetimeFechaPago.Text = fila.Cells["FechaPago"].Value.ToString();
             }
+        }
+
+        private void btnRegistroPago_Click_1(object sender, EventArgs e)
+        {
+            PAG.mtdAgregarPago(
+                int.Parse(txtCodigoPasajero.Text),
+                int.Parse(txtCodigoTarifa.Text),
+                datetimeFechaPago.Value,
+                cboxTipoPago.Text,
+                txtBanco.Text,
+                cboxEstado.Text
+            );
+            MessageBox.Show("Pago agregado correctamente.");
+            CargarPagos();
+        }
+
+        private void btnEliminar_Click_1(object sender, EventArgs e)
+        {
+            PAG.mtdEliminarPago(int.Parse(txtCodigoPago.Text));
+            MessageBox.Show("Pago eliminado.");
+            CargarPagos();
+        }
+
+        private void btnActualizar_Click_1(object sender, EventArgs e)
+        {
+            PAG.mtdActualizarPago(
+                int.Parse(txtCodigoPago.Text),
+                int.Parse(txtCodigoPasajero.Text),
+                int.Parse(txtCodigoTarifa.Text),
+                datetimeFechaPago.Value,
+                cboxTipoPago.Text,
+                txtBanco.Text,
+                cboxEstado.Text
+            );
+            MessageBox.Show("Pago actualizado correctamente.");
+            CargarPagos();
         }
     }
 }
