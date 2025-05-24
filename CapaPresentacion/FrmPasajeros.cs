@@ -63,14 +63,15 @@ namespace CapaPresentacion
             Refresh();
         }
 
-        private void btnBuscar_Click(object sender, EventArgs e)
-        {
-            dtgvPasajeros.DataSource = PAS.BuscarPasajero(txtBuscar.Text);
-        }
 
         private void btnSalir_Click(object sender, EventArgs e)
         {
             this.Hide();
+        }
+
+        private void btnBuscar_Click_1(object sender, EventArgs e)
+        {
+            dtgvPasajeros.DataSource = PAS.BuscarPasajero(txtBuscar.Text);
         }
     }
 }
