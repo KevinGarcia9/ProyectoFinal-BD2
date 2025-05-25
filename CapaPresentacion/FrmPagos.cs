@@ -23,6 +23,7 @@ namespace CapaPresentacion
         private void btnBuscar_Click(object sender, EventArgs e)
         {
 
+
             if (string.IsNullOrWhiteSpace(txtCodigoPasajero.Text))
             {
                 dtgvPagos.DataSource = PAG.mtdMostrarPagos(); 
@@ -105,6 +106,11 @@ namespace CapaPresentacion
             );
             MessageBox.Show("Pago actualizado correctamente.");
             CargarPagos();
+        }
+
+        private void datetimeFechaPago_ValueChanged(object sender, EventArgs e)
+        {
+
         }
     }
 }

@@ -29,8 +29,11 @@
         private void InitializeComponent()
         {
             this.gboxestadisticos = new System.Windows.Forms.GroupBox();
+            this.btnBuscar = new System.Windows.Forms.Button();
+            this.label9 = new System.Windows.Forms.Label();
+            this.datetimeFechaPago = new System.Windows.Forms.DateTimePicker();
+            this.btnlimpiar = new System.Windows.Forms.Button();
             this.cmbestado = new System.Windows.Forms.ComboBox();
-            this.btneliminar = new System.Windows.Forms.Button();
             this.txttotalincedentes = new System.Windows.Forms.TextBox();
             this.btneditar = new System.Windows.Forms.Button();
             this.txtmoneda = new System.Windows.Forms.TextBox();
@@ -47,17 +50,20 @@
             this.label3 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
+            this.btneliminar = new System.Windows.Forms.Button();
             this.dgvestadisticas = new System.Windows.Forms.DataGridView();
-            this.btnlimpiar = new System.Windows.Forms.Button();
+            this.btnSalir = new System.Windows.Forms.Button();
             this.gboxestadisticos.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgvestadisticas)).BeginInit();
             this.SuspendLayout();
             // 
             // gboxestadisticos
             // 
+            this.gboxestadisticos.Controls.Add(this.btnBuscar);
+            this.gboxestadisticos.Controls.Add(this.label9);
+            this.gboxestadisticos.Controls.Add(this.datetimeFechaPago);
             this.gboxestadisticos.Controls.Add(this.btnlimpiar);
             this.gboxestadisticos.Controls.Add(this.cmbestado);
-            this.gboxestadisticos.Controls.Add(this.btneliminar);
             this.gboxestadisticos.Controls.Add(this.txttotalincedentes);
             this.gboxestadisticos.Controls.Add(this.btneditar);
             this.gboxestadisticos.Controls.Add(this.txtmoneda);
@@ -82,23 +88,55 @@
             this.gboxestadisticos.Text = "Datos Estadisticos";
             this.gboxestadisticos.Enter += new System.EventHandler(this.groupBox1_Enter);
             // 
+            // btnBuscar
+            // 
+            this.btnBuscar.Location = new System.Drawing.Point(752, 108);
+            this.btnBuscar.Margin = new System.Windows.Forms.Padding(2, 1, 2, 1);
+            this.btnBuscar.Name = "btnBuscar";
+            this.btnBuscar.Size = new System.Drawing.Size(94, 23);
+            this.btnBuscar.TabIndex = 27;
+            this.btnBuscar.Text = "Buscar";
+            this.btnBuscar.UseVisualStyleBackColor = true;
+            this.btnBuscar.Click += new System.EventHandler(this.btnBuscar_Click_1);
+            // 
+            // label9
+            // 
+            this.label9.AutoSize = true;
+            this.label9.Location = new System.Drawing.Point(590, 13);
+            this.label9.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.label9.Name = "label9";
+            this.label9.Size = new System.Drawing.Size(40, 13);
+            this.label9.TabIndex = 19;
+            this.label9.Text = "Fecha ";
+            // 
+            // datetimeFechaPago
+            // 
+            this.datetimeFechaPago.Location = new System.Drawing.Point(634, 6);
+            this.datetimeFechaPago.Margin = new System.Windows.Forms.Padding(2, 1, 2, 1);
+            this.datetimeFechaPago.Name = "datetimeFechaPago";
+            this.datetimeFechaPago.Size = new System.Drawing.Size(212, 20);
+            this.datetimeFechaPago.TabIndex = 18;
+            // 
+            // btnlimpiar
+            // 
+            this.btnlimpiar.Location = new System.Drawing.Point(752, 147);
+            this.btnlimpiar.Name = "btnlimpiar";
+            this.btnlimpiar.Size = new System.Drawing.Size(94, 24);
+            this.btnlimpiar.TabIndex = 7;
+            this.btnlimpiar.Text = "Cancelar";
+            this.btnlimpiar.UseVisualStyleBackColor = true;
+            this.btnlimpiar.Click += new System.EventHandler(this.btnlimpiar_Click);
+            // 
             // cmbestado
             // 
             this.cmbestado.FormattingEnabled = true;
+            this.cmbestado.Items.AddRange(new object[] {
+            "Activo",
+            "Inactivo"});
             this.cmbestado.Location = new System.Drawing.Point(507, 110);
             this.cmbestado.Name = "cmbestado";
             this.cmbestado.Size = new System.Drawing.Size(121, 21);
             this.cmbestado.TabIndex = 14;
-            // 
-            // btneliminar
-            // 
-            this.btneliminar.Location = new System.Drawing.Point(752, 113);
-            this.btneliminar.Name = "btneliminar";
-            this.btneliminar.Size = new System.Drawing.Size(94, 28);
-            this.btneliminar.TabIndex = 5;
-            this.btneliminar.Text = "Eliminar";
-            this.btneliminar.UseVisualStyleBackColor = true;
-            this.btneliminar.Click += new System.EventHandler(this.btneliminar_Click);
             // 
             // txttotalincedentes
             // 
@@ -234,6 +272,16 @@
             this.label1.TabIndex = 0;
             this.label1.Text = "Codigo";
             // 
+            // btneliminar
+            // 
+            this.btneliminar.Location = new System.Drawing.Point(678, 541);
+            this.btneliminar.Name = "btneliminar";
+            this.btneliminar.Size = new System.Drawing.Size(94, 28);
+            this.btneliminar.TabIndex = 5;
+            this.btneliminar.Text = "Eliminar";
+            this.btneliminar.UseVisualStyleBackColor = true;
+            this.btneliminar.Click += new System.EventHandler(this.btneliminar_Click);
+            // 
             // dgvestadisticas
             // 
             this.dgvestadisticas.BackgroundColor = System.Drawing.Color.White;
@@ -245,15 +293,15 @@
             this.dgvestadisticas.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvestadisticas_CellClick);
             this.dgvestadisticas.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvestadisticas_CellContentClick);
             // 
-            // btnlimpiar
+            // btnSalir
             // 
-            this.btnlimpiar.Location = new System.Drawing.Point(752, 147);
-            this.btnlimpiar.Name = "btnlimpiar";
-            this.btnlimpiar.Size = new System.Drawing.Size(94, 24);
-            this.btnlimpiar.TabIndex = 7;
-            this.btnlimpiar.Text = "Cancelar";
-            this.btnlimpiar.UseVisualStyleBackColor = true;
-            this.btnlimpiar.Click += new System.EventHandler(this.btnlimpiar_Click);
+            this.btnSalir.Location = new System.Drawing.Point(777, 541);
+            this.btnSalir.Margin = new System.Windows.Forms.Padding(2, 1, 2, 1);
+            this.btnSalir.Name = "btnSalir";
+            this.btnSalir.Size = new System.Drawing.Size(94, 28);
+            this.btnSalir.TabIndex = 26;
+            this.btnSalir.Text = "Salir";
+            this.btnSalir.UseVisualStyleBackColor = true;
             // 
             // FormEstadisticas
             // 
@@ -261,8 +309,10 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.White;
             this.ClientSize = new System.Drawing.Size(1176, 627);
+            this.Controls.Add(this.btnSalir);
             this.Controls.Add(this.dgvestadisticas);
             this.Controls.Add(this.gboxestadisticos);
+            this.Controls.Add(this.btneliminar);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "FormEstadisticas";
             this.Text = "FormEstadisticas";
@@ -297,5 +347,9 @@
         private System.Windows.Forms.Button btneditar;
         private System.Windows.Forms.Button btneliminar;
         private System.Windows.Forms.Button btnlimpiar;
+        private System.Windows.Forms.DateTimePicker datetimeFechaPago;
+        private System.Windows.Forms.Label label9;
+        private System.Windows.Forms.Button btnSalir;
+        private System.Windows.Forms.Button btnBuscar;
     }
 }

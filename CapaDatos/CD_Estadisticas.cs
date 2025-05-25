@@ -14,7 +14,7 @@ namespace CapaDatos
 
         public DataTable MtMostrarEstadisticas()
         {
-            string Qry = "Usp_Estadisticas_Buscar";
+            string Qry = "Usp_Estadisticas_Mostrar";
             SqlDataAdapter adapter = new SqlDataAdapter(Qry, db_conexion.MtdAbrirConexion());
             DataTable tabla = new DataTable();
             adapter.Fill(tabla);
@@ -22,12 +22,12 @@ namespace CapaDatos
         }
 
 
-        public void MtInsertarEstadistica(string FechaReporte, int pasajeros, decimal IngresoTotal, string Moneda, int TotalIncidentes, string Estado)
+        public void MtInsertarEstadistica(DateTime FechaReporte, int pasajeros, decimal IngresoTotal, string Moneda, int TotalIncidentes, string Estado)
         {
             SqlCommand cmd = new SqlCommand("Usp_Estadisticas_Agregar", db_conexion.MtdAbrirConexion());
             cmd.CommandType = CommandType.StoredProcedure;
             cmd.Parameters.AddWithValue("@FechaReporte", FechaReporte);
-            cmd.Parameters.AddWithValue("@pasajeros", pasajeros);
+            cmd.Parameters.AddWithValue("@PasajerosTransportados", pasajeros);
             cmd.Parameters.AddWithValue("@IngresoTotal", IngresoTotal);
             cmd.Parameters.AddWithValue("@Moneda", Moneda);
             cmd.Parameters.AddWithValue("@TotalIncidentes", TotalIncidentes);
@@ -36,13 +36,13 @@ namespace CapaDatos
             cmd.Parameters.Clear();
         }
 
-        public void MtActualizarEstadistica(int codigo, string FechaReporte, int pasajeros, decimal IngresoTotal, string Moneda, int TotalIncidentes, string Estado)
+        public void MtActualizarEstadistica(int codigo, DateTime FechaReporte, int pasajeros, decimal IngresoTotal, string Moneda, int TotalIncidentes, string Estado)
         {
             SqlCommand cmd = new SqlCommand("Usp_Estadisticas_Actualizar", db_conexion.MtdAbrirConexion());
             cmd.CommandType = CommandType.StoredProcedure;
             cmd.Parameters.AddWithValue("@Codigo", codigo);
             cmd.Parameters.AddWithValue("@FechaReporte", FechaReporte);
-            cmd.Parameters.AddWithValue("@pasajeros", pasajeros);
+            cmd.Parameters.AddWithValue("@PasajerosTransportados", pasajeros);
             cmd.Parameters.AddWithValue("@IngresoTotal", IngresoTotal);
             cmd.Parameters.AddWithValue("@Moneda", Moneda);
             cmd.Parameters.AddWithValue("@TotalIncidentes", TotalIncidentes);
@@ -50,6 +50,22 @@ namespace CapaDatos
             cmd.ExecuteNonQuery();
             cmd.Parameters.Clear();
         }
+
+
+        public DataTable mtdBuscarEstadisticas(int Codigo)
+        {
+            SqlCommand cmd = new SqlCommand("Usp_Estadisticas_Buscar", db_conexion.MtdAbrirConexion());
+            cmd.CommandType = CommandType.StoredProcedure;
+            cmd.Parameters.AddWithValue("@Codigo", Codigo);
+
+            SqlDataAdapter da = new SqlDataAdapter(cmd);
+            DataTable tabla = new DataTable();
+
+            da.Fill(tabla);
+            return tabla;
+        }
+
+
 
         public void MtEliminarEstadistica(int codigo)
         {

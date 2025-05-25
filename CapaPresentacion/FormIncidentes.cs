@@ -45,7 +45,7 @@ namespace CapaPresentacion
                   int.Parse(  txtcodigotransporte.Text),
                    int.Parse( txtcodigoconductor.Text),
                     txtdescripcion.Text,
-                    txtfecha.Text,
+                  DateTime.Parse(  txtfecha.Text),
                     txthora.Text,
                     cmbestado.Text
                 );
@@ -68,7 +68,7 @@ namespace CapaPresentacion
                  int.Parse(  txtcodigotransporte.Text),
                     int.Parse(txtcodigoconductor.Text),
                     txtdescripcion.Text,
-                    txtfecha.Text,
+                   DateTime.Parse( txtfecha.Text),
                     txthora.Text,
                     cmbestado.Text
                 );
@@ -121,8 +121,30 @@ namespace CapaPresentacion
                 cmbestado.Text = fila.Cells["Estado"].Value.ToString();
             }
         }
+
+        private void btnBuscar_Click(object sender, EventArgs e)
+        {
+
+
+            if (string.IsNullOrWhiteSpace(txtcodigoincidente.Text))
+            {
+                dgvincidentes.DataSource = cd_incidentes.MtMostrarIncidentes ();
+            }
+            else
+            {
+                int CodigoIncidente;
+                if (int.TryParse(txtcodigoincidente.Text, out CodigoIncidente))
+                {
+                    dgvincidentes.DataSource = cd_incidentes.mtdBuscarIncidentes(CodigoIncidente);
+                }
+                else
+                {
+                    MessageBox.Show("Por favor ingresa un número válido para el código de incidente.");
+                }
+            }
+        }
+
     }
 
 }
-    
 

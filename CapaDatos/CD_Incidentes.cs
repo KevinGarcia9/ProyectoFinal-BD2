@@ -14,7 +14,7 @@ namespace CapaDatos
 
         public DataTable MtMostrarIncidentes()
         {
-            string Qry = "Usp_Incidentes_Buscar";
+            string Qry = "Usp_Incidentes_Mostrar";
             SqlDataAdapter adapter = new SqlDataAdapter(Qry, db_conexion.MtdAbrirConexion());
             DataTable tabla = new DataTable();
             adapter.Fill(tabla);
@@ -22,7 +22,7 @@ namespace CapaDatos
         }
 
 
-        public void MtInsertarIncidentes(int CodigoConductor, int CodigoTransporte, string Descripcion, string Fecha, string Hora, string Estado)
+        public void MtInsertarIncidentes(int CodigoConductor, int CodigoTransporte, string Descripcion, DateTime Fecha, string Hora, string Estado)
         {
             SqlCommand cmd = new SqlCommand("Usp_Incidentes_Agregar", db_conexion.MtdAbrirConexion());
             cmd.CommandType = CommandType.StoredProcedure;
@@ -36,7 +36,21 @@ namespace CapaDatos
             cmd.Parameters.Clear();
         }
 
-        public void MtActualizarIncidentes(int CodigoIncidente,int CodigoTransporte, int CodigoConductor, string Descripcion, string Fecha, string Hora, string Estado)
+        public DataTable mtdBuscarIncidentes(int CodigoIncidente)
+        {
+            SqlCommand cmd = new SqlCommand("Usp_Incidentes_Buscar", db_conexion.MtdAbrirConexion());
+            cmd.CommandType = CommandType.StoredProcedure;
+            cmd.Parameters.AddWithValue("@CodigoIncidente", CodigoIncidente);
+
+            SqlDataAdapter da = new SqlDataAdapter(cmd);
+            DataTable tabla = new DataTable();
+
+            da.Fill(tabla);
+            return tabla;
+        }
+
+
+        public void MtActualizarIncidentes(int CodigoIncidente,int CodigoTransporte, int CodigoConductor, string Descripcion, DateTime Fecha, string Hora, string Estado)
         {
             SqlCommand cmd = new SqlCommand("Usp_Incidentes_Actualizar", db_conexion.MtdAbrirConexion());
             cmd.CommandType = CommandType.StoredProcedure;

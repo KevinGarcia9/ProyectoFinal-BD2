@@ -34,6 +34,7 @@
             this.label4 = new System.Windows.Forms.Label();
             this.label5 = new System.Windows.Forms.Label();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
+            this.btnlimpiar = new System.Windows.Forms.Button();
             this.cmbestado = new System.Windows.Forms.ComboBox();
             this.btneliminar = new System.Windows.Forms.Button();
             this.txtmoneda = new System.Windows.Forms.TextBox();
@@ -47,7 +48,8 @@
             this.label7 = new System.Windows.Forms.Label();
             this.label6 = new System.Windows.Forms.Label();
             this.dgvmatenimiento = new System.Windows.Forms.DataGridView();
-            this.btnlimpiar = new System.Windows.Forms.Button();
+            this.btnBuscar = new System.Windows.Forms.Button();
+            this.datetimeFechaPago = new System.Windows.Forms.DateTimePicker();
             this.groupBox1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgvmatenimiento)).BeginInit();
             this.SuspendLayout();
@@ -92,7 +94,7 @@
             // label5
             // 
             this.label5.AutoSize = true;
-            this.label5.Location = new System.Drawing.Point(404, 28);
+            this.label5.Location = new System.Drawing.Point(404, 38);
             this.label5.Name = "label5";
             this.label5.Size = new System.Drawing.Size(34, 13);
             this.label5.TabIndex = 4;
@@ -100,9 +102,10 @@
             // 
             // groupBox1
             // 
+            this.groupBox1.Controls.Add(this.datetimeFechaPago);
+            this.groupBox1.Controls.Add(this.btnBuscar);
             this.groupBox1.Controls.Add(this.btnlimpiar);
             this.groupBox1.Controls.Add(this.cmbestado);
-            this.groupBox1.Controls.Add(this.btneliminar);
             this.groupBox1.Controls.Add(this.txtmoneda);
             this.groupBox1.Controls.Add(this.btneditar);
             this.groupBox1.Controls.Add(this.txtcosto);
@@ -125,17 +128,30 @@
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Datos de Mantenimiento";
             // 
+            // btnlimpiar
+            // 
+            this.btnlimpiar.Location = new System.Drawing.Point(617, 131);
+            this.btnlimpiar.Name = "btnlimpiar";
+            this.btnlimpiar.Size = new System.Drawing.Size(75, 23);
+            this.btnlimpiar.TabIndex = 12;
+            this.btnlimpiar.Text = "Cancelar";
+            this.btnlimpiar.UseVisualStyleBackColor = true;
+            this.btnlimpiar.Click += new System.EventHandler(this.button1_Click);
+            // 
             // cmbestado
             // 
             this.cmbestado.FormattingEnabled = true;
-            this.cmbestado.Location = new System.Drawing.Point(462, 101);
+            this.cmbestado.Items.AddRange(new object[] {
+            "Activo",
+            "Inactivo"});
+            this.cmbestado.Location = new System.Drawing.Point(462, 105);
             this.cmbestado.Name = "cmbestado";
             this.cmbestado.Size = new System.Drawing.Size(121, 21);
             this.cmbestado.TabIndex = 13;
             // 
             // btneliminar
             // 
-            this.btneliminar.Location = new System.Drawing.Point(617, 91);
+            this.btneliminar.Location = new System.Drawing.Point(601, 399);
             this.btneliminar.Name = "btneliminar";
             this.btneliminar.Size = new System.Drawing.Size(75, 23);
             this.btneliminar.TabIndex = 10;
@@ -145,14 +161,14 @@
             // 
             // txtmoneda
             // 
-            this.txtmoneda.Location = new System.Drawing.Point(462, 57);
+            this.txtmoneda.Location = new System.Drawing.Point(462, 67);
             this.txtmoneda.Name = "txtmoneda";
             this.txtmoneda.Size = new System.Drawing.Size(41, 20);
             this.txtmoneda.TabIndex = 12;
             // 
             // btneditar
             // 
-            this.btneditar.Location = new System.Drawing.Point(617, 54);
+            this.btneditar.Location = new System.Drawing.Point(617, 65);
             this.btneditar.Name = "btneditar";
             this.btneditar.Size = new System.Drawing.Size(75, 23);
             this.btneditar.TabIndex = 9;
@@ -162,19 +178,20 @@
             // 
             // txtcosto
             // 
-            this.txtcosto.Location = new System.Drawing.Point(462, 28);
+            this.txtcosto.Location = new System.Drawing.Point(462, 31);
             this.txtcosto.Name = "txtcosto";
             this.txtcosto.Size = new System.Drawing.Size(100, 20);
             this.txtcosto.TabIndex = 11;
             // 
             // btnguardar
             // 
-            this.btnguardar.Location = new System.Drawing.Point(617, 18);
+            this.btnguardar.Location = new System.Drawing.Point(617, 28);
             this.btnguardar.Name = "btnguardar";
             this.btnguardar.Size = new System.Drawing.Size(75, 23);
             this.btnguardar.TabIndex = 8;
             this.btnguardar.Text = "Guardar";
             this.btnguardar.UseVisualStyleBackColor = true;
+            this.btnguardar.Click += new System.EventHandler(this.btnguardar_Click_1);
             // 
             // txtfechasalida
             // 
@@ -207,7 +224,7 @@
             // label7
             // 
             this.label7.AutoSize = true;
-            this.label7.Location = new System.Drawing.Point(404, 101);
+            this.label7.Location = new System.Drawing.Point(404, 113);
             this.label7.Name = "label7";
             this.label7.Size = new System.Drawing.Size(40, 13);
             this.label7.TabIndex = 6;
@@ -216,7 +233,7 @@
             // label6
             // 
             this.label6.AutoSize = true;
-            this.label6.Location = new System.Drawing.Point(404, 65);
+            this.label6.Location = new System.Drawing.Point(404, 74);
             this.label6.Name = "label6";
             this.label6.Size = new System.Drawing.Size(46, 13);
             this.label6.TabIndex = 5;
@@ -232,15 +249,23 @@
             this.dgvmatenimiento.TabIndex = 6;
             this.dgvmatenimiento.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvmatenimiento_CellClick);
             // 
-            // btnlimpiar
+            // btnBuscar
             // 
-            this.btnlimpiar.Location = new System.Drawing.Point(617, 131);
-            this.btnlimpiar.Name = "btnlimpiar";
-            this.btnlimpiar.Size = new System.Drawing.Size(75, 23);
-            this.btnlimpiar.TabIndex = 12;
-            this.btnlimpiar.Text = "Cancelar";
-            this.btnlimpiar.UseVisualStyleBackColor = true;
-            this.btnlimpiar.Click += new System.EventHandler(this.button1_Click);
+            this.btnBuscar.Location = new System.Drawing.Point(617, 96);
+            this.btnBuscar.Name = "btnBuscar";
+            this.btnBuscar.Size = new System.Drawing.Size(75, 23);
+            this.btnBuscar.TabIndex = 7;
+            this.btnBuscar.Text = "Buscar";
+            this.btnBuscar.UseVisualStyleBackColor = true;
+            this.btnBuscar.Click += new System.EventHandler(this.btnBuscar_Click);
+            // 
+            // datetimeFechaPago
+            // 
+            this.datetimeFechaPago.Location = new System.Drawing.Point(486, 7);
+            this.datetimeFechaPago.Margin = new System.Windows.Forms.Padding(2, 1, 2, 1);
+            this.datetimeFechaPago.Name = "datetimeFechaPago";
+            this.datetimeFechaPago.Size = new System.Drawing.Size(212, 20);
+            this.datetimeFechaPago.TabIndex = 18;
             // 
             // FormMantenimieto
             // 
@@ -248,6 +273,7 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(800, 450);
             this.Controls.Add(this.dgvmatenimiento);
+            this.Controls.Add(this.btneliminar);
             this.Controls.Add(this.groupBox1);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "FormMantenimieto";
@@ -282,5 +308,7 @@
         private System.Windows.Forms.Button btneditar;
         private System.Windows.Forms.Button btneliminar;
         private System.Windows.Forms.Button btnlimpiar;
+        private System.Windows.Forms.Button btnBuscar;
+        private System.Windows.Forms.DateTimePicker datetimeFechaPago;
     }
 }

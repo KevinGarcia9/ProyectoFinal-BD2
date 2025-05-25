@@ -29,6 +29,7 @@
         private void InitializeComponent()
         {
             this.groupBox1 = new System.Windows.Forms.GroupBox();
+            this.btncancelar = new System.Windows.Forms.Button();
             this.btneliminar = new System.Windows.Forms.Button();
             this.btneditar = new System.Windows.Forms.Button();
             this.cmbestado = new System.Windows.Forms.ComboBox();
@@ -47,15 +48,17 @@
             this.label2 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
-            this.btncancelar = new System.Windows.Forms.Button();
+            this.btnBuscar = new System.Windows.Forms.Button();
+            this.datetimeFechaPago = new System.Windows.Forms.DateTimePicker();
             this.groupBox1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             this.SuspendLayout();
             // 
             // groupBox1
             // 
+            this.groupBox1.Controls.Add(this.datetimeFechaPago);
+            this.groupBox1.Controls.Add(this.btnBuscar);
             this.groupBox1.Controls.Add(this.btncancelar);
-            this.groupBox1.Controls.Add(this.btneliminar);
             this.groupBox1.Controls.Add(this.btneditar);
             this.groupBox1.Controls.Add(this.cmbestado);
             this.groupBox1.Controls.Add(this.txttipodetarjeta);
@@ -79,9 +82,19 @@
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Datos de Tarjeta de Transportes";
             // 
+            // btncancelar
+            // 
+            this.btncancelar.Location = new System.Drawing.Point(597, 135);
+            this.btncancelar.Name = "btncancelar";
+            this.btncancelar.Size = new System.Drawing.Size(75, 23);
+            this.btncancelar.TabIndex = 3;
+            this.btncancelar.Text = "Cancelar";
+            this.btncancelar.UseVisualStyleBackColor = true;
+            this.btncancelar.Click += new System.EventHandler(this.btncancelar_Click);
+            // 
             // btneliminar
             // 
-            this.btneliminar.Location = new System.Drawing.Point(597, 91);
+            this.btneliminar.Location = new System.Drawing.Point(566, 394);
             this.btneliminar.Name = "btneliminar";
             this.btneliminar.Size = new System.Drawing.Size(75, 23);
             this.btneliminar.TabIndex = 4;
@@ -91,7 +104,7 @@
             // 
             // btneditar
             // 
-            this.btneditar.Location = new System.Drawing.Point(597, 50);
+            this.btneditar.Location = new System.Drawing.Point(597, 72);
             this.btneditar.Name = "btneditar";
             this.btneditar.Size = new System.Drawing.Size(75, 23);
             this.btneditar.TabIndex = 5;
@@ -102,21 +115,24 @@
             // cmbestado
             // 
             this.cmbestado.FormattingEnabled = true;
-            this.cmbestado.Location = new System.Drawing.Point(427, 80);
+            this.cmbestado.Items.AddRange(new object[] {
+            "Activo",
+            "Inactivo"});
+            this.cmbestado.Location = new System.Drawing.Point(402, 79);
             this.cmbestado.Name = "cmbestado";
             this.cmbestado.Size = new System.Drawing.Size(121, 21);
             this.cmbestado.TabIndex = 13;
             // 
             // txttipodetarjeta
             // 
-            this.txttipodetarjeta.Location = new System.Drawing.Point(427, 50);
+            this.txttipodetarjeta.Location = new System.Drawing.Point(402, 50);
             this.txttipodetarjeta.Name = "txttipodetarjeta";
             this.txttipodetarjeta.Size = new System.Drawing.Size(121, 20);
             this.txttipodetarjeta.TabIndex = 12;
             // 
             // btnguardar
             // 
-            this.btnguardar.Location = new System.Drawing.Point(597, 20);
+            this.btnguardar.Location = new System.Drawing.Point(597, 39);
             this.btnguardar.Name = "btnguardar";
             this.btnguardar.Size = new System.Drawing.Size(75, 23);
             this.btnguardar.TabIndex = 2;
@@ -126,7 +142,7 @@
             // 
             // txtmoneda
             // 
-            this.txtmoneda.Location = new System.Drawing.Point(427, 20);
+            this.txtmoneda.Location = new System.Drawing.Point(402, 20);
             this.txtmoneda.Name = "txtmoneda";
             this.txtmoneda.Size = new System.Drawing.Size(56, 20);
             this.txtmoneda.TabIndex = 11;
@@ -162,7 +178,7 @@
             // label7
             // 
             this.label7.AutoSize = true;
-            this.label7.Location = new System.Drawing.Point(346, 82);
+            this.label7.Location = new System.Drawing.Point(324, 85);
             this.label7.Name = "label7";
             this.label7.Size = new System.Drawing.Size(40, 13);
             this.label7.TabIndex = 6;
@@ -171,7 +187,7 @@
             // label6
             // 
             this.label6.AutoSize = true;
-            this.label6.Location = new System.Drawing.Point(343, 49);
+            this.label6.Location = new System.Drawing.Point(324, 49);
             this.label6.Name = "label6";
             this.label6.Size = new System.Drawing.Size(75, 13);
             this.label6.TabIndex = 5;
@@ -180,7 +196,7 @@
             // label5
             // 
             this.label5.AutoSize = true;
-            this.label5.Location = new System.Drawing.Point(340, 20);
+            this.label5.Location = new System.Drawing.Point(324, 20);
             this.label5.Name = "label5";
             this.label5.Size = new System.Drawing.Size(46, 13);
             this.label5.TabIndex = 4;
@@ -231,15 +247,23 @@
             this.dataGridView1.TabIndex = 1;
             this.dataGridView1.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView1_CellClick);
             // 
-            // btncancelar
+            // btnBuscar
             // 
-            this.btncancelar.Location = new System.Drawing.Point(597, 135);
-            this.btncancelar.Name = "btncancelar";
-            this.btncancelar.Size = new System.Drawing.Size(75, 23);
-            this.btncancelar.TabIndex = 3;
-            this.btncancelar.Text = "Cancelar";
-            this.btncancelar.UseVisualStyleBackColor = true;
-            this.btncancelar.Click += new System.EventHandler(this.btncancelar_Click);
+            this.btnBuscar.Location = new System.Drawing.Point(597, 106);
+            this.btnBuscar.Name = "btnBuscar";
+            this.btnBuscar.Size = new System.Drawing.Size(75, 23);
+            this.btnBuscar.TabIndex = 14;
+            this.btnBuscar.Text = "Buscar";
+            this.btnBuscar.UseVisualStyleBackColor = true;
+            this.btnBuscar.Click += new System.EventHandler(this.btnBuscar_Click);
+            // 
+            // datetimeFechaPago
+            // 
+            this.datetimeFechaPago.Location = new System.Drawing.Point(479, 0);
+            this.datetimeFechaPago.Margin = new System.Windows.Forms.Padding(2, 1, 2, 1);
+            this.datetimeFechaPago.Name = "datetimeFechaPago";
+            this.datetimeFechaPago.Size = new System.Drawing.Size(212, 20);
+            this.datetimeFechaPago.TabIndex = 20;
             // 
             // FormTarjetasdetransportes
             // 
@@ -247,7 +271,9 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(800, 450);
             this.Controls.Add(this.dataGridView1);
+            this.Controls.Add(this.btneliminar);
             this.Controls.Add(this.groupBox1);
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "FormTarjetasdetransportes";
             this.Text = "FormTarjetasdetransportes";
             this.Load += new System.EventHandler(this.FormTarjetasdetransportes_Load);
@@ -280,5 +306,7 @@
         private System.Windows.Forms.Button btncancelar;
         private System.Windows.Forms.Button btneliminar;
         private System.Windows.Forms.Button btneditar;
+        private System.Windows.Forms.Button btnBuscar;
+        private System.Windows.Forms.DateTimePicker datetimeFechaPago;
     }
 }

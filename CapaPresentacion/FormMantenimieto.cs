@@ -34,6 +34,7 @@ namespace CapaPresentacion
             txtcosto.Text = "";
             txtmoneda.Text = "";
             cmbestado.SelectedIndex = -1;
+            cmbestado.ResetText();
         }
         private void FormMantenimieto_Load(object sender, EventArgs e)
         {
@@ -42,12 +43,12 @@ namespace CapaPresentacion
 
         private void btnguardar_Click(object sender, EventArgs e)
         {
-            try
+          /*  try
             {
 
 
                 cd_mantenimiento.MtInsertarMantenimiento(
-                 int.Parse(txtcodigotransp.Text),
+                    int.Parse(txtcodigotransp.Text),
                     txtfechaingreso.Text,
                     txtfechasalida.Text,
                    decimal.Parse(txtcosto.Text),
@@ -61,7 +62,7 @@ namespace CapaPresentacion
             catch (Exception ex)
             {
                 MessageBox.Show("Error al guardar: " + ex.Message);
-            }
+            }*/
         }
 
         private void btneditar_Click(object sender, EventArgs e)
@@ -118,7 +119,7 @@ namespace CapaPresentacion
             {
                 DataGridViewRow fila = dgvmatenimiento.Rows[e.RowIndex];
                 txtcodigomant.Text = fila.Cells["CodigoMant"].Value.ToString();
-                txtcodigotransp.Text = fila.Cells["CodigoTransporte"].Value.ToString();
+               txtcodigotransp.Text = fila.Cells["CodigoTransporte"].Value.ToString();
                 txtfechaingreso.Text = fila.Cells["FechaIngreso"].Value.ToString();
                 txtfechasalida.Text = fila.Cells["FechaSalida"].Value.ToString();
                 txtcosto.Text = fila.Cells["Costo"].Value.ToString();
@@ -130,6 +131,51 @@ namespace CapaPresentacion
         private void label1_Click(object sender, EventArgs e)
         {
 
+        }
+
+        private void btnguardar_Click_1(object sender, EventArgs e)
+        {
+            try
+            {
+
+
+                cd_mantenimiento.MtInsertarMantenimiento(
+               int.Parse(txtcodigotransp.Text ),
+                    txtfechaingreso.Text,
+                    txtfechasalida.Text,
+                   decimal.Parse(txtcosto.Text),
+                    txtmoneda.Text,
+                    cmbestado.Text
+                );
+                MessageBox.Show(" Mantenimiento se agregó con éxito", "Correcto", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                MtdMostrarMantenimiento();
+                MtdLimpiarCampos();
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show("Error al guardar: " + ex.Message);
+            }
+        }
+
+        private void btnBuscar_Click(object sender, EventArgs e)
+        {
+
+            if (string.IsNullOrWhiteSpace(txtcodigomant.Text))
+            {
+                dgvmatenimiento.DataSource = cd_mantenimiento.MtMostrarManteniminento();
+            }
+            else
+            {
+                int CodigoMant;
+                if (int.TryParse(txtcodigomant.Text, out CodigoMant))
+                {
+                    dgvmatenimiento.DataSource = cd_mantenimiento.mtdBuscarMantenimiento(CodigoMant);
+                }
+                else
+                {
+                    MessageBox.Show("Por favor ingresa un número válido para el código de mantenimiento.");
+                }
+            }
         }
     }
 }

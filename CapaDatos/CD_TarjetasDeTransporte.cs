@@ -13,7 +13,7 @@ namespace CapaDatos
         CD_Conexion db_conexion = new CD_Conexion();
         public DataTable MtMostrarTarjetadeTransporte()
         {
-            string Qry = "Usp_TarjeradeTransporte_Buscar";
+            string Qry = "Usp_TarjetadeTrasporte_Mostrar";
             SqlDataAdapter adapter = new SqlDataAdapter(Qry, db_conexion.MtdAbrirConexion());
             DataTable tabla = new DataTable();
             adapter.Fill(tabla);
@@ -21,9 +21,9 @@ namespace CapaDatos
         }
 
 
-        public void MtInsertarTarjetadeTransporte (int CodigoPasajero, string FechaEmision, decimal Saldo,string Moneda,string TipoTarjeta, string Estado)
+        public void MtInsertarTarjetadeTransporte (int CodigoPasajero, DateTime FechaEmision, decimal Saldo,string Moneda,string TipoTarjeta, string Estado)
         {
-            SqlCommand cmd = new SqlCommand("Usp_TarjetadeTransporte_Agregar", db_conexion.MtdAbrirConexion());
+            SqlCommand cmd = new SqlCommand("Usp_Tarjetas_de_transporte_Agregar", db_conexion.MtdAbrirConexion());
             cmd.CommandType = CommandType.StoredProcedure;
             cmd.Parameters.AddWithValue("@CodigoPasajero", CodigoPasajero);
             cmd.Parameters.AddWithValue("@FechaEmision", FechaEmision);
@@ -35,9 +35,9 @@ namespace CapaDatos
             cmd.Parameters.Clear();
         }
 
-        public void MtActualizarTarjetadeTransporte(int CodigoTarjeta,int CodigoPasajero, string FechaEmision, decimal Saldo, string Moneda,string TipoTarjeta, string Estado)
+        public void MtActualizarTarjetadeTransporte(int CodigoTarjeta,int CodigoPasajero, DateTime FechaEmision, decimal Saldo, string Moneda,string TipoTarjeta, string Estado)
         {
-            SqlCommand cmd = new SqlCommand("Usp_TarjetadeTransporte_Actualizar", db_conexion.MtdAbrirConexion());
+            SqlCommand cmd = new SqlCommand("Usp_TarjetadeTrasporte_Actualizar", db_conexion.MtdAbrirConexion());
             cmd.CommandType = CommandType.StoredProcedure;
             cmd.Parameters.AddWithValue("@CodigoTarjeta", CodigoTarjeta);
             cmd.Parameters.AddWithValue("@CodigoPasajero", CodigoPasajero);
@@ -49,9 +49,22 @@ namespace CapaDatos
             cmd.Parameters.Clear();
         }
 
+        public DataTable mtdBuscarTarjetadetranspote (int CodigoTarjeta)
+        {
+            SqlCommand cmd = new SqlCommand("Usp_Tarjetadetransporte_Buscar", db_conexion.MtdAbrirConexion());
+            cmd.CommandType = CommandType.StoredProcedure;
+            cmd.Parameters.AddWithValue("@CodigoTarjeta", CodigoTarjeta);
+
+            SqlDataAdapter da = new SqlDataAdapter(cmd);
+            DataTable tabla = new DataTable();
+
+            da.Fill(tabla);
+            return tabla;
+        }
+
         public void MtEliminarTarjetadeTransporte(int CodigoTarjeta)
         {
-            SqlCommand cmd = new SqlCommand("Usp_TarjetadeTransporte_Eliminar", db_conexion.MtdAbrirConexion());
+            SqlCommand cmd = new SqlCommand("Usp_TarjetadeTrasporte_Eliminar", db_conexion.MtdAbrirConexion());
             cmd.CommandType = CommandType.StoredProcedure;
             cmd.Parameters.AddWithValue("@CodigoTarjeta", CodigoTarjeta);
             cmd.ExecuteNonQuery();

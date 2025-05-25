@@ -40,12 +40,12 @@ namespace CapaPresentacion
             if (e.RowIndex >= 0)
             {
                 DataGridViewRow fila = dataGridView1.Rows[e.RowIndex];
-                txtcodigotarjeta.Text = fila.Cells["CodigoIncidente"].Value.ToString();
-                txtcodigopasajero.Text = fila.Cells["CodigoTransporte"].Value.ToString();
-                txtfechaemision.Text = fila.Cells["CodigoConductor"].Value.ToString();
-                txtsaldo.Text = fila.Cells["Descripcion"].Value.ToString();
-                txtmoneda.Text = fila.Cells["Fecha"].Value.ToString();
-                txttipodetarjeta.Text = fila.Cells["Hora"].Value.ToString();
+                txtcodigotarjeta.Text = fila.Cells["CodigoTarjeta"].Value.ToString();
+                txtcodigopasajero.Text = fila.Cells["CodigoPasajero"].Value.ToString();
+                txtfechaemision.Text = fila.Cells["FechaEmision"].Value.ToString();
+                txtsaldo.Text = fila.Cells["Saldo"].Value.ToString();
+                txtmoneda.Text = fila.Cells["Moneda"].Value.ToString();
+                txttipodetarjeta.Text = fila.Cells["TipoTarjeta"].Value.ToString();
                 cmbestado.Text = fila.Cells["Estado"].Value.ToString();
             }
         }
@@ -61,7 +61,7 @@ namespace CapaPresentacion
             {
                 cd_tarjetadetransporte.MtInsertarTarjetadeTransporte(
                 int.Parse(txtcodigopasajero.Text),
-                txtfechaemision.Text,
+                DateTime.Parse( txtfechaemision.Text),
                 decimal.Parse(txtsaldo.Text),
                 txtmoneda.Text,
                  txttipodetarjeta.Text,    
@@ -84,7 +84,7 @@ namespace CapaPresentacion
                 cd_tarjetadetransporte.MtActualizarTarjetadeTransporte(
                     int.Parse(txtcodigotarjeta.Text),
                   int.Parse(txtcodigopasajero.Text),
-                txtfechaemision.Text,
+                  DateTime.Parse(txtfechaemision.Text),
                 decimal.Parse(txtsaldo.Text),
                 txtmoneda.Text,
                  txttipodetarjeta.Text,
@@ -119,6 +119,28 @@ namespace CapaPresentacion
         private void btncancelar_Click(object sender, EventArgs e)
         {
             MtdLimpiarCampos();
+        }
+
+        private void btnBuscar_Click(object sender, EventArgs e)
+        {
+
+
+            if (string.IsNullOrWhiteSpace(txtcodigotarjeta.Text))
+            {
+                dataGridView1.DataSource = cd_tarjetadetransporte.MtMostrarTarjetadeTransporte();
+            }
+            else
+            {
+                int CodigoIncidente;
+                if (int.TryParse(txtcodigotarjeta.Text, out CodigoIncidente))
+                {
+                    dataGridView1.DataSource = cd_tarjetadetransporte.mtdBuscarTarjetadetranspote (CodigoIncidente);
+                }
+                else
+                {
+                    MessageBox.Show("Por favor ingresa un número válido para el código de tarjeta de transporte.");
+                }
+            }
         }
     }
 }

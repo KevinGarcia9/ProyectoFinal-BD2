@@ -29,6 +29,7 @@
         private void InitializeComponent()
         {
             this.gboxincidentes = new System.Windows.Forms.GroupBox();
+            this.btnlimpiar = new System.Windows.Forms.Button();
             this.cmbestado = new System.Windows.Forms.ComboBox();
             this.btneliminar = new System.Windows.Forms.Button();
             this.txthora = new System.Windows.Forms.TextBox();
@@ -47,16 +48,19 @@
             this.label2 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
             this.dgvincidentes = new System.Windows.Forms.DataGridView();
-            this.btnlimpiar = new System.Windows.Forms.Button();
+            this.btnBuscar = new System.Windows.Forms.Button();
+            this.datetimeFechaPago = new System.Windows.Forms.DateTimePicker();
+            this.btnSalir = new System.Windows.Forms.Button();
             this.gboxincidentes.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgvincidentes)).BeginInit();
             this.SuspendLayout();
             // 
             // gboxincidentes
             // 
+            this.gboxincidentes.Controls.Add(this.datetimeFechaPago);
+            this.gboxincidentes.Controls.Add(this.btnBuscar);
             this.gboxincidentes.Controls.Add(this.btnlimpiar);
             this.gboxincidentes.Controls.Add(this.cmbestado);
-            this.gboxincidentes.Controls.Add(this.btneliminar);
             this.gboxincidentes.Controls.Add(this.txthora);
             this.gboxincidentes.Controls.Add(this.btneditar);
             this.gboxincidentes.Controls.Add(this.txtfecha);
@@ -79,17 +83,30 @@
             this.gboxincidentes.TabStop = false;
             this.gboxincidentes.Text = "Datos Incidentes";
             // 
+            // btnlimpiar
+            // 
+            this.btnlimpiar.Location = new System.Drawing.Point(617, 121);
+            this.btnlimpiar.Name = "btnlimpiar";
+            this.btnlimpiar.Size = new System.Drawing.Size(75, 23);
+            this.btnlimpiar.TabIndex = 7;
+            this.btnlimpiar.Text = "Cancelar";
+            this.btnlimpiar.UseVisualStyleBackColor = true;
+            this.btnlimpiar.Click += new System.EventHandler(this.btnlimpiar_Click);
+            // 
             // cmbestado
             // 
             this.cmbestado.FormattingEnabled = true;
-            this.cmbestado.Location = new System.Drawing.Point(414, 92);
+            this.cmbestado.Items.AddRange(new object[] {
+            "Activo",
+            "Inactivo"});
+            this.cmbestado.Location = new System.Drawing.Point(388, 84);
             this.cmbestado.Name = "cmbestado";
             this.cmbestado.Size = new System.Drawing.Size(121, 21);
             this.cmbestado.TabIndex = 13;
             // 
             // btneliminar
             // 
-            this.btneliminar.Location = new System.Drawing.Point(617, 77);
+            this.btneliminar.Location = new System.Drawing.Point(541, 353);
             this.btneliminar.Name = "btneliminar";
             this.btneliminar.Size = new System.Drawing.Size(75, 23);
             this.btneliminar.TabIndex = 5;
@@ -99,14 +116,14 @@
             // 
             // txthora
             // 
-            this.txthora.Location = new System.Drawing.Point(414, 60);
+            this.txthora.Location = new System.Drawing.Point(388, 56);
             this.txthora.Name = "txthora";
             this.txthora.Size = new System.Drawing.Size(100, 20);
             this.txthora.TabIndex = 12;
             // 
             // btneditar
             // 
-            this.btneditar.Location = new System.Drawing.Point(617, 48);
+            this.btneditar.Location = new System.Drawing.Point(617, 60);
             this.btneditar.Name = "btneditar";
             this.btneditar.Size = new System.Drawing.Size(75, 23);
             this.btneditar.TabIndex = 4;
@@ -116,14 +133,14 @@
             // 
             // txtfecha
             // 
-            this.txtfecha.Location = new System.Drawing.Point(414, 27);
+            this.txtfecha.Location = new System.Drawing.Point(388, 27);
             this.txtfecha.Name = "txtfecha";
             this.txtfecha.Size = new System.Drawing.Size(100, 20);
             this.txtfecha.TabIndex = 11;
             // 
             // btnguardar
             // 
-            this.btnguardar.Location = new System.Drawing.Point(617, 19);
+            this.btnguardar.Location = new System.Drawing.Point(617, 29);
             this.btnguardar.Name = "btnguardar";
             this.btnguardar.Size = new System.Drawing.Size(75, 23);
             this.btnguardar.TabIndex = 3;
@@ -162,7 +179,7 @@
             // label7
             // 
             this.label7.AutoSize = true;
-            this.label7.Location = new System.Drawing.Point(355, 92);
+            this.label7.Location = new System.Drawing.Point(332, 92);
             this.label7.Name = "label7";
             this.label7.Size = new System.Drawing.Size(40, 13);
             this.label7.TabIndex = 6;
@@ -171,7 +188,7 @@
             // label6
             // 
             this.label6.AutoSize = true;
-            this.label6.Location = new System.Drawing.Point(355, 63);
+            this.label6.Location = new System.Drawing.Point(332, 60);
             this.label6.Name = "label6";
             this.label6.Size = new System.Drawing.Size(30, 13);
             this.label6.TabIndex = 5;
@@ -180,7 +197,7 @@
             // label5
             // 
             this.label5.AutoSize = true;
-            this.label5.Location = new System.Drawing.Point(355, 34);
+            this.label5.Location = new System.Drawing.Point(332, 34);
             this.label5.Name = "label5";
             this.label5.Size = new System.Drawing.Size(37, 13);
             this.label5.TabIndex = 4;
@@ -231,23 +248,43 @@
             this.dgvincidentes.TabIndex = 1;
             this.dgvincidentes.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvincidentes_CellClick);
             // 
-            // btnlimpiar
+            // btnBuscar
             // 
-            this.btnlimpiar.Location = new System.Drawing.Point(617, 106);
-            this.btnlimpiar.Name = "btnlimpiar";
-            this.btnlimpiar.Size = new System.Drawing.Size(75, 23);
-            this.btnlimpiar.TabIndex = 7;
-            this.btnlimpiar.Text = "Cancelar";
-            this.btnlimpiar.UseVisualStyleBackColor = true;
-            this.btnlimpiar.Click += new System.EventHandler(this.btnlimpiar_Click);
+            this.btnBuscar.Location = new System.Drawing.Point(617, 90);
+            this.btnBuscar.Name = "btnBuscar";
+            this.btnBuscar.Size = new System.Drawing.Size(75, 23);
+            this.btnBuscar.TabIndex = 14;
+            this.btnBuscar.Text = "Buscar";
+            this.btnBuscar.UseVisualStyleBackColor = true;
+            this.btnBuscar.Click += new System.EventHandler(this.btnBuscar_Click);
+            // 
+            // datetimeFechaPago
+            // 
+            this.datetimeFechaPago.Location = new System.Drawing.Point(505, 5);
+            this.datetimeFechaPago.Margin = new System.Windows.Forms.Padding(2, 1, 2, 1);
+            this.datetimeFechaPago.Name = "datetimeFechaPago";
+            this.datetimeFechaPago.Size = new System.Drawing.Size(212, 20);
+            this.datetimeFechaPago.TabIndex = 19;
+            // 
+            // btnSalir
+            // 
+            this.btnSalir.Location = new System.Drawing.Point(653, 353);
+            this.btnSalir.Name = "btnSalir";
+            this.btnSalir.Size = new System.Drawing.Size(75, 23);
+            this.btnSalir.TabIndex = 6;
+            this.btnSalir.Text = "Salir";
+            this.btnSalir.UseVisualStyleBackColor = true;
             // 
             // FormIncidentes
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(800, 450);
+            this.Controls.Add(this.btnSalir);
             this.Controls.Add(this.dgvincidentes);
             this.Controls.Add(this.gboxincidentes);
+            this.Controls.Add(this.btneliminar);
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "FormIncidentes";
             this.Text = "FormIncidentes";
             this.Load += new System.EventHandler(this.FormIncidentes_Load);
@@ -280,5 +317,8 @@
         private System.Windows.Forms.Button btneditar;
         private System.Windows.Forms.Button btneliminar;
         private System.Windows.Forms.Button btnlimpiar;
+        private System.Windows.Forms.Button btnBuscar;
+        private System.Windows.Forms.DateTimePicker datetimeFechaPago;
+        private System.Windows.Forms.Button btnSalir;
     }
 }

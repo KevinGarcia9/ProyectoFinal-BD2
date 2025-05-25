@@ -54,7 +54,7 @@ namespace CapaPresentacion
             {
                 cd_estadisticas.MtInsertarEstadistica(
                   
-                txtfechareporte.Text,
+                DateTime.Parse( txtfechareporte.Text),
                int.Parse( txtpasajerostransp.Text),
                 decimal.Parse(txtingresototal.Text ),
                 txtmoneda.Text ,
@@ -78,7 +78,7 @@ namespace CapaPresentacion
             {
                 cd_estadisticas.MtActualizarEstadistica(
                     int.Parse(txtcodigo.Text),
-                   txtfechareporte.Text,
+                   DateTime.Parse(txtfechareporte.Text),
                 int.Parse(  txtpasajerostransp.Text),
                 decimal.Parse(txtingresototal.Text),
                 txtmoneda.Text,
@@ -122,7 +122,7 @@ namespace CapaPresentacion
 
         private void dgvestadisticas_CellClick(object sender, DataGridViewCellEventArgs e)
         {
-            /*
+            
             if (e.RowIndex >= 0)
             {
                 DataGridViewRow fila = dgvestadisticas.Rows[e.RowIndex];
@@ -134,13 +134,34 @@ namespace CapaPresentacion
                 txttotalincedentes.Text = fila.Cells["TotalIncidentes"].Value.ToString();
                 cmbestado.Text = fila.Cells["Estado"].Value.ToString();
             }
-            */
+           
         }
 
         private void dgvestadisticas_CellContentClick(object sender, DataGridViewCellEventArgs e)
         {
 
         }
+
+        private void btnBuscar_Click_1(object sender, EventArgs e)
+        {
+
+
+            if (string.IsNullOrWhiteSpace(txtcodigo.Text))
+            {
+                dgvestadisticas.DataSource = cd_estadisticas.MtMostrarEstadisticas();
+            }
+            else
+            {
+                int Codigo;
+                if (int.TryParse(txtcodigo.Text, out Codigo))
+                {
+                    dgvestadisticas.DataSource = cd_estadisticas.mtdBuscarEstadisticas(Codigo);
+                }
+                else
+                {
+                    MessageBox.Show("Por favor ingresa un número válido para el código de estadisticas.");
+                }
+            }
     }
 }
 

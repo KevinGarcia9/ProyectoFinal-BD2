@@ -10,8 +10,8 @@ namespace CapaDatos
 {
     public class CD_Pagos
     {
-        private SqlConnection conexion = new SqlConnection("Server=LAPTOP-6PG83GU4\\SQLEXPRESS;Database=ElIngeVeloz;Trusted_Connection=True;");
-
+        private SqlConnection conexion = new SqlConnection("Server=DESKTOP-9QF8HLG\\SQLEXPRESS;Database=ElIngeVeloz;Trusted_Connection=True;");
+       
         public void mtdAgregarPago(int codigoPasajero, int codigoTarifa, DateTime fechaPago, string tipoPago, string banco, string estado)
         {
             SqlCommand cmd = new SqlCommand("Usp_Agregar_Pagos", conexion);
