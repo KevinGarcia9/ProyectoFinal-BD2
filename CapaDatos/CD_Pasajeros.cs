@@ -10,7 +10,7 @@ namespace CapaDatos
 {
     public class CD_Pasajeros
     {
-        private SqlConnection conexion = new SqlConnection("Server=LAPTOP-6PG83GU4\\SQLEXPRESS;Database=ElIngeVeloz;Trusted_Connection=True;");
+        private SqlConnection conexion = new SqlConnection("Server=DESKTOP-9QF8HLG\\SQLEXPRESS;Database=ElIngeVeloz;Trusted_Connection=True;");
 
         public void mtdAgregarPasajero(string nombre, string dpi, string nit, DateTime fechaAlta, string telefono, string estado)
         {

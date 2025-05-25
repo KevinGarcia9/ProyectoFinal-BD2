@@ -88,9 +88,17 @@ namespace CapaPresentacion
 
         private void btnEliminar_Click_1(object sender, EventArgs e)
         {
-            PAG.mtdEliminarPago(int.Parse(txtCodigoPago.Text));
-            MessageBox.Show("Pago eliminado.");
-            CargarPagos();
+           
+            try
+            {
+                PAG.mtdEliminarPago(int.Parse(txtCodigoPago.Text));
+                MessageBox.Show("Pago eliminado.");
+                CargarPagos();
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show("Error al eliminar: " + ex.Message);
+            }
         }
 
         private void btnActualizar_Click_1(object sender, EventArgs e)

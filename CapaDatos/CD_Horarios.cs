@@ -11,7 +11,7 @@ namespace CapaDatos
 
     public class CD_Horarios
     {
-        private SqlConnection conexion = new SqlConnection("Server=LAPTOP-6PG83GU4\\SQLEXPRESS;Database=ElIngeVeloz;Trusted_Connection=True;");
+        private SqlConnection conexion = new SqlConnection("Server=DESKTOP-9QF8HLG\\SQLEXPRESS;Database=ElIngeVeloz;Trusted_Connection=True;");
 
         public void mtdAgregarHorario(int codigoEstacion, TimeSpan horaSalida, TimeSpan horaLlegada, DateTime fechaInicio, DateTime fechaFin, string estado)
         {

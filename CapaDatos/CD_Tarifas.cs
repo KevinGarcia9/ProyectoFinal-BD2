@@ -11,7 +11,7 @@ namespace CapaDatos
 {
     public class CD_Tarifas
     {
-        private SqlConnection conexion = new SqlConnection("Server=LAPTOP-6PG83GU4\\SQLEXPRESS;Database=ElIngeVeloz;Trusted_Connection=True;");
+        private SqlConnection conexion = new SqlConnection("Server=DESKTOP-9QF8HLG\\SQLEXPRESS;Database=ElIngeVeloz;Trusted_Connection=True;");
 
         public void mtdAgregarTarifa(int codigoRuta, decimal monto, string moneda, DateTime fechaVigencia, DateTime fechaVencimiento, string estado)
         {
