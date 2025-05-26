@@ -27,16 +27,23 @@ namespace CapaPresentacion
 
         private void btnAgregar_Click(object sender, EventArgs e)
         {
-            PAS.mtdAgregarPasajero(
-                txtNombre.Text,
-                txtDpi.Text,
-                txtNit.Text,
-                datetimeFechaAlta.Value,
-                txtTelefono.Text,
-                cboxEstado.Text
-            );
-            MessageBox.Show("Pasajero agregado.");
-            CargarPagos();
+            try
+            {
+               PAS.mtdAgregarPasajero(
+               txtNombre.Text,
+               txtDpi.Text,
+               txtNit.Text,
+               datetimeFechaAlta.Value,
+               txtTelefono.Text,
+               cboxEstado.Text);
+
+               MessageBox.Show("Pasajero agregado.");
+               CargarPagos();
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show("Error al agregar: " + ex.Message);
+            }
         }
 
         private void btnSalir_Click(object sender, EventArgs e)
@@ -74,26 +81,40 @@ namespace CapaPresentacion
 
         private void btnActualizar_Click_1(object sender, EventArgs e)
         {
-            int codigo = int.Parse(txtCodigo.Text);
-            PAS.mtdActualizarPasajero(
-                codigo,
-                txtNombre.Text,
-                txtDpi.Text,
-                txtNit.Text,
-                datetimeFechaAlta.Value,
-                txtTelefono.Text,
-                cboxEstado.Text
-            );
-            MessageBox.Show("Pasajero actualizado.");
-            CargarPagos();
+            try
+            {
+                int codigo = int.Parse(txtCodigo.Text);
+                PAS.mtdActualizarPasajero(
+                    codigo,
+                    txtNombre.Text,
+                    txtDpi.Text,
+                    txtNit.Text,
+                    datetimeFechaAlta.Value,
+                    txtTelefono.Text,
+                    cboxEstado.Text
+                );
+                MessageBox.Show("Pasajero actualizado.");
+                CargarPagos();
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show("Error al actualizar: " + ex.Message);
+            }
         }
 
         private void btnEliminar_Click_1(object sender, EventArgs e)
         {
-            int codigo = int.Parse(txtCodigo.Text);
-            PAS.mtdEliminarPasajero(codigo);
-            MessageBox.Show("Pasajero eliminado.");
-            CargarPagos();
+            try
+            {
+                int codigo = int.Parse(txtCodigo.Text);
+                PAS.mtdEliminarPasajero(codigo);
+                MessageBox.Show("Pasajero eliminado.");
+                CargarPagos();
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show("Error al eliminar: " + ex.Message);
+            }
         }
     }
 }

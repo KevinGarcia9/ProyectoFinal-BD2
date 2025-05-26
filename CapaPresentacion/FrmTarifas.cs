@@ -21,16 +21,23 @@ namespace CapaPresentacion
 
         private void btnAgregarTarifa_Click(object sender, EventArgs e)
         {
-            TAR.mtdAgregarTarifa(
+            try
+            {
+               TAR.mtdAgregarTarifa(
                int.Parse(txtCodigoRuta.Text),
                decimal.Parse(txtMonto.Text),
                cboxMoneda.Text,
                datetimeFechaVigencia.Value,
                datetimeFechaVencimiento.Value,
-               cboxEstado.Text
-           );
-            MessageBox.Show("Tarifa agregada correctamente.");
-            CargarPagos();
+               cboxEstado.Text);
+
+                MessageBox.Show("Tarifa agregada correctamente.");
+                CargarPagos();
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show("Error al agregar: " + ex.Message);
+            }
         }
 
         private void btnSalir_Click(object sender, EventArgs e)
@@ -65,24 +72,38 @@ namespace CapaPresentacion
 
         private void btnActualizarTarifa_Click_1(object sender, EventArgs e)
         {
-            TAR.mtdActualizarTarifa(
+            try
+            {
+               TAR.mtdActualizarTarifa(
                int.Parse(txtCodigoTarifa.Text),
                int.Parse(txtCodigoRuta.Text),
                decimal.Parse(txtMonto.Text),
                cboxMoneda.Text,
                datetimeFechaVigencia.Value,
                datetimeFechaVencimiento.Value,
-               cboxEstado.Text
-           );
-            MessageBox.Show("Tarifa actualizada correctamente.");
-            CargarPagos();
+               cboxEstado.Text);
+
+                MessageBox.Show("Tarifa actualizada correctamente.");
+                CargarPagos();
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show("Error al Actualizar: " + ex.Message);
+            }
         }
 
         private void btnEliminar_Click_1(object sender, EventArgs e)
         {
-            TAR.mtdEliminarTarifa(int.Parse(txtCodigoTarifa.Text));
-            MessageBox.Show("Tarifa eliminada correctamente.");
-            CargarPagos();
+            try
+            {
+                TAR.mtdEliminarTarifa(int.Parse(txtCodigoTarifa.Text));
+                MessageBox.Show("Tarifa eliminada correctamente.");
+                CargarPagos();
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show("Error al eliminar: " + ex.Message);
+            }
         }
 
         private void btnBuscar_Click_1(object sender, EventArgs e)

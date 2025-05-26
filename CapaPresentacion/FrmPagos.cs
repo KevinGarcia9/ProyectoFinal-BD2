@@ -74,21 +74,28 @@ namespace CapaPresentacion
 
         private void btnRegistroPago_Click_1(object sender, EventArgs e)
         {
-            PAG.mtdAgregarPago(
+            try 
+            {
+                PAG.mtdAgregarPago(
                 int.Parse(txtCodigoPasajero.Text),
                 int.Parse(txtCodigoTarifa.Text),
                 datetimeFechaPago.Value,
                 cboxTipoPago.Text,
                 txtBanco.Text,
-                cboxEstado.Text
-            );
-            MessageBox.Show("Pago agregado correctamente.");
-            CargarPagos();
+                cboxEstado.Text);
+
+                MessageBox.Show("Pago agregado correctamente.");
+                CargarPagos();
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show("Error al registrar: " + ex.Message);
+            }
+
         }
 
         private void btnEliminar_Click_1(object sender, EventArgs e)
         {
-           
             try
             {
                 PAG.mtdEliminarPago(int.Parse(txtCodigoPago.Text));
@@ -103,17 +110,24 @@ namespace CapaPresentacion
 
         private void btnActualizar_Click_1(object sender, EventArgs e)
         {
-            PAG.mtdActualizarPago(
-                int.Parse(txtCodigoPago.Text),
-                int.Parse(txtCodigoPasajero.Text),
-                int.Parse(txtCodigoTarifa.Text),
-                datetimeFechaPago.Value,
-                cboxTipoPago.Text,
-                txtBanco.Text,
-                cboxEstado.Text
-            );
-            MessageBox.Show("Pago actualizado correctamente.");
-            CargarPagos();
+            try
+            {
+                PAG.mtdActualizarPago(
+               int.Parse(txtCodigoPago.Text),
+               int.Parse(txtCodigoPasajero.Text),
+               int.Parse(txtCodigoTarifa.Text),
+               datetimeFechaPago.Value,
+               cboxTipoPago.Text,
+               txtBanco.Text,
+               cboxEstado.Text);
+
+                MessageBox.Show("Pago actualizado correctamente.");
+                CargarPagos();
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show("Error al actualizar: " + ex.Message);
+            }
         }
 
         private void datetimeFechaPago_ValueChanged(object sender, EventArgs e)

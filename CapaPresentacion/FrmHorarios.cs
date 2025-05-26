@@ -22,16 +22,23 @@ namespace CapaPresentacion
 
         private void btnAgregarHorario_Click(object sender, EventArgs e)
         {
-            HOR.mtdAgregarHorario(
-                int.Parse(txtCodigoEstacion.Text),
-                TimeSpan.Parse(datetimeHoraSalida.Text),
-                TimeSpan.Parse(datetimeHoraLLegada.Text),
-                datetimeFechaInicio.Value,
-                datetimeFechaFin.Value,
-                cboxEstado.Text
-            );
-            MessageBox.Show("Horario agregado.");
-            CargarPagos();
+            try
+            {
+                HOR.mtdAgregarHorario(
+                  int.Parse(txtCodigoEstacion.Text),
+                  TimeSpan.Parse(datetimeHoraSalida.Text),
+                  TimeSpan.Parse(datetimeHoraLLegada.Text),
+                  datetimeFechaInicio.Value,
+                  datetimeFechaFin.Value,
+                  cboxEstado.Text);
+
+                MessageBox.Show("Horario agregado.");
+                CargarPagos();
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show("Error al Agregar: " + ex.Message);
+            }
         }
 
         private void btnSalir_Click(object sender, EventArgs e)
@@ -86,24 +93,38 @@ namespace CapaPresentacion
 
         private void btnActualizarHrs_Click_1(object sender, EventArgs e)
         {
-            HOR.mtdActualizarHorario(
+            try
+            {
+              HOR.mtdActualizarHorario(
               int.Parse(txtCodigoHorario.Text),
               int.Parse(txtCodigoEstacion.Text),
               TimeSpan.Parse(datetimeHoraSalida.Text),
               TimeSpan.Parse(datetimeHoraLLegada.Text),
               datetimeFechaInicio.Value,
               datetimeFechaFin.Value,
-              cboxEstado.Text
-          );
-            MessageBox.Show("Horario actualizado.");
-            CargarPagos();
+              cboxEstado.Text);
+
+                MessageBox.Show("Horario actualizado.");
+                CargarPagos();
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show("Error al actualizar: " + ex.Message);
+            }
         }
 
         private void btnEliminar_Click_1(object sender, EventArgs e)
         {
-            HOR.mtdEliminarHorario(int.Parse(txtCodigoHorario.Text));
-            MessageBox.Show("Horario eliminado.");
-            CargarPagos();
+            try
+            {
+                HOR.mtdEliminarHorario(int.Parse(txtCodigoHorario.Text));
+                MessageBox.Show("Horario eliminado.");
+                CargarPagos();
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show("Error al eliminar: " + ex.Message);
+            }
         }
     }
 }
