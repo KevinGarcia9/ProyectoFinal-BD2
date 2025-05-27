@@ -108,7 +108,7 @@ namespace CapaPresentacion
 
         private void btnBuscar_Click_1(object sender, EventArgs e)
         {
-            if (string.IsNullOrWhiteSpace(txtCodigoRuta.Text))
+            if (string.IsNullOrWhiteSpace(txtBuscarT.Text))
             {
                 // Si el campo está vacío, muestra todo
                 dtgvTarifas.DataSource = TAR.mtdMostrarTarifas(); // <-- Asegúrate de tener este método
@@ -116,7 +116,7 @@ namespace CapaPresentacion
             else
             {
                 int codigoRuta;
-                if (int.TryParse(txtCodigoRuta.Text, out codigoRuta))
+                if (int.TryParse(txtBuscarT.Text, out codigoRuta))
                 {
                     dtgvTarifas.DataSource = TAR.mtdBuscarTarifasPorRuta(codigoRuta);
                 }

@@ -67,14 +67,14 @@ namespace CapaPresentacion
         {
 
 
-            if (string.IsNullOrWhiteSpace(txtCodigoPago.Text))
+            if (string.IsNullOrWhiteSpace(txtBuscarP.Text))
             {
                 dtgvPagos.DataSource = PAG.mtdMostrarPagos(); 
             }
             else
             {
                 int codigoPasajero;
-                if (int.TryParse(txtCodigoPago.Text, out codigoPasajero))
+                if (int.TryParse(txtBuscarP.Text, out codigoPasajero))
                 {
                     dtgvPagos.DataSource = PAG.mtdBuscarPagosPorPasajero(codigoPasajero);
                 }

@@ -73,14 +73,14 @@ namespace CapaPresentacion
         private void btnBuscar_Click_1(object sender, EventArgs e)
         {
 
-            if (string.IsNullOrWhiteSpace(txtCodigoEstacion.Text))
+            if (string.IsNullOrWhiteSpace(txtBuscarH.Text))
             {
                 dtgvHorarios.DataSource = HOR.mtdMostrarHorarios(); 
             }
             else
             {
                 int codigoEstacion;
-                if (int.TryParse(txtCodigoEstacion.Text, out codigoEstacion))
+                if (int.TryParse(txtBuscarH.Text, out codigoEstacion))
                 {
                     dtgvHorarios.DataSource = HOR.BuscarHorarios(codigoEstacion);
                 }

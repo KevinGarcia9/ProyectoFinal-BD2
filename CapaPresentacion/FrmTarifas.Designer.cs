@@ -49,12 +49,15 @@
             this.label3 = new System.Windows.Forms.Label();
             this.txtCodigoRuta = new System.Windows.Forms.TextBox();
             this.label1 = new System.Windows.Forms.Label();
+            this.txtBuscarT = new System.Windows.Forms.TextBox();
+            this.label5 = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.dtgvTarifas)).BeginInit();
             this.groupBox1.SuspendLayout();
             this.SuspendLayout();
             // 
             // btnSalir
             // 
+            this.btnSalir.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnSalir.Location = new System.Drawing.Point(952, 634);
             this.btnSalir.Name = "btnSalir";
             this.btnSalir.Size = new System.Drawing.Size(126, 36);
@@ -76,6 +79,8 @@
             // 
             // groupBox1
             // 
+            this.groupBox1.Controls.Add(this.label5);
+            this.groupBox1.Controls.Add(this.txtBuscarT);
             this.groupBox1.Controls.Add(this.txtCodigoTarifa);
             this.groupBox1.Controls.Add(this.label4);
             this.groupBox1.Controls.Add(this.cboxMoneda);
@@ -103,7 +108,7 @@
             // 
             // txtCodigoTarifa
             // 
-            this.txtCodigoTarifa.Location = new System.Drawing.Point(164, 37);
+            this.txtCodigoTarifa.Location = new System.Drawing.Point(183, 38);
             this.txtCodigoTarifa.Name = "txtCodigoTarifa";
             this.txtCodigoTarifa.Size = new System.Drawing.Size(103, 26);
             this.txtCodigoTarifa.TabIndex = 35;
@@ -111,9 +116,10 @@
             // label4
             // 
             this.label4.AutoSize = true;
+            this.label4.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label4.Location = new System.Drawing.Point(22, 43);
             this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(103, 20);
+            this.label4.Size = new System.Drawing.Size(153, 26);
             this.label4.TabIndex = 34;
             this.label4.Text = "Código Tarifa";
             // 
@@ -124,7 +130,7 @@
             "GTQ",
             "USD",
             "EUR"});
-            this.cboxMoneda.Location = new System.Drawing.Point(164, 186);
+            this.cboxMoneda.Location = new System.Drawing.Point(183, 187);
             this.cboxMoneda.Name = "cboxMoneda";
             this.cboxMoneda.Size = new System.Drawing.Size(103, 28);
             this.cboxMoneda.TabIndex = 33;
@@ -132,15 +138,16 @@
             // label8
             // 
             this.label8.AutoSize = true;
+            this.label8.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label8.Location = new System.Drawing.Point(22, 189);
             this.label8.Name = "label8";
-            this.label8.Size = new System.Drawing.Size(67, 20);
+            this.label8.Size = new System.Drawing.Size(96, 26);
             this.label8.TabIndex = 32;
             this.label8.Text = "Moneda";
             // 
             // txtMonto
             // 
-            this.txtMonto.Location = new System.Drawing.Point(164, 137);
+            this.txtMonto.Location = new System.Drawing.Point(183, 138);
             this.txtMonto.Name = "txtMonto";
             this.txtMonto.Size = new System.Drawing.Size(103, 26);
             this.txtMonto.TabIndex = 31;
@@ -148,15 +155,17 @@
             // label7
             // 
             this.label7.AutoSize = true;
+            this.label7.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label7.Location = new System.Drawing.Point(22, 137);
             this.label7.Name = "label7";
-            this.label7.Size = new System.Drawing.Size(54, 20);
+            this.label7.Size = new System.Drawing.Size(80, 26);
             this.label7.TabIndex = 30;
             this.label7.Text = "Monto";
             // 
             // btnEliminar
             // 
-            this.btnEliminar.Location = new System.Drawing.Point(878, 232);
+            this.btnEliminar.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnEliminar.Location = new System.Drawing.Point(894, 188);
             this.btnEliminar.Name = "btnEliminar";
             this.btnEliminar.Size = new System.Drawing.Size(139, 36);
             this.btnEliminar.TabIndex = 29;
@@ -166,7 +175,8 @@
             // 
             // btnBuscar
             // 
-            this.btnBuscar.Location = new System.Drawing.Point(878, 57);
+            this.btnBuscar.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnBuscar.Location = new System.Drawing.Point(341, 150);
             this.btnBuscar.Name = "btnBuscar";
             this.btnBuscar.Size = new System.Drawing.Size(139, 36);
             this.btnBuscar.TabIndex = 28;
@@ -176,7 +186,8 @@
             // 
             // btnActualizarTarifa
             // 
-            this.btnActualizarTarifa.Location = new System.Drawing.Point(878, 111);
+            this.btnActualizarTarifa.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnActualizarTarifa.Location = new System.Drawing.Point(894, 67);
             this.btnActualizarTarifa.Name = "btnActualizarTarifa";
             this.btnActualizarTarifa.Size = new System.Drawing.Size(139, 36);
             this.btnActualizarTarifa.TabIndex = 27;
@@ -186,7 +197,8 @@
             // 
             // btnAgregarTarifa
             // 
-            this.btnAgregarTarifa.Location = new System.Drawing.Point(878, 171);
+            this.btnAgregarTarifa.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnAgregarTarifa.Location = new System.Drawing.Point(894, 127);
             this.btnAgregarTarifa.Name = "btnAgregarTarifa";
             this.btnAgregarTarifa.Size = new System.Drawing.Size(139, 36);
             this.btnAgregarTarifa.TabIndex = 26;
@@ -200,7 +212,7 @@
             this.cboxEstado.Items.AddRange(new object[] {
             "Activo",
             "Inactivo"});
-            this.cboxEstado.Location = new System.Drawing.Point(164, 239);
+            this.cboxEstado.Location = new System.Drawing.Point(183, 240);
             this.cboxEstado.Name = "cboxEstado";
             this.cboxEstado.Size = new System.Drawing.Size(103, 28);
             this.cboxEstado.TabIndex = 16;
@@ -208,15 +220,17 @@
             // label6
             // 
             this.label6.AutoSize = true;
+            this.label6.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label6.Location = new System.Drawing.Point(22, 242);
             this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(60, 20);
+            this.label6.Size = new System.Drawing.Size(82, 26);
             this.label6.TabIndex = 15;
             this.label6.Text = "Estado";
             // 
             // datetimeFechaVencimiento
             // 
-            this.datetimeFechaVencimiento.Location = new System.Drawing.Point(506, 88);
+            this.datetimeFechaVencimiento.Font = new System.Drawing.Font("Times New Roman", 8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.datetimeFechaVencimiento.Location = new System.Drawing.Point(546, 88);
             this.datetimeFechaVencimiento.Name = "datetimeFechaVencimiento";
             this.datetimeFechaVencimiento.Size = new System.Drawing.Size(316, 26);
             this.datetimeFechaVencimiento.TabIndex = 21;
@@ -224,15 +238,17 @@
             // label2
             // 
             this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(354, 93);
+            this.label2.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label2.Location = new System.Drawing.Point(333, 90);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(146, 20);
+            this.label2.Size = new System.Drawing.Size(207, 26);
             this.label2.TabIndex = 20;
             this.label2.Text = "Fecha Vencimiento";
             // 
             // datetimeFechaVigencia
             // 
-            this.datetimeFechaVigencia.Location = new System.Drawing.Point(482, 35);
+            this.datetimeFechaVigencia.Font = new System.Drawing.Font("Times New Roman", 8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.datetimeFechaVigencia.Location = new System.Drawing.Point(522, 35);
             this.datetimeFechaVigencia.Name = "datetimeFechaVigencia";
             this.datetimeFechaVigencia.Size = new System.Drawing.Size(316, 26);
             this.datetimeFechaVigencia.TabIndex = 19;
@@ -240,15 +256,16 @@
             // label3
             // 
             this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(354, 40);
+            this.label3.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label3.Location = new System.Drawing.Point(333, 37);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(119, 20);
+            this.label3.Size = new System.Drawing.Size(169, 26);
             this.label3.TabIndex = 18;
             this.label3.Text = "Fecha Vigencia";
             // 
             // txtCodigoRuta
             // 
-            this.txtCodigoRuta.Location = new System.Drawing.Point(164, 89);
+            this.txtCodigoRuta.Location = new System.Drawing.Point(183, 90);
             this.txtCodigoRuta.Name = "txtCodigoRuta";
             this.txtCodigoRuta.Size = new System.Drawing.Size(103, 26);
             this.txtCodigoRuta.TabIndex = 14;
@@ -256,16 +273,35 @@
             // label1
             // 
             this.label1.AutoSize = true;
+            this.label1.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label1.Location = new System.Drawing.Point(22, 95);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(98, 20);
+            this.label1.Size = new System.Drawing.Size(141, 26);
             this.label1.TabIndex = 13;
             this.label1.Text = "Código Ruta";
+            // 
+            // txtBuscarT
+            // 
+            this.txtBuscarT.Location = new System.Drawing.Point(498, 155);
+            this.txtBuscarT.Name = "txtBuscarT";
+            this.txtBuscarT.Size = new System.Drawing.Size(258, 26);
+            this.txtBuscarT.TabIndex = 36;
+            // 
+            // label5
+            // 
+            this.label5.AutoSize = true;
+            this.label5.Font = new System.Drawing.Font("Times New Roman", 8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label5.Location = new System.Drawing.Point(542, 195);
+            this.label5.Name = "label5";
+            this.label5.Size = new System.Drawing.Size(157, 19);
+            this.label5.TabIndex = 37;
+            this.label5.Text = "Ingresar codigo Rutas";
             // 
             // FrmTarifas
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.BackColor = System.Drawing.Color.MediumAquamarine;
             this.ClientSize = new System.Drawing.Size(1123, 687);
             this.Controls.Add(this.btnSalir);
             this.Controls.Add(this.dtgvTarifas);
@@ -304,5 +340,7 @@
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.TextBox txtCodigoRuta;
         private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.TextBox txtBuscarT;
+        private System.Windows.Forms.Label label5;
     }
 }

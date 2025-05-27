@@ -13,8 +13,9 @@ namespace CapaDatos
 
         // DESKTOP-9QF8HLG\\SQLEXPRESS Seleidy
         //DESKTOP-TGA3FFT\\SQLEXPRESS  Alexander
-        private SqlConnection db_conexion = new SqlConnection("Data Source=ALEX\\SQLEXPRESS;" +
-            "Initial Catalog=ElIngeVeloz;" +
+        //LAPTOP-6PG83GU4\SQLEXPRESS   Josvin
+        private SqlConnection db_conexion = new SqlConnection("Data Source=LAPTOP-6PG83GU4\\SQLEXPRESS;" +
+            "Initial Catalog=ElIngeVeloz_V2;" +
             "Integrated Security=True;Encrypt=False") ;
 
         public SqlConnection MtdAbrirConexion()
