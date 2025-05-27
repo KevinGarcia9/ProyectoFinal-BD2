@@ -61,7 +61,7 @@ namespace CapaPresentacion
             this.gboxRutas.Controls.Add(this.label1);
             this.gboxRutas.Location = new System.Drawing.Point(12, 12);
             this.gboxRutas.Name = "gboxRutas";
-            this.gboxRutas.Size = new System.Drawing.Size(1052, 264);
+            this.gboxRutas.Size = new System.Drawing.Size(1199, 264);
             this.gboxRutas.TabIndex = 0;
             this.gboxRutas.TabStop = false;
             this.gboxRutas.Text = "DATOS RUTAS";
@@ -73,7 +73,7 @@ namespace CapaPresentacion
             this.btnGuardar.IconFont = FontAwesome.Sharp.IconFont.Auto;
             this.btnGuardar.IconSize = 30;
             this.btnGuardar.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnGuardar.Location = new System.Drawing.Point(874, 81);
+            this.btnGuardar.Location = new System.Drawing.Point(1038, 98);
             this.btnGuardar.Name = "btnGuardar";
             this.btnGuardar.Size = new System.Drawing.Size(130, 35);
             this.btnGuardar.TabIndex = 24;
@@ -87,7 +87,7 @@ namespace CapaPresentacion
             this.btnActualizar.IconFont = FontAwesome.Sharp.IconFont.Auto;
             this.btnActualizar.IconSize = 30;
             this.btnActualizar.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnActualizar.Location = new System.Drawing.Point(874, 121);
+            this.btnActualizar.Location = new System.Drawing.Point(1038, 138);
             this.btnActualizar.Name = "btnActualizar";
             this.btnActualizar.Size = new System.Drawing.Size(130, 35);
             this.btnActualizar.TabIndex = 25;
@@ -101,7 +101,7 @@ namespace CapaPresentacion
             this.btnCancelar.IconFont = FontAwesome.Sharp.IconFont.Auto;
             this.btnCancelar.IconSize = 30;
             this.btnCancelar.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnCancelar.Location = new System.Drawing.Point(874, 161);
+            this.btnCancelar.Location = new System.Drawing.Point(1038, 178);
             this.btnCancelar.Name = "btnCancelar";
             this.btnCancelar.Size = new System.Drawing.Size(130, 35);
             this.btnCancelar.TabIndex = 26;
@@ -116,7 +116,7 @@ namespace CapaPresentacion
             "Inactivo"});
             this.cmbEstado.Location = new System.Drawing.Point(204, 222);
             this.cmbEstado.Name = "cmbEstado";
-            this.cmbEstado.Size = new System.Drawing.Size(200, 24);
+            this.cmbEstado.Size = new System.Drawing.Size(200, 21);
             this.cmbEstado.TabIndex = 0;
             // 
             // label7
@@ -124,7 +124,7 @@ namespace CapaPresentacion
             this.label7.AutoSize = true;
             this.label7.Location = new System.Drawing.Point(37, 225);
             this.label7.Name = "label7";
-            this.label7.Size = new System.Drawing.Size(53, 16);
+            this.label7.Size = new System.Drawing.Size(43, 13);
             this.label7.TabIndex = 1;
             this.label7.Text = "Estado:";
             // 
@@ -136,7 +136,7 @@ namespace CapaPresentacion
             "Interurbana"});
             this.cmbTipoRuta.Location = new System.Drawing.Point(204, 186);
             this.cmbTipoRuta.Name = "cmbTipoRuta";
-            this.cmbTipoRuta.Size = new System.Drawing.Size(200, 24);
+            this.cmbTipoRuta.Size = new System.Drawing.Size(200, 21);
             this.cmbTipoRuta.TabIndex = 2;
             // 
             // label6
@@ -144,7 +144,7 @@ namespace CapaPresentacion
             this.label6.AutoSize = true;
             this.label6.Location = new System.Drawing.Point(37, 189);
             this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(88, 16);
+            this.label6.Size = new System.Drawing.Size(72, 13);
             this.label6.TabIndex = 3;
             this.label6.Text = "Tipo de Ruta:";
             // 
@@ -152,7 +152,7 @@ namespace CapaPresentacion
             // 
             this.txtDistancia.Location = new System.Drawing.Point(204, 150);
             this.txtDistancia.Name = "txtDistancia";
-            this.txtDistancia.Size = new System.Drawing.Size(200, 22);
+            this.txtDistancia.Size = new System.Drawing.Size(200, 20);
             this.txtDistancia.TabIndex = 4;
             // 
             // label5
@@ -160,7 +160,7 @@ namespace CapaPresentacion
             this.label5.AutoSize = true;
             this.label5.Location = new System.Drawing.Point(37, 153);
             this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(66, 16);
+            this.label5.Size = new System.Drawing.Size(54, 13);
             this.label5.TabIndex = 5;
             this.label5.Text = "Distancia:";
             // 
@@ -168,7 +168,7 @@ namespace CapaPresentacion
             // 
             this.txtDestino.Location = new System.Drawing.Point(204, 114);
             this.txtDestino.Name = "txtDestino";
-            this.txtDestino.Size = new System.Drawing.Size(200, 22);
+            this.txtDestino.Size = new System.Drawing.Size(200, 20);
             this.txtDestino.TabIndex = 6;
             // 
             // label4
@@ -176,7 +176,7 @@ namespace CapaPresentacion
             this.label4.AutoSize = true;
             this.label4.Location = new System.Drawing.Point(37, 117);
             this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(56, 16);
+            this.label4.Size = new System.Drawing.Size(46, 13);
             this.label4.TabIndex = 7;
             this.label4.Text = "Destino:";
             // 
@@ -184,7 +184,7 @@ namespace CapaPresentacion
             // 
             this.txtOrigen.Location = new System.Drawing.Point(204, 78);
             this.txtOrigen.Name = "txtOrigen";
-            this.txtOrigen.Size = new System.Drawing.Size(200, 22);
+            this.txtOrigen.Size = new System.Drawing.Size(200, 20);
             this.txtOrigen.TabIndex = 8;
             // 
             // label3
@@ -192,7 +192,7 @@ namespace CapaPresentacion
             this.label3.AutoSize = true;
             this.label3.Location = new System.Drawing.Point(37, 81);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(50, 16);
+            this.label3.Size = new System.Drawing.Size(41, 13);
             this.label3.TabIndex = 9;
             this.label3.Text = "Origen:";
             // 
@@ -200,7 +200,7 @@ namespace CapaPresentacion
             // 
             this.txtNombre.Location = new System.Drawing.Point(204, 42);
             this.txtNombre.Name = "txtNombre";
-            this.txtNombre.Size = new System.Drawing.Size(400, 22);
+            this.txtNombre.Size = new System.Drawing.Size(400, 20);
             this.txtNombre.TabIndex = 10;
             // 
             // label2
@@ -208,7 +208,7 @@ namespace CapaPresentacion
             this.label2.AutoSize = true;
             this.label2.Location = new System.Drawing.Point(37, 45);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(59, 16);
+            this.label2.Size = new System.Drawing.Size(47, 13);
             this.label2.TabIndex = 11;
             this.label2.Text = "Nombre:";
             // 
@@ -216,7 +216,7 @@ namespace CapaPresentacion
             // 
             this.txtCodigo.Location = new System.Drawing.Point(854, 42);
             this.txtCodigo.Name = "txtCodigo";
-            this.txtCodigo.Size = new System.Drawing.Size(130, 22);
+            this.txtCodigo.Size = new System.Drawing.Size(130, 20);
             this.txtCodigo.TabIndex = 12;
             // 
             // label1
@@ -224,7 +224,7 @@ namespace CapaPresentacion
             this.label1.AutoSize = true;
             this.label1.Location = new System.Drawing.Point(709, 47);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(85, 16);
+            this.label1.Size = new System.Drawing.Size(69, 13);
             this.label1.TabIndex = 13;
             this.label1.Text = "Código Ruta:";
             // 
@@ -238,7 +238,7 @@ namespace CapaPresentacion
             this.dgvRutas.ReadOnly = true;
             this.dgvRutas.RowHeadersWidth = 51;
             this.dgvRutas.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.dgvRutas.Size = new System.Drawing.Size(1052, 270);
+            this.dgvRutas.Size = new System.Drawing.Size(1052, 375);
             this.dgvRutas.TabIndex = 1;
             this.dgvRutas.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvRutas_CellClick_1);
             // 
@@ -249,9 +249,9 @@ namespace CapaPresentacion
             this.btnEliminar.IconFont = FontAwesome.Sharp.IconFont.Auto;
             this.btnEliminar.IconSize = 30;
             this.btnEliminar.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnEliminar.Location = new System.Drawing.Point(914, 588);
+            this.btnEliminar.Location = new System.Drawing.Point(935, 685);
             this.btnEliminar.Name = "btnEliminar";
-            this.btnEliminar.Size = new System.Drawing.Size(150, 35);
+            this.btnEliminar.Size = new System.Drawing.Size(165, 64);
             this.btnEliminar.TabIndex = 2;
             this.btnEliminar.Text = "Eliminar";
             this.btnEliminar.Click += new System.EventHandler(this.btnEliminar_Click_1);
@@ -259,7 +259,7 @@ namespace CapaPresentacion
             // FrmRutas
             // 
             this.BackColor = System.Drawing.Color.White;
-            this.ClientSize = new System.Drawing.Size(1192, 666);
+            this.ClientSize = new System.Drawing.Size(1236, 788);
             this.Controls.Add(this.btnEliminar);
             this.Controls.Add(this.dgvRutas);
             this.Controls.Add(this.gboxRutas);

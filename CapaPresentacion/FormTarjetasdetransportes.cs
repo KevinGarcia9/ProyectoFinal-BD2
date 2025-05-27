@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
+using System.Data.SqlClient;
 using System.Drawing;
 using System.Linq;
 using System.Text;
@@ -16,8 +17,32 @@ namespace CapaPresentacion
         public FormTarjetasdetransportes()
         {
             InitializeComponent();
+            
         }
+
+
         CD_TarjetasDeTransporte cd_tarjetadetransporte = new CD_TarjetasDeTransporte();
+
+
+        private void MtdMostrarFK()
+        {
+            CD_Conexion db_conexion = new CD_Conexion();
+
+            SqlCommand cmd = new SqlCommand("select CodigoPasajero,Nombre,Nit,Estado from Pasajeros", db_conexion.MtdAbrirConexion());
+            SqlDataReader reader = cmd.ExecuteReader();
+
+            DataTable dt = new DataTable();
+            dt.Load(reader);
+
+            // Agrega columna para visualización combinada
+            dt.Columns.Add("Descripcion", typeof(string), "CodigoPasajero + ' - ' + Nombre + ' - ' + Nit + ' - ' + Estado");
+
+            cbxCodigoPasajero.DataSource = dt;
+            cbxCodigoPasajero.DisplayMember = "Descripcion";
+            cbxCodigoPasajero.ValueMember = "CodigoPasajero";
+
+        }
+
         private void MtMostrarTarjetadeTransporte()
         {
             DataTable tabla = cd_tarjetadetransporte.MtMostrarTarjetadeTransporte();
@@ -27,7 +52,7 @@ namespace CapaPresentacion
             
         {
             txtcodigotarjeta.Text = "";
-            txtcodigopasajero.Text = "";
+            cbxCodigoPasajero.Text = "";
             txtfechaemision.Text = "";
             txtsaldo.Text = "";
             txtmoneda.Text = "";
@@ -41,7 +66,7 @@ namespace CapaPresentacion
             {
                 DataGridViewRow fila = dataGridView1.Rows[e.RowIndex];
                 txtcodigotarjeta.Text = fila.Cells["CodigoTarjeta"].Value.ToString();
-                txtcodigopasajero.Text = fila.Cells["CodigoPasajero"].Value.ToString();
+                cbxCodigoPasajero.Text = fila.Cells["CodigoPasajero"].Value.ToString();
                 txtfechaemision.Text = fila.Cells["FechaEmision"].Value.ToString();
                 txtsaldo.Text = fila.Cells["Saldo"].Value.ToString();
                 txtmoneda.Text = fila.Cells["Moneda"].Value.ToString();
@@ -57,10 +82,12 @@ namespace CapaPresentacion
 
         private void btnguardar_Click(object sender, EventArgs e)
         {
+            int FK = Convert.ToInt32(cbxCodigoPasajero.SelectedValue.ToString());
+
             try
             {
                 cd_tarjetadetransporte.MtInsertarTarjetadeTransporte(
-                int.Parse(txtcodigopasajero.Text),
+                FK,
                 DateTime.Parse( txtfechaemision.Text),
                 decimal.Parse(txtsaldo.Text),
                 txtmoneda.Text,
@@ -79,11 +106,13 @@ namespace CapaPresentacion
 
         private void btneditar_Click(object sender, EventArgs e)
         {
+            int FK = Convert.ToInt32(cbxCodigoPasajero.SelectedValue.ToString());
+
             try
             {
                 cd_tarjetadetransporte.MtActualizarTarjetadeTransporte(
                     int.Parse(txtcodigotarjeta.Text),
-                  int.Parse(txtcodigopasajero.Text),
+                  FK,
                   DateTime.Parse(txtfechaemision.Text),
                 decimal.Parse(txtsaldo.Text),
                 txtmoneda.Text,
@@ -141,6 +170,11 @@ namespace CapaPresentacion
                     MessageBox.Show("Por favor ingresa un número válido para el código de tarjeta de transporte.");
                 }
             }
+        }
+
+        private void cbxCodigoPasajero_Click(object sender, EventArgs e)
+        {
+            MtdMostrarFK();
         }
     }
 }

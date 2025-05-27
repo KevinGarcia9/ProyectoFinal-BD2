@@ -11,11 +11,12 @@ namespace CapaDatos
 {
     public class CD_Tarifas
     {
-        private SqlConnection conexion = new SqlConnection("Server=DESKTOP-9QF8HLG\\SQLEXPRESS;Database=ElIngeVeloz;Trusted_Connection=True;");
+        //private SqlConnection conexion = new SqlConnection("Server=DESKTOP-9QF8HLG\\SQLEXPRESS;Database=ElIngeVeloz;Trusted_Connection=True;");
+        CD_Conexion db_conexion = new CD_Conexion();
 
         public void mtdAgregarTarifa(int codigoRuta, decimal monto, string moneda, DateTime fechaVigencia, DateTime fechaVencimiento, string estado)
         {
-            SqlCommand cmd = new SqlCommand("Usp_Agregar_Tarifas", conexion);
+            SqlCommand cmd = new SqlCommand("Usp_Agregar_Tarifas", db_conexion.MtdAbrirConexion());
 
             cmd.CommandType = CommandType.StoredProcedure;
             cmd.Parameters.AddWithValue("@CodigoRuta", codigoRuta);
@@ -25,15 +26,15 @@ namespace CapaDatos
             cmd.Parameters.AddWithValue("@FechaVencimiento", fechaVencimiento);
             cmd.Parameters.AddWithValue("@Estado", estado);
 
-            conexion.Open();
+            
             cmd.ExecuteNonQuery();
             cmd.Parameters.Clear();
-            conexion.Close();
+            
         }
 
         public void mtdActualizarTarifa(int codigoTarifa, int codigoRuta, decimal monto, string moneda, DateTime fechaVigencia, DateTime fechaVencimiento, string estado)
         {
-            SqlCommand cmd = new SqlCommand("Usp_Actualizar_Tarifas", conexion);
+            SqlCommand cmd = new SqlCommand("Usp_Actualizar_Tarifas", db_conexion.MtdAbrirConexion());
 
             cmd.CommandType = CommandType.StoredProcedure;
             cmd.Parameters.AddWithValue("@CodigoTarifa", codigoTarifa);
@@ -44,28 +45,28 @@ namespace CapaDatos
             cmd.Parameters.AddWithValue("@FechaVencimiento", fechaVencimiento);
             cmd.Parameters.AddWithValue("@Estado", estado);
 
-            conexion.Open();
+          
             cmd.ExecuteNonQuery();
             cmd.Parameters.Clear();
-            conexion.Close();
+            
         }
 
         public void mtdEliminarTarifa(int codigoTarifa)
         {
-            SqlCommand cmd = new SqlCommand("Usp_Eliminar_Tarifas", conexion);
+            SqlCommand cmd = new SqlCommand("Usp_Eliminar_Tarifas", db_conexion.MtdAbrirConexion());
 
             cmd.CommandType = CommandType.StoredProcedure;
             cmd.Parameters.AddWithValue("@CodigoTarifa", codigoTarifa);
 
-            conexion.Open();
+            
             cmd.ExecuteNonQuery();
             cmd.Parameters.Clear();
-            conexion.Close();
+            
         }
 
         public DataTable mtdBuscarTarifasPorRuta(int codigoRuta)
         {
-            SqlCommand cmd = new SqlCommand("Usp_Buscar_Tarifas", conexion);
+            SqlCommand cmd = new SqlCommand("Usp_Buscar_Tarifas", db_conexion.MtdAbrirConexion());
             cmd.CommandType = CommandType.StoredProcedure;
             cmd.Parameters.AddWithValue("@CodigoRuta", codigoRuta);
 
@@ -77,7 +78,7 @@ namespace CapaDatos
 
         public DataTable mtdMostrarTarifas()
         {
-            SqlCommand comando = new SqlCommand("Usp_Mostrar_Tarifas", conexion);
+            SqlCommand comando = new SqlCommand("Usp_Mostrar_Tarifas", db_conexion.MtdAbrirConexion());
             comando.CommandType = CommandType.StoredProcedure;
 
             SqlDataAdapter adaptador = new SqlDataAdapter(comando);

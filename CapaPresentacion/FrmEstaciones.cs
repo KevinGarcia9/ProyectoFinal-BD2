@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
+using System.Data.SqlClient;
 using System.Drawing;
 using System.Linq;
 using System.Text;
@@ -18,7 +19,28 @@ namespace CapaPresentacion
             InitializeComponent();
         }
 
+        
         CD_Estaciones cd_estaciones = new CD_Estaciones();
+
+        private void MtdMostrarRut()
+        {
+            CD_Conexion db_conexion = new CD_Conexion();
+
+            SqlCommand cmd = new SqlCommand("SELECT CodigoRuta, Nombre, Origen, Destino,Estado FROM Rutas ", db_conexion.MtdAbrirConexion() );
+                SqlDataReader reader = cmd.ExecuteReader();
+
+                DataTable dt = new DataTable();
+                dt.Load(reader);
+
+                // Agrega columna para visualización combinada
+                dt.Columns.Add("DescripcionRuta", typeof(string), "CodigoRuta + ' - ' + Nombre + ' (' + Origen + ' - ' + Destino + ')' + ' ' + Estado");
+
+                cbxCodigoRuta.DataSource = dt;
+                cbxCodigoRuta.DisplayMember = "DescripcionRuta";
+                cbxCodigoRuta.ValueMember = "CodigoRuta";
+            
+        }
+
 
         private void MtdMostrarEstaciones()
         {
@@ -29,7 +51,8 @@ namespace CapaPresentacion
         private void MtdLimpiarCampos()
         {
             txtCodigo.Text = "";
-            txtCodigoRuta.Text = "";
+           
+            cbxCodigoRuta.SelectedIndex = -1; 
             txtNombre.Text = "";
             txtUbicacion.Text = "";
             txtSecuencia.Text = "";
@@ -40,18 +63,20 @@ namespace CapaPresentacion
         private void FrmEstaciones_Load_1(object sender, EventArgs e)
         {
             MtdMostrarEstaciones();
+            
         }
 
         private void iconButton1_Click(object sender, EventArgs e)
         {
             try
             {
-                int codigoRuta = int.Parse(txtCodigoRuta.Text);
+
+                int codigoruta = Convert.ToInt32(cbxCodigoRuta.SelectedValue.ToString());
                 int secuencia = int.Parse(txtSecuencia.Text);
                 int tiempoEspera = int.Parse(txtTiempoEspera.Text);
 
                 cd_estaciones.MtInsertarEstacion(
-                    codigoRuta,
+                    codigoruta,
                     txtNombre.Text,
                     txtUbicacion.Text,
                     secuencia,
@@ -73,13 +98,13 @@ namespace CapaPresentacion
             try
             {
                 int codigoEstacion = int.Parse(txtCodigo.Text);
-                int codigoRuta = int.Parse(txtCodigoRuta.Text);
+                int codigoruta = Convert.ToInt32(cbxCodigoRuta.SelectedValue.ToString());
                 int secuencia = int.Parse(txtSecuencia.Text);
                 int tiempoEspera = int.Parse(txtTiempoEspera.Text);
 
                 cd_estaciones.MtActualizarEstacion(
                     codigoEstacion,
-                    codigoRuta,
+                    codigoruta,
                     txtNombre.Text,
                     txtUbicacion.Text,
                     secuencia,
@@ -123,13 +148,19 @@ namespace CapaPresentacion
             {
                 DataGridViewRow fila = dgvEstaciones.Rows[e.RowIndex];
                 txtCodigo.Text = fila.Cells["CodigoEstacion"].Value.ToString();
-                txtCodigoRuta.Text = fila.Cells["CodigoRuta"].Value.ToString();
+                
+                cbxCodigoRuta.Text = fila.Cells["CodigoRuta"].Value.ToString();
                 txtNombre.Text = fila.Cells["Nombre"].Value.ToString();
                 txtUbicacion.Text = fila.Cells["Ubicación"].Value.ToString();
                 txtSecuencia.Text = fila.Cells["Secuencia"].Value.ToString();
                 txtTiempoEspera.Text = fila.Cells["TiempoEspera"].Value.ToString();
                 cmbEstado.Text = fila.Cells["Estado"].Value.ToString();
             }
+        }
+
+        private void cbxCodigoRuta_Click(object sender, EventArgs e)
+        {
+            MtdMostrarRut();
         }
     }
 }

@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
+using System.Data.SqlClient;
 using System.Drawing;
 using System.Linq;
 using System.Text;
@@ -16,10 +17,55 @@ namespace CapaPresentacion
         public FormIncidentes()
         {
             InitializeComponent();
+            
         }
 
 
+
+
         CD_Incidentes cd_incidentes = new CD_Incidentes();
+
+
+        private void MtdMostrarFK()
+        {
+            CD_Conexion db_conexion = new CD_Conexion();
+
+            SqlCommand cmd = new SqlCommand("select CodigoTransporte,Placa,Marca,Estado from Transportes", db_conexion.MtdAbrirConexion());
+            SqlDataReader reader = cmd.ExecuteReader();
+
+            DataTable dt = new DataTable();
+            dt.Load(reader);
+
+            // Agrega columna para visualización combinada
+            dt.Columns.Add("Descripcion", typeof(string), "CodigoTransporte + ' - ' + Placa + ' - ' + Marca + ' - ' + Estado");
+
+            cbxCodigoTransporte.DataSource = dt;
+            cbxCodigoTransporte.DisplayMember = "Descripcion";
+            cbxCodigoTransporte.ValueMember = "CodigoTransporte";
+
+        }
+
+        private void MtdMostrarFK2()
+        {
+            CD_Conexion db_conexion = new CD_Conexion();
+
+            SqlCommand cmd = new SqlCommand("select CodigoConductor, Nombre,Licencia,Estado from Conductores", db_conexion.MtdAbrirConexion());
+            SqlDataReader reader = cmd.ExecuteReader();
+
+            DataTable dt = new DataTable();
+            dt.Load(reader);
+
+            // Agrega columna para visualización combinada
+            dt.Columns.Add("Descripcion", typeof(string), "CodigoConductor + ' - ' + Nombre + ' - ' + Licencia + ' - ' + Estado");
+
+            cbxCodigoConductor.DataSource = dt;
+            cbxCodigoConductor.DisplayMember = "Descripcion";
+            cbxCodigoConductor.ValueMember = "CodigoConductor";
+
+        }
+
+
+
         private void MtdMostrarIncidentes()
         {
             DataTable tabla = cd_incidentes.MtMostrarIncidentes();
@@ -29,8 +75,9 @@ namespace CapaPresentacion
         private void MtdLimpiarCampos()
         {
             txtcodigoincidente.Text = "";
-            txtcodigotransporte.Text = "";
-            txtcodigoconductor.Text = "";
+
+            cbxCodigoTransporte.Text = "";
+            cbxCodigoConductor.Text = "";
             txtdescripcion.Text = "";
             txtfecha.Text = "";
             txthora.Text = "";
@@ -38,12 +85,14 @@ namespace CapaPresentacion
         }
         private void btnguardar_Click(object sender, EventArgs e)
         {
+            int FK = Convert.ToInt32(cbxCodigoTransporte.SelectedValue.ToString());
+            int FK2 = Convert.ToInt32(cbxCodigoConductor.SelectedValue.ToString());
 
             try
             {
                 cd_incidentes.MtInsertarIncidentes(
-                  int.Parse(  txtcodigotransporte.Text),
-                   int.Parse( txtcodigoconductor.Text),
+                    FK,
+                    FK2,
                     txtdescripcion.Text,
                   DateTime.Parse(  txtfecha.Text),
                     txthora.Text,
@@ -61,12 +110,16 @@ namespace CapaPresentacion
 
         private void btneditar_Click(object sender, EventArgs e)
         {
+            int FK = Convert.ToInt32(cbxCodigoTransporte.SelectedValue.ToString());
+            int FK2 = Convert.ToInt32(cbxCodigoConductor.SelectedValue.ToString());
+
+
             try
             {
                 cd_incidentes.MtActualizarIncidentes(
                     int.Parse(txtcodigoincidente.Text),
-                 int.Parse(  txtcodigotransporte.Text),
-                    int.Parse(txtcodigoconductor.Text),
+                    FK,
+                    FK2,
                     txtdescripcion.Text,
                    DateTime.Parse( txtfecha.Text),
                     txthora.Text,
@@ -113,8 +166,9 @@ namespace CapaPresentacion
             {
                 DataGridViewRow fila = dgvincidentes.Rows[e.RowIndex];
                 txtcodigoincidente.Text = fila.Cells["CodigoIncidente"].Value.ToString();
-                txtcodigotransporte.Text = fila.Cells["CodigoTransporte"].Value.ToString();
-                txtcodigoconductor.Text = fila.Cells["CodigoConductor"].Value.ToString();
+
+                cbxCodigoTransporte.Text = fila.Cells["CodigoTransporte"].Value.ToString();
+                cbxCodigoConductor.Text = fila.Cells["CodigoConductor"].Value.ToString();
                 txtdescripcion.Text = fila.Cells["Descripcion"].Value.ToString();
                 txtfecha.Text = fila.Cells["Fecha"].Value.ToString();
                 txthora.Text = fila.Cells["Hora"].Value.ToString();
@@ -144,6 +198,15 @@ namespace CapaPresentacion
             }
         }
 
+        private void cbxCodigoTransporte_Click(object sender, EventArgs e)
+        {
+            MtdMostrarFK();
+        }
+
+        private void cbxCodigoConductor_Click(object sender, EventArgs e)
+        {
+            MtdMostrarFK2();
+        }
     }
 
 }

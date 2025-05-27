@@ -10,12 +10,13 @@ namespace CapaDatos
 {
     public class CD_Pasajeros
     {
-        private SqlConnection conexion = new SqlConnection("Server=DESKTOP-9QF8HLG\\SQLEXPRESS;Database=ElIngeVeloz;Trusted_Connection=True;");
+        //private SqlConnection conexion = new SqlConnection("Server=DESKTOP-9QF8HLG\\SQLEXPRESS;Database=ElIngeVeloz;Trusted_Connection=True;");
+        CD_Conexion db_conexion = new CD_Conexion();
 
         public void mtdAgregarPasajero(string nombre, string dpi, string nit, DateTime fechaAlta, string telefono, string estado)
         {
 
-            SqlCommand cmd = new SqlCommand("Usp_Agregar_Pasajero", conexion);
+            SqlCommand cmd = new SqlCommand("Usp_Agregar_Pasajero", db_conexion.MtdAbrirConexion());
             cmd.CommandType = CommandType.StoredProcedure;
             cmd.Parameters.AddWithValue("@Nombre", nombre);
             cmd.Parameters.AddWithValue("@Dpi", dpi);
@@ -24,16 +25,16 @@ namespace CapaDatos
             cmd.Parameters.AddWithValue("@Telefono", telefono);
             cmd.Parameters.AddWithValue("@Estado", estado);
 
-            conexion.Open();
+            
             cmd.ExecuteNonQuery();
             cmd.Parameters.Clear();
-            conexion.Close();
+            
 
         }
 
         public void mtdActualizarPasajero(int codigo, string nombre, string dpi, string nit, DateTime fechaAlta, string telefono, string estado)
         {
-            SqlCommand cmd = new SqlCommand("Usp_Actualizar_Pasajero", conexion);
+            SqlCommand cmd = new SqlCommand("Usp_Actualizar_Pasajero", db_conexion.MtdAbrirConexion());
             cmd.CommandType = CommandType.StoredProcedure;
             cmd.Parameters.AddWithValue("@CodigoPasajero", codigo);
             cmd.Parameters.AddWithValue("@Nombre", nombre);
@@ -43,27 +44,27 @@ namespace CapaDatos
             cmd.Parameters.AddWithValue("@Telefono", telefono);
             cmd.Parameters.AddWithValue("@Estado", estado);
 
-            conexion.Open();
+            
             cmd.ExecuteNonQuery();
             cmd.Parameters.Clear();
-            conexion.Close();
+           
         }
 
         public void mtdEliminarPasajero(int codigo)
         {
-            SqlCommand cmd = new SqlCommand("Usp_Eliminar_Pasajero", conexion);
+            SqlCommand cmd = new SqlCommand("Usp_Eliminar_Pasajero", db_conexion.MtdAbrirConexion());
             cmd.CommandType = CommandType.StoredProcedure;
             cmd.Parameters.AddWithValue("@CodigoPasajero", codigo);
 
-            conexion.Open();
+         
             cmd.ExecuteNonQuery();
             cmd.Parameters.Clear();
-            conexion.Close();
+            
         }
 
         public DataTable mtdBuscarPasajero(string filtro)
         {
-            SqlCommand cmd = new SqlCommand("Usp_Buscar_Pasajero", conexion);
+            SqlCommand cmd = new SqlCommand("Usp_Buscar_Pasajero", db_conexion.MtdAbrirConexion());
             cmd.CommandType = CommandType.StoredProcedure;
             cmd.Parameters.AddWithValue("@Filtro", filtro);
 
@@ -75,7 +76,7 @@ namespace CapaDatos
 
         public DataTable mtdMostrarPasajeros()
         {
-            SqlCommand comando = new SqlCommand("Usp_Mostrar_Pasajeros", conexion);
+            SqlCommand comando = new SqlCommand("Usp_Mostrar_Pasajeros", db_conexion.MtdAbrirConexion());
             comando.CommandType = CommandType.StoredProcedure;
 
             SqlDataAdapter adaptador = new SqlDataAdapter(comando);

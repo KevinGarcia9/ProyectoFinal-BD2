@@ -60,7 +60,7 @@
             this.gboxConductores.Controls.Add(this.btnCancelar);
             this.gboxConductores.Location = new System.Drawing.Point(12, 12);
             this.gboxConductores.Name = "gboxConductores";
-            this.gboxConductores.Size = new System.Drawing.Size(1052, 264);
+            this.gboxConductores.Size = new System.Drawing.Size(1176, 264);
             this.gboxConductores.TabIndex = 0;
             this.gboxConductores.TabStop = false;
             this.gboxConductores.Text = "DATOS CONDUCTORES";
@@ -189,7 +189,7 @@
             this.btnGuardar.IconFont = FontAwesome.Sharp.IconFont.Auto;
             this.btnGuardar.IconSize = 30;
             this.btnGuardar.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnGuardar.Location = new System.Drawing.Point(854, 90);
+            this.btnGuardar.Location = new System.Drawing.Point(1014, 106);
             this.btnGuardar.Name = "btnGuardar";
             this.btnGuardar.Size = new System.Drawing.Size(130, 35);
             this.btnGuardar.TabIndex = 21;
@@ -203,7 +203,7 @@
             this.btnActualizar.IconFont = FontAwesome.Sharp.IconFont.Auto;
             this.btnActualizar.IconSize = 30;
             this.btnActualizar.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnActualizar.Location = new System.Drawing.Point(854, 130);
+            this.btnActualizar.Location = new System.Drawing.Point(1014, 146);
             this.btnActualizar.Name = "btnActualizar";
             this.btnActualizar.Size = new System.Drawing.Size(130, 35);
             this.btnActualizar.TabIndex = 22;
@@ -217,7 +217,7 @@
             this.btnCancelar.IconFont = FontAwesome.Sharp.IconFont.Auto;
             this.btnCancelar.IconSize = 30;
             this.btnCancelar.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnCancelar.Location = new System.Drawing.Point(854, 170);
+            this.btnCancelar.Location = new System.Drawing.Point(1014, 186);
             this.btnCancelar.Name = "btnCancelar";
             this.btnCancelar.Size = new System.Drawing.Size(130, 35);
             this.btnCancelar.TabIndex = 23;
@@ -235,7 +235,7 @@
             this.dgvConductores.ReadOnly = true;
             this.dgvConductores.RowHeadersWidth = 51;
             this.dgvConductores.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.dgvConductores.Size = new System.Drawing.Size(1052, 270);
+            this.dgvConductores.Size = new System.Drawing.Size(868, 361);
             this.dgvConductores.TabIndex = 1;
             this.dgvConductores.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvConductores_CellClick);
             this.dgvConductores.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvConductores_CellContentClick);
@@ -247,9 +247,9 @@
             this.btnEliminar.IconFont = FontAwesome.Sharp.IconFont.Auto;
             this.btnEliminar.IconSize = 30;
             this.btnEliminar.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnEliminar.Location = new System.Drawing.Point(966, 592);
+            this.btnEliminar.Location = new System.Drawing.Point(923, 679);
             this.btnEliminar.Name = "btnEliminar";
-            this.btnEliminar.Size = new System.Drawing.Size(150, 35);
+            this.btnEliminar.Size = new System.Drawing.Size(170, 62);
             this.btnEliminar.TabIndex = 0;
             this.btnEliminar.Text = "Eliminar";
             this.btnEliminar.Click += new System.EventHandler(this.btnEliminar_Click);
@@ -262,7 +262,7 @@
             // FrmConductores
             // 
             this.BackColor = System.Drawing.Color.White;
-            this.ClientSize = new System.Drawing.Size(1192, 666);
+            this.ClientSize = new System.Drawing.Size(1236, 788);
             this.Controls.Add(this.btnEliminar);
             this.Controls.Add(this.dgvConductores);
             this.Controls.Add(this.gboxConductores);

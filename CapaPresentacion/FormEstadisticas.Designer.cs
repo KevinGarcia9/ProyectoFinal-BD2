@@ -82,7 +82,7 @@
             this.gboxestadisticos.Controls.Add(this.label1);
             this.gboxestadisticos.Location = new System.Drawing.Point(25, 12);
             this.gboxestadisticos.Name = "gboxestadisticos";
-            this.gboxestadisticos.Size = new System.Drawing.Size(852, 187);
+            this.gboxestadisticos.Size = new System.Drawing.Size(1172, 296);
             this.gboxestadisticos.TabIndex = 0;
             this.gboxestadisticos.TabStop = false;
             this.gboxestadisticos.Text = "Datos Estadisticos";
@@ -90,10 +90,10 @@
             // 
             // btnBuscar
             // 
-            this.btnBuscar.Location = new System.Drawing.Point(752, 108);
+            this.btnBuscar.Location = new System.Drawing.Point(1024, 161);
             this.btnBuscar.Margin = new System.Windows.Forms.Padding(2, 1, 2, 1);
             this.btnBuscar.Name = "btnBuscar";
-            this.btnBuscar.Size = new System.Drawing.Size(94, 23);
+            this.btnBuscar.Size = new System.Drawing.Size(125, 58);
             this.btnBuscar.TabIndex = 27;
             this.btnBuscar.Text = "Buscar";
             this.btnBuscar.UseVisualStyleBackColor = true;
@@ -102,7 +102,7 @@
             // label9
             // 
             this.label9.AutoSize = true;
-            this.label9.Location = new System.Drawing.Point(590, 13);
+            this.label9.Location = new System.Drawing.Point(421, 16);
             this.label9.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label9.Name = "label9";
             this.label9.Size = new System.Drawing.Size(40, 13);
@@ -111,7 +111,7 @@
             // 
             // datetimeFechaPago
             // 
-            this.datetimeFechaPago.Location = new System.Drawing.Point(634, 6);
+            this.datetimeFechaPago.Location = new System.Drawing.Point(465, 17);
             this.datetimeFechaPago.Margin = new System.Windows.Forms.Padding(2, 1, 2, 1);
             this.datetimeFechaPago.Name = "datetimeFechaPago";
             this.datetimeFechaPago.Size = new System.Drawing.Size(212, 20);
@@ -119,9 +119,9 @@
             // 
             // btnlimpiar
             // 
-            this.btnlimpiar.Location = new System.Drawing.Point(752, 147);
+            this.btnlimpiar.Location = new System.Drawing.Point(1024, 222);
             this.btnlimpiar.Name = "btnlimpiar";
-            this.btnlimpiar.Size = new System.Drawing.Size(94, 24);
+            this.btnlimpiar.Size = new System.Drawing.Size(125, 59);
             this.btnlimpiar.TabIndex = 7;
             this.btnlimpiar.Text = "Cancelar";
             this.btnlimpiar.UseVisualStyleBackColor = true;
@@ -133,23 +133,23 @@
             this.cmbestado.Items.AddRange(new object[] {
             "Activo",
             "Inactivo"});
-            this.cmbestado.Location = new System.Drawing.Point(507, 110);
+            this.cmbestado.Location = new System.Drawing.Point(613, 195);
             this.cmbestado.Name = "cmbestado";
             this.cmbestado.Size = new System.Drawing.Size(121, 21);
             this.cmbestado.TabIndex = 14;
             // 
             // txttotalincedentes
             // 
-            this.txttotalincedentes.Location = new System.Drawing.Point(507, 67);
+            this.txttotalincedentes.Location = new System.Drawing.Point(613, 152);
             this.txttotalincedentes.Name = "txttotalincedentes";
             this.txttotalincedentes.Size = new System.Drawing.Size(100, 20);
             this.txttotalincedentes.TabIndex = 13;
             // 
             // btneditar
             // 
-            this.btneditar.Location = new System.Drawing.Point(752, 70);
+            this.btneditar.Location = new System.Drawing.Point(1024, 93);
             this.btneditar.Name = "btneditar";
-            this.btneditar.Size = new System.Drawing.Size(94, 29);
+            this.btneditar.Size = new System.Drawing.Size(125, 64);
             this.btneditar.TabIndex = 4;
             this.btneditar.Text = "Editar";
             this.btneditar.UseVisualStyleBackColor = true;
@@ -157,16 +157,16 @@
             // 
             // txtmoneda
             // 
-            this.txtmoneda.Location = new System.Drawing.Point(507, 27);
+            this.txtmoneda.Location = new System.Drawing.Point(613, 112);
             this.txtmoneda.Name = "txtmoneda";
             this.txtmoneda.Size = new System.Drawing.Size(49, 20);
             this.txtmoneda.TabIndex = 12;
             // 
             // btnguardar
             // 
-            this.btnguardar.Location = new System.Drawing.Point(752, 30);
+            this.btnguardar.Location = new System.Drawing.Point(1024, 24);
             this.btnguardar.Name = "btnguardar";
-            this.btnguardar.Size = new System.Drawing.Size(94, 28);
+            this.btnguardar.Size = new System.Drawing.Size(125, 63);
             this.btnguardar.TabIndex = 3;
             this.btnguardar.Text = "Guardar";
             this.btnguardar.UseVisualStyleBackColor = true;
@@ -174,28 +174,28 @@
             // 
             // txtingresototal
             // 
-            this.txtingresototal.Location = new System.Drawing.Point(185, 131);
+            this.txtingresototal.Location = new System.Drawing.Point(221, 202);
             this.txtingresototal.Name = "txtingresototal";
             this.txtingresototal.Size = new System.Drawing.Size(100, 20);
             this.txtingresototal.TabIndex = 11;
             // 
             // txtpasajerostransp
             // 
-            this.txtpasajerostransp.Location = new System.Drawing.Point(185, 93);
+            this.txtpasajerostransp.Location = new System.Drawing.Point(221, 164);
             this.txtpasajerostransp.Name = "txtpasajerostransp";
             this.txtpasajerostransp.Size = new System.Drawing.Size(91, 20);
             this.txtpasajerostransp.TabIndex = 10;
             // 
             // txtfechareporte
             // 
-            this.txtfechareporte.Location = new System.Drawing.Point(185, 55);
+            this.txtfechareporte.Location = new System.Drawing.Point(221, 126);
             this.txtfechareporte.Name = "txtfechareporte";
             this.txtfechareporte.Size = new System.Drawing.Size(125, 20);
             this.txtfechareporte.TabIndex = 9;
             // 
             // txtcodigo
             // 
-            this.txtcodigo.Location = new System.Drawing.Point(185, 20);
+            this.txtcodigo.Location = new System.Drawing.Point(221, 91);
             this.txtcodigo.Name = "txtcodigo";
             this.txtcodigo.Size = new System.Drawing.Size(69, 20);
             this.txtcodigo.TabIndex = 8;
@@ -203,7 +203,7 @@
             // label8
             // 
             this.label8.AutoSize = true;
-            this.label8.Location = new System.Drawing.Point(339, 113);
+            this.label8.Location = new System.Drawing.Point(375, 184);
             this.label8.Name = "label8";
             this.label8.Size = new System.Drawing.Size(0, 13);
             this.label8.TabIndex = 7;
@@ -211,7 +211,7 @@
             // label7
             // 
             this.label7.AutoSize = true;
-            this.label7.Location = new System.Drawing.Point(385, 113);
+            this.label7.Location = new System.Drawing.Point(491, 198);
             this.label7.Name = "label7";
             this.label7.Size = new System.Drawing.Size(40, 13);
             this.label7.TabIndex = 6;
@@ -220,7 +220,7 @@
             // label6
             // 
             this.label6.AutoSize = true;
-            this.label6.Location = new System.Drawing.Point(385, 70);
+            this.label6.Location = new System.Drawing.Point(491, 155);
             this.label6.Name = "label6";
             this.label6.Size = new System.Drawing.Size(86, 13);
             this.label6.TabIndex = 5;
@@ -229,7 +229,7 @@
             // label5
             // 
             this.label5.AutoSize = true;
-            this.label5.Location = new System.Drawing.Point(385, 34);
+            this.label5.Location = new System.Drawing.Point(491, 119);
             this.label5.Name = "label5";
             this.label5.Size = new System.Drawing.Size(46, 13);
             this.label5.TabIndex = 4;
@@ -238,7 +238,7 @@
             // label4
             // 
             this.label4.AutoSize = true;
-            this.label4.Location = new System.Drawing.Point(15, 138);
+            this.label4.Location = new System.Drawing.Point(51, 209);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(69, 13);
             this.label4.TabIndex = 3;
@@ -247,7 +247,7 @@
             // label3
             // 
             this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(15, 96);
+            this.label3.Location = new System.Drawing.Point(51, 167);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(124, 13);
             this.label3.TabIndex = 2;
@@ -256,7 +256,7 @@
             // label2
             // 
             this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(15, 62);
+            this.label2.Location = new System.Drawing.Point(51, 133);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(78, 13);
             this.label2.TabIndex = 1;
@@ -266,7 +266,7 @@
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(15, 27);
+            this.label1.Location = new System.Drawing.Point(51, 98);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(40, 13);
             this.label1.TabIndex = 0;
@@ -274,9 +274,9 @@
             // 
             // btneliminar
             // 
-            this.btneliminar.Location = new System.Drawing.Point(678, 541);
+            this.btneliminar.Location = new System.Drawing.Point(737, 674);
             this.btneliminar.Name = "btneliminar";
-            this.btneliminar.Size = new System.Drawing.Size(94, 28);
+            this.btneliminar.Size = new System.Drawing.Size(134, 46);
             this.btneliminar.TabIndex = 5;
             this.btneliminar.Text = "Eliminar";
             this.btneliminar.UseVisualStyleBackColor = true;
@@ -286,19 +286,19 @@
             // 
             this.dgvestadisticas.BackgroundColor = System.Drawing.Color.White;
             this.dgvestadisticas.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dgvestadisticas.Location = new System.Drawing.Point(25, 215);
+            this.dgvestadisticas.Location = new System.Drawing.Point(25, 333);
             this.dgvestadisticas.Name = "dgvestadisticas";
-            this.dgvestadisticas.Size = new System.Drawing.Size(751, 285);
+            this.dgvestadisticas.Size = new System.Drawing.Size(922, 316);
             this.dgvestadisticas.TabIndex = 1;
             this.dgvestadisticas.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvestadisticas_CellClick);
             this.dgvestadisticas.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvestadisticas_CellContentClick);
             // 
             // btnSalir
             // 
-            this.btnSalir.Location = new System.Drawing.Point(777, 541);
+            this.btnSalir.Location = new System.Drawing.Point(887, 674);
             this.btnSalir.Margin = new System.Windows.Forms.Padding(2, 1, 2, 1);
             this.btnSalir.Name = "btnSalir";
-            this.btnSalir.Size = new System.Drawing.Size(94, 28);
+            this.btnSalir.Size = new System.Drawing.Size(134, 46);
             this.btnSalir.TabIndex = 26;
             this.btnSalir.Text = "Salir";
             this.btnSalir.UseVisualStyleBackColor = true;
@@ -308,7 +308,7 @@
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.White;
-            this.ClientSize = new System.Drawing.Size(1176, 627);
+            this.ClientSize = new System.Drawing.Size(1236, 788);
             this.Controls.Add(this.btnSalir);
             this.Controls.Add(this.dgvestadisticas);
             this.Controls.Add(this.gboxestadisticos);

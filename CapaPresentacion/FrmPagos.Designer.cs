@@ -41,24 +41,24 @@
             this.txtBanco = new System.Windows.Forms.TextBox();
             this.cboxTipoPago = new System.Windows.Forms.ComboBox();
             this.cboxEstado = new System.Windows.Forms.ComboBox();
-            this.txtCodigoTarifa = new System.Windows.Forms.TextBox();
-            this.txtCodigoPasajero = new System.Windows.Forms.TextBox();
             this.label6 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.label5 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
             this.label4 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
+            this.cbxCodigoPasajero = new System.Windows.Forms.ComboBox();
+            this.cbxCodigoTarifa = new System.Windows.Forms.ComboBox();
             ((System.ComponentModel.ISupportInitialize)(this.dtgvPagos)).BeginInit();
             this.groupBox1.SuspendLayout();
             this.SuspendLayout();
             // 
             // btnSalir
             // 
-            this.btnSalir.Location = new System.Drawing.Point(455, 397);
+            this.btnSalir.Location = new System.Drawing.Point(764, 689);
             this.btnSalir.Margin = new System.Windows.Forms.Padding(2, 1, 2, 1);
             this.btnSalir.Name = "btnSalir";
-            this.btnSalir.Size = new System.Drawing.Size(84, 23);
+            this.btnSalir.Size = new System.Drawing.Size(153, 59);
             this.btnSalir.TabIndex = 25;
             this.btnSalir.Text = "Salir";
             this.btnSalir.UseVisualStyleBackColor = true;
@@ -66,18 +66,21 @@
             // 
             // dtgvPagos
             // 
+            this.dtgvPagos.BackgroundColor = System.Drawing.Color.White;
             this.dtgvPagos.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dtgvPagos.Location = new System.Drawing.Point(29, 226);
+            this.dtgvPagos.Location = new System.Drawing.Point(29, 301);
             this.dtgvPagos.Margin = new System.Windows.Forms.Padding(2, 1, 2, 1);
             this.dtgvPagos.Name = "dtgvPagos";
             this.dtgvPagos.RowHeadersWidth = 62;
             this.dtgvPagos.RowTemplate.Height = 28;
-            this.dtgvPagos.Size = new System.Drawing.Size(573, 161);
+            this.dtgvPagos.Size = new System.Drawing.Size(830, 373);
             this.dtgvPagos.TabIndex = 24;
             this.dtgvPagos.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dtgvPagos_CellClick);
             // 
             // groupBox1
             // 
+            this.groupBox1.Controls.Add(this.cbxCodigoTarifa);
+            this.groupBox1.Controls.Add(this.cbxCodigoPasajero);
             this.groupBox1.Controls.Add(this.txtCodigoPago);
             this.groupBox1.Controls.Add(this.label7);
             this.groupBox1.Controls.Add(this.btnEliminar);
@@ -88,8 +91,6 @@
             this.groupBox1.Controls.Add(this.txtBanco);
             this.groupBox1.Controls.Add(this.cboxTipoPago);
             this.groupBox1.Controls.Add(this.cboxEstado);
-            this.groupBox1.Controls.Add(this.txtCodigoTarifa);
-            this.groupBox1.Controls.Add(this.txtCodigoPasajero);
             this.groupBox1.Controls.Add(this.label6);
             this.groupBox1.Controls.Add(this.label2);
             this.groupBox1.Controls.Add(this.label5);
@@ -100,14 +101,14 @@
             this.groupBox1.Margin = new System.Windows.Forms.Padding(2, 1, 2, 1);
             this.groupBox1.Name = "groupBox1";
             this.groupBox1.Padding = new System.Windows.Forms.Padding(2, 1, 2, 1);
-            this.groupBox1.Size = new System.Drawing.Size(573, 209);
+            this.groupBox1.Size = new System.Drawing.Size(1178, 280);
             this.groupBox1.TabIndex = 23;
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Datos Pagos";
             // 
             // txtCodigoPago
             // 
-            this.txtCodigoPago.Location = new System.Drawing.Point(136, 38);
+            this.txtCodigoPago.Location = new System.Drawing.Point(161, 76);
             this.txtCodigoPago.Margin = new System.Windows.Forms.Padding(2, 1, 2, 1);
             this.txtCodigoPago.Name = "txtCodigoPago";
             this.txtCodigoPago.Size = new System.Drawing.Size(70, 20);
@@ -116,7 +117,7 @@
             // label7
             // 
             this.label7.AutoSize = true;
-            this.label7.Location = new System.Drawing.Point(41, 38);
+            this.label7.Location = new System.Drawing.Point(66, 76);
             this.label7.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label7.Name = "label7";
             this.label7.Size = new System.Drawing.Size(68, 13);
@@ -125,10 +126,10 @@
             // 
             // btnEliminar
             // 
-            this.btnEliminar.Location = new System.Drawing.Point(427, 163);
+            this.btnEliminar.Location = new System.Drawing.Point(1049, 212);
             this.btnEliminar.Margin = new System.Windows.Forms.Padding(2, 1, 2, 1);
             this.btnEliminar.Name = "btnEliminar";
-            this.btnEliminar.Size = new System.Drawing.Size(84, 23);
+            this.btnEliminar.Size = new System.Drawing.Size(125, 56);
             this.btnEliminar.TabIndex = 21;
             this.btnEliminar.Text = "Eliminar";
             this.btnEliminar.UseVisualStyleBackColor = true;
@@ -136,10 +137,10 @@
             // 
             // btnBuscar
             // 
-            this.btnBuscar.Location = new System.Drawing.Point(427, 49);
+            this.btnBuscar.Location = new System.Drawing.Point(1049, 13);
             this.btnBuscar.Margin = new System.Windows.Forms.Padding(2, 1, 2, 1);
             this.btnBuscar.Name = "btnBuscar";
-            this.btnBuscar.Size = new System.Drawing.Size(84, 23);
+            this.btnBuscar.Size = new System.Drawing.Size(125, 56);
             this.btnBuscar.TabIndex = 20;
             this.btnBuscar.Text = "Buscar";
             this.btnBuscar.UseVisualStyleBackColor = true;
@@ -147,10 +148,10 @@
             // 
             // btnActualizar
             // 
-            this.btnActualizar.Location = new System.Drawing.Point(427, 84);
+            this.btnActualizar.Location = new System.Drawing.Point(1049, 76);
             this.btnActualizar.Margin = new System.Windows.Forms.Padding(2, 1, 2, 1);
             this.btnActualizar.Name = "btnActualizar";
-            this.btnActualizar.Size = new System.Drawing.Size(84, 23);
+            this.btnActualizar.Size = new System.Drawing.Size(125, 56);
             this.btnActualizar.TabIndex = 19;
             this.btnActualizar.Text = "Actualizar";
             this.btnActualizar.UseVisualStyleBackColor = true;
@@ -158,10 +159,10 @@
             // 
             // btnRegistroPago
             // 
-            this.btnRegistroPago.Location = new System.Drawing.Point(427, 123);
+            this.btnRegistroPago.Location = new System.Drawing.Point(1049, 142);
             this.btnRegistroPago.Margin = new System.Windows.Forms.Padding(2, 1, 2, 1);
             this.btnRegistroPago.Name = "btnRegistroPago";
-            this.btnRegistroPago.Size = new System.Drawing.Size(84, 23);
+            this.btnRegistroPago.Size = new System.Drawing.Size(125, 56);
             this.btnRegistroPago.TabIndex = 18;
             this.btnRegistroPago.Text = "Registrar Pago";
             this.btnRegistroPago.UseVisualStyleBackColor = true;
@@ -169,7 +170,7 @@
             // 
             // datetimeFechaPago
             // 
-            this.datetimeFechaPago.Location = new System.Drawing.Point(340, 14);
+            this.datetimeFechaPago.Location = new System.Drawing.Point(415, 25);
             this.datetimeFechaPago.Margin = new System.Windows.Forms.Padding(2, 1, 2, 1);
             this.datetimeFechaPago.Name = "datetimeFechaPago";
             this.datetimeFechaPago.Size = new System.Drawing.Size(212, 20);
@@ -178,7 +179,7 @@
             // 
             // txtBanco
             // 
-            this.txtBanco.Location = new System.Drawing.Point(136, 183);
+            this.txtBanco.Location = new System.Drawing.Point(161, 221);
             this.txtBanco.Margin = new System.Windows.Forms.Padding(2, 1, 2, 1);
             this.txtBanco.Name = "txtBanco";
             this.txtBanco.Size = new System.Drawing.Size(70, 20);
@@ -191,7 +192,7 @@
             "Tarjeta",
             "Efectivo",
             "Transferencia"});
-            this.cboxTipoPago.Location = new System.Drawing.Point(136, 153);
+            this.cboxTipoPago.Location = new System.Drawing.Point(161, 191);
             this.cboxTipoPago.Margin = new System.Windows.Forms.Padding(2, 1, 2, 1);
             this.cboxTipoPago.Name = "cboxTipoPago";
             this.cboxTipoPago.Size = new System.Drawing.Size(70, 21);
@@ -203,32 +204,16 @@
             this.cboxEstado.Items.AddRange(new object[] {
             "Activo",
             "Inactivo"});
-            this.cboxEstado.Location = new System.Drawing.Point(136, 127);
+            this.cboxEstado.Location = new System.Drawing.Point(161, 165);
             this.cboxEstado.Margin = new System.Windows.Forms.Padding(2, 1, 2, 1);
             this.cboxEstado.Name = "cboxEstado";
             this.cboxEstado.Size = new System.Drawing.Size(70, 21);
             this.cboxEstado.TabIndex = 14;
             // 
-            // txtCodigoTarifa
-            // 
-            this.txtCodigoTarifa.Location = new System.Drawing.Point(136, 98);
-            this.txtCodigoTarifa.Margin = new System.Windows.Forms.Padding(2, 1, 2, 1);
-            this.txtCodigoTarifa.Name = "txtCodigoTarifa";
-            this.txtCodigoTarifa.Size = new System.Drawing.Size(70, 20);
-            this.txtCodigoTarifa.TabIndex = 13;
-            // 
-            // txtCodigoPasajero
-            // 
-            this.txtCodigoPasajero.Location = new System.Drawing.Point(136, 64);
-            this.txtCodigoPasajero.Margin = new System.Windows.Forms.Padding(2, 1, 2, 1);
-            this.txtCodigoPasajero.Name = "txtCodigoPasajero";
-            this.txtCodigoPasajero.Size = new System.Drawing.Size(70, 20);
-            this.txtCodigoPasajero.TabIndex = 12;
-            // 
             // label6
             // 
             this.label6.AutoSize = true;
-            this.label6.Location = new System.Drawing.Point(41, 129);
+            this.label6.Location = new System.Drawing.Point(66, 167);
             this.label6.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label6.Name = "label6";
             this.label6.Size = new System.Drawing.Size(40, 13);
@@ -238,7 +223,7 @@
             // label2
             // 
             this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(41, 98);
+            this.label2.Location = new System.Drawing.Point(66, 136);
             this.label2.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(70, 13);
@@ -248,7 +233,7 @@
             // label5
             // 
             this.label5.AutoSize = true;
-            this.label5.Location = new System.Drawing.Point(41, 185);
+            this.label5.Location = new System.Drawing.Point(66, 223);
             this.label5.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label5.Name = "label5";
             this.label5.Size = new System.Drawing.Size(38, 13);
@@ -258,7 +243,7 @@
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(41, 68);
+            this.label1.Location = new System.Drawing.Point(66, 106);
             this.label1.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(84, 13);
@@ -268,7 +253,7 @@
             // label4
             // 
             this.label4.AutoSize = true;
-            this.label4.Location = new System.Drawing.Point(41, 159);
+            this.label4.Location = new System.Drawing.Point(66, 197);
             this.label4.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(56, 13);
@@ -278,18 +263,37 @@
             // label3
             // 
             this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(264, 13);
+            this.label3.Location = new System.Drawing.Point(339, 24);
             this.label3.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(65, 13);
             this.label3.TabIndex = 8;
             this.label3.Text = "Fecha Pago";
             // 
+            // cbxCodigoPasajero
+            // 
+            this.cbxCodigoPasajero.FormattingEnabled = true;
+            this.cbxCodigoPasajero.Location = new System.Drawing.Point(161, 106);
+            this.cbxCodigoPasajero.Name = "cbxCodigoPasajero";
+            this.cbxCodigoPasajero.Size = new System.Drawing.Size(283, 21);
+            this.cbxCodigoPasajero.TabIndex = 24;
+            this.cbxCodigoPasajero.Click += new System.EventHandler(this.cbxCodigoPasajero_Click);
+            // 
+            // cbxCodigoTarifa
+            // 
+            this.cbxCodigoTarifa.FormattingEnabled = true;
+            this.cbxCodigoTarifa.Location = new System.Drawing.Point(161, 134);
+            this.cbxCodigoTarifa.Name = "cbxCodigoTarifa";
+            this.cbxCodigoTarifa.Size = new System.Drawing.Size(283, 21);
+            this.cbxCodigoTarifa.TabIndex = 25;
+            this.cbxCodigoTarifa.Click += new System.EventHandler(this.cbxCodigoTarifa_Click);
+            // 
             // FrmPagos
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(624, 432);
+            this.BackColor = System.Drawing.Color.White;
+            this.ClientSize = new System.Drawing.Size(1236, 788);
             this.Controls.Add(this.btnSalir);
             this.Controls.Add(this.dtgvPagos);
             this.Controls.Add(this.groupBox1);
@@ -320,13 +324,13 @@
         private System.Windows.Forms.TextBox txtBanco;
         private System.Windows.Forms.ComboBox cboxTipoPago;
         private System.Windows.Forms.ComboBox cboxEstado;
-        private System.Windows.Forms.TextBox txtCodigoTarifa;
-        private System.Windows.Forms.TextBox txtCodigoPasajero;
         private System.Windows.Forms.Label label6;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Label label5;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.Label label3;
+        private System.Windows.Forms.ComboBox cbxCodigoTarifa;
+        private System.Windows.Forms.ComboBox cbxCodigoPasajero;
     }
 }
