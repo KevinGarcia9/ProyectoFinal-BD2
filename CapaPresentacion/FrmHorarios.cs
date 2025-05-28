@@ -3,6 +3,7 @@ using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
+using System.Data.SqlClient;
 using System.Drawing;
 using System.Linq;
 using System.Text;
@@ -18,14 +19,41 @@ namespace CapaPresentacion
         public FrmHorarios()
         {
             InitializeComponent();
+            
         }
+
+
+
+        private void MtdMostrarFK()
+        {
+            CD_Conexion db_conexion = new CD_Conexion();
+
+            SqlCommand cmd = new SqlCommand("select CodigoEstacion, Nombre, Ubicación, Estado from Estaciones", db_conexion.MtdAbrirConexion());
+            SqlDataReader reader = cmd.ExecuteReader();
+
+            DataTable dt = new DataTable();
+            dt.Load(reader);
+
+            // Agrega columna para visualización combinada
+            dt.Columns.Add("Descripcion", typeof(string), "CodigoEstacion + ' - ' + Nombre + ' - ' + Ubicación + ' - ' + Estado");
+
+            cbxCodigoEstacion.DataSource = dt;
+            cbxCodigoEstacion.DisplayMember = "Descripcion";
+            cbxCodigoEstacion.ValueMember = "CodigoEstacion";
+
+        }
+
+
+
 
         private void btnAgregarHorario_Click(object sender, EventArgs e)
         {
+            int FK = Convert.ToInt32(cbxCodigoEstacion.SelectedValue.ToString());
+
             try
             {
                 HOR.mtdAgregarHorario(
-                  int.Parse(txtCodigoEstacion.Text),
+                  FK,
                   TimeSpan.Parse(datetimeHoraSalida.Text),
                   TimeSpan.Parse(datetimeHoraLLegada.Text),
                   datetimeFechaInicio.Value,
@@ -52,7 +80,7 @@ namespace CapaPresentacion
             {
                 DataGridViewRow fila = dtgvHorarios.Rows[e.RowIndex];
                 txtCodigoHorario.Text = fila.Cells["CodigoHorario"].Value.ToString();
-                txtCodigoEstacion.Text = fila.Cells["CodigoEstacion"].Value.ToString();
+                cbxCodigoEstacion.Text = fila.Cells["CodigoEstacion"].Value.ToString();
                 cboxEstado.Text = fila.Cells["Estado"].Value.ToString();
                 datetimeHoraLLegada.Text = fila.Cells["HoraLlegada"].Value.ToString();
                 datetimeHoraSalida.Text = fila.Cells["HoraSalida"].Value.ToString();
@@ -93,11 +121,13 @@ namespace CapaPresentacion
 
         private void btnActualizarHrs_Click_1(object sender, EventArgs e)
         {
+            int FK = Convert.ToInt32(cbxCodigoEstacion.SelectedValue.ToString());
+
             try
             {
               HOR.mtdActualizarHorario(
               int.Parse(txtCodigoHorario.Text),
-              int.Parse(txtCodigoEstacion.Text),
+              FK,
               TimeSpan.Parse(datetimeHoraSalida.Text),
               TimeSpan.Parse(datetimeHoraLLegada.Text),
               datetimeFechaInicio.Value,
@@ -125,6 +155,11 @@ namespace CapaPresentacion
             {
                 MessageBox.Show("Error al eliminar: " + ex.Message);
             }
+        }
+
+        private void cbxCodigoEstacion_Click(object sender, EventArgs e)
+        {
+            MtdMostrarFK();
         }
     }
 }

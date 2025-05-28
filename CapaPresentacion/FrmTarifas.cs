@@ -3,6 +3,7 @@ using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
+using System.Data.SqlClient;
 using System.Drawing;
 using System.Linq;
 using System.Text;
@@ -17,14 +18,39 @@ namespace CapaPresentacion
         public FrmTarifas()
         {
             InitializeComponent();
+            
         }
+
+
+        private void MtdMostrarFK()
+        {
+            CD_Conexion db_conexion = new CD_Conexion();
+
+            SqlCommand cmd = new SqlCommand("select CodigoRuta,Nombre,Origen,Destino,Estado from Rutas", db_conexion.MtdAbrirConexion());
+            SqlDataReader reader = cmd.ExecuteReader();
+
+            DataTable dt = new DataTable();
+            dt.Load(reader);
+
+            // Agrega columna para visualización combinada
+            dt.Columns.Add("Descripcion", typeof(string), "CodigoRuta + ' - ' + Nombre + ' - ' + Origen + ' - ' + Destino + ' - ' + Estado");
+
+            cbxCodigoRuta.DataSource = dt;
+            cbxCodigoRuta.DisplayMember = "Descripcion";
+            cbxCodigoRuta.ValueMember = "CodigoRuta";
+
+        }
+
+
 
         private void btnAgregarTarifa_Click(object sender, EventArgs e)
         {
+            int FK = Convert.ToInt32(cbxCodigoRuta.SelectedValue.ToString());
+
             try
             {
                TAR.mtdAgregarTarifa(
-               int.Parse(txtCodigoRuta.Text),
+               FK,
                decimal.Parse(txtMonto.Text),
                cboxMoneda.Text,
                datetimeFechaVigencia.Value,
@@ -56,7 +82,7 @@ namespace CapaPresentacion
             {
                 DataGridViewRow fila = dtgvTarifas.Rows[e.RowIndex];
                 txtCodigoTarifa.Text = fila.Cells["CodigoTarifa"].Value.ToString();
-                txtCodigoRuta.Text = fila.Cells["CodigoRuta"].Value.ToString();
+                cbxCodigoRuta.Text = fila.Cells["CodigoRuta"].Value.ToString();
                 txtMonto.Text = fila.Cells["Monto"].Value.ToString();
                 cboxMoneda.Text = fila.Cells["Moneda"].Value.ToString();
                 cboxEstado.Text = fila.Cells["Estado"].Value.ToString();
@@ -72,11 +98,13 @@ namespace CapaPresentacion
 
         private void btnActualizarTarifa_Click_1(object sender, EventArgs e)
         {
+            int FK = Convert.ToInt32(cbxCodigoRuta.SelectedValue.ToString());
+
             try
             {
                TAR.mtdActualizarTarifa(
                int.Parse(txtCodigoTarifa.Text),
-               int.Parse(txtCodigoRuta.Text),
+               FK,
                decimal.Parse(txtMonto.Text),
                cboxMoneda.Text,
                datetimeFechaVigencia.Value,
@@ -125,6 +153,11 @@ namespace CapaPresentacion
                     MessageBox.Show("Por favor ingresa un número válido para el código de ruta.");
                 }
             }
+        }
+
+        private void cbxCodigoRuta_Click(object sender, EventArgs e)
+        {
+            MtdMostrarFK();
         }
     }
 }
