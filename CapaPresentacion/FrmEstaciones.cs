@@ -174,5 +174,20 @@ namespace CapaPresentacion
         {
 
         }
+
+        private void btnBuscar_Click(object sender, EventArgs e)
+        {
+            string criterio = txtBuscar.Text.Trim();
+
+            if (string.IsNullOrEmpty(criterio))
+            {
+                MtdMostrarEstaciones(); // Si no hay búsqueda, recarga todo
+            }
+            else
+            {
+                DataTable dt = cd_estaciones.MtBuscar(criterio);
+                dgvEstaciones.DataSource = dt;
+            }
+        }
     }
 }

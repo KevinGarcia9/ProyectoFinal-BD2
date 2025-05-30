@@ -136,5 +136,20 @@ namespace CapaPresentacion
                 cmbEstado.Text = fila.Cells["Estado"].Value.ToString();
             }
         }
+
+        private void btnBuscar_Click(object sender, EventArgs e)
+        {
+            string criterio = txtBuscar.Text.Trim();
+
+            if (string.IsNullOrEmpty(criterio))
+            {
+                MtdMostrarRutas(); // Si no hay búsqueda, recarga todo
+            }
+            else
+            {
+                DataTable dt = cd_rutas.MtBuscar(criterio);
+                dgvRutas.DataSource = dt;
+            }
+        }
     }
 }

@@ -36,6 +36,8 @@ namespace CapaPresentacion
             this.label1 = new System.Windows.Forms.Label();
             this.dgvRutas = new System.Windows.Forms.DataGridView();
             this.btnEliminar = new FontAwesome.Sharp.IconButton();
+            this.txtBuscar = new System.Windows.Forms.TextBox();
+            this.btnBuscar = new FontAwesome.Sharp.IconButton();
             this.gboxRutas.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgvRutas)).BeginInit();
             this.SuspendLayout();
@@ -238,7 +240,7 @@ namespace CapaPresentacion
             this.dgvRutas.ReadOnly = true;
             this.dgvRutas.RowHeadersWidth = 51;
             this.dgvRutas.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.dgvRutas.Size = new System.Drawing.Size(1052, 375);
+            this.dgvRutas.Size = new System.Drawing.Size(969, 375);
             this.dgvRutas.TabIndex = 1;
             this.dgvRutas.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvRutas_CellClick_1);
             // 
@@ -256,10 +258,39 @@ namespace CapaPresentacion
             this.btnEliminar.Text = "Eliminar";
             this.btnEliminar.Click += new System.EventHandler(this.btnEliminar_Click_1);
             // 
+            // txtBuscar
+            // 
+            this.txtBuscar.BackColor = System.Drawing.SystemColors.GradientInactiveCaption;
+            this.txtBuscar.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtBuscar.Location = new System.Drawing.Point(1004, 363);
+            this.txtBuscar.Margin = new System.Windows.Forms.Padding(2);
+            this.txtBuscar.Name = "txtBuscar";
+            this.txtBuscar.Size = new System.Drawing.Size(197, 26);
+            this.txtBuscar.TabIndex = 35;
+            // 
+            // btnBuscar
+            // 
+            this.btnBuscar.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnBuscar.IconChar = FontAwesome.Sharp.IconChar.SatelliteDish;
+            this.btnBuscar.IconColor = System.Drawing.Color.ForestGreen;
+            this.btnBuscar.IconFont = FontAwesome.Sharp.IconFont.Auto;
+            this.btnBuscar.IconSize = 25;
+            this.btnBuscar.Location = new System.Drawing.Point(1032, 294);
+            this.btnBuscar.Margin = new System.Windows.Forms.Padding(2);
+            this.btnBuscar.Name = "btnBuscar";
+            this.btnBuscar.Size = new System.Drawing.Size(148, 52);
+            this.btnBuscar.TabIndex = 36;
+            this.btnBuscar.Text = "BUSCAR";
+            this.btnBuscar.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
+            this.btnBuscar.UseVisualStyleBackColor = true;
+            this.btnBuscar.Click += new System.EventHandler(this.btnBuscar_Click);
+            // 
             // FrmRutas
             // 
             this.BackColor = System.Drawing.Color.White;
             this.ClientSize = new System.Drawing.Size(1236, 788);
+            this.Controls.Add(this.txtBuscar);
+            this.Controls.Add(this.btnBuscar);
             this.Controls.Add(this.btnEliminar);
             this.Controls.Add(this.dgvRutas);
             this.Controls.Add(this.gboxRutas);
@@ -271,6 +302,7 @@ namespace CapaPresentacion
             this.gboxRutas.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgvRutas)).EndInit();
             this.ResumeLayout(false);
+            this.PerformLayout();
 
         }
 
@@ -319,5 +351,7 @@ namespace CapaPresentacion
         private FontAwesome.Sharp.IconButton btnActualizar;
         private FontAwesome.Sharp.IconButton btnCancelar;
         private FontAwesome.Sharp.IconButton btnEliminar;
+        private TextBox txtBuscar;
+        private FontAwesome.Sharp.IconButton btnBuscar;
     }
 }

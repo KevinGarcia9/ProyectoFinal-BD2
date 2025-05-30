@@ -58,5 +58,29 @@ namespace CapaDatos
                 cmd.ExecuteNonQuery();
                 cmd.Parameters.Clear();
             }
+
+        public DataTable MtBuscar(string criterio)
+        {
+            
+            {
+                SqlCommand cmd = new SqlCommand(
+                    @"SELECT CodigoTransporte,Placa,Marca,Modelo,Año,Capacidad,Estado FROM Transportes
+              WHERE Placa LIKE @criterio OR Marca LIKE @criterio
+                OR Modelo LIKE @criterio
+                OR CAST(Año AS VARCHAR) LIKE @criterio
+                OR CAST(Capacidad AS VARCHAR) LIKE @criterio
+                OR Estado LIKE @criterio
+              OR CAST(CodigoTransporte AS VARCHAR) LIKE @criterio", db_conexion.MtdAbrirConexion());
+
+                cmd.Parameters.AddWithValue("@criterio", "%" + criterio + "%");
+
+                SqlDataAdapter adapter = new SqlDataAdapter(cmd);
+                DataTable dt = new DataTable();
+                adapter.Fill(dt);
+                return dt;
+            }
         }
+
+
+    }
 }

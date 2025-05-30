@@ -132,5 +132,20 @@ namespace CapaPresentacion
         {
             MtdLimpiarCampos();
         }
+
+        private void btnBuscar_Click(object sender, EventArgs e)
+        {
+            string criterio = txtBuscar.Text.Trim();
+
+            if (string.IsNullOrEmpty(criterio))
+            {
+                MtdMostrarTransportes(); // Si no hay búsqueda, recarga todo
+            }
+            else
+            {
+                DataTable dt = cd_transportes.MtBuscar(criterio);
+                dgvTransportes.DataSource = dt;
+            }
+        }
     }
 }

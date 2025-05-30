@@ -48,6 +48,8 @@
             this.label1 = new System.Windows.Forms.Label();
             this.dgvTransportes = new System.Windows.Forms.DataGridView();
             this.btnEliminar = new FontAwesome.Sharp.IconButton();
+            this.btnBuscar = new FontAwesome.Sharp.IconButton();
+            this.txtBuscar = new System.Windows.Forms.TextBox();
             this.gboxClientes.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgvTransportes)).BeginInit();
             this.SuspendLayout();
@@ -74,9 +76,9 @@
             this.gboxClientes.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.gboxClientes.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(18)))), ((int)(((byte)(34)))), ((int)(((byte)(118)))));
             this.gboxClientes.Location = new System.Drawing.Point(4, 9);
-            this.gboxClientes.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.gboxClientes.Margin = new System.Windows.Forms.Padding(2);
             this.gboxClientes.Name = "gboxClientes";
-            this.gboxClientes.Padding = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.gboxClientes.Padding = new System.Windows.Forms.Padding(2);
             this.gboxClientes.Size = new System.Drawing.Size(1080, 204);
             this.gboxClientes.TabIndex = 0;
             this.gboxClientes.TabStop = false;
@@ -89,7 +91,7 @@
             "Activo",
             "Inactivo"});
             this.cmbEstado.Location = new System.Drawing.Point(438, 111);
-            this.cmbEstado.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.cmbEstado.Margin = new System.Windows.Forms.Padding(2);
             this.cmbEstado.Name = "cmbEstado";
             this.cmbEstado.Size = new System.Drawing.Size(105, 28);
             this.cmbEstado.TabIndex = 31;
@@ -108,7 +110,7 @@
             // txtCapacidad
             // 
             this.txtCapacidad.Location = new System.Drawing.Point(438, 74);
-            this.txtCapacidad.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.txtCapacidad.Margin = new System.Windows.Forms.Padding(2);
             this.txtCapacidad.Name = "txtCapacidad";
             this.txtCapacidad.Size = new System.Drawing.Size(105, 26);
             this.txtCapacidad.TabIndex = 29;
@@ -127,7 +129,7 @@
             // txtAño
             // 
             this.txtAño.Location = new System.Drawing.Point(438, 40);
-            this.txtAño.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.txtAño.Margin = new System.Windows.Forms.Padding(2);
             this.txtAño.Name = "txtAño";
             this.txtAño.Size = new System.Drawing.Size(105, 26);
             this.txtAño.TabIndex = 27;
@@ -146,7 +148,7 @@
             // txtModelo
             // 
             this.txtModelo.Location = new System.Drawing.Point(175, 145);
-            this.txtModelo.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.txtModelo.Margin = new System.Windows.Forms.Padding(2);
             this.txtModelo.Name = "txtModelo";
             this.txtModelo.Size = new System.Drawing.Size(105, 26);
             this.txtModelo.TabIndex = 25;
@@ -165,7 +167,7 @@
             // txtMarca
             // 
             this.txtMarca.Location = new System.Drawing.Point(175, 109);
-            this.txtMarca.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.txtMarca.Margin = new System.Windows.Forms.Padding(2);
             this.txtMarca.Name = "txtMarca";
             this.txtMarca.Size = new System.Drawing.Size(105, 26);
             this.txtMarca.TabIndex = 23;
@@ -184,7 +186,7 @@
             // txtPlaca
             // 
             this.txtPlaca.Location = new System.Drawing.Point(175, 74);
-            this.txtPlaca.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.txtPlaca.Margin = new System.Windows.Forms.Padding(2);
             this.txtPlaca.Name = "txtPlaca";
             this.txtPlaca.Size = new System.Drawing.Size(105, 26);
             this.txtPlaca.TabIndex = 21;
@@ -203,7 +205,7 @@
             // txtCodigo
             // 
             this.txtCodigo.Location = new System.Drawing.Point(175, 40);
-            this.txtCodigo.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.txtCodigo.Margin = new System.Windows.Forms.Padding(2);
             this.txtCodigo.Name = "txtCodigo";
             this.txtCodigo.Size = new System.Drawing.Size(105, 26);
             this.txtCodigo.TabIndex = 19;
@@ -216,7 +218,7 @@
             this.btnGuardar.IconFont = FontAwesome.Sharp.IconFont.Auto;
             this.btnGuardar.IconSize = 25;
             this.btnGuardar.Location = new System.Drawing.Point(911, 58);
-            this.btnGuardar.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.btnGuardar.Margin = new System.Windows.Forms.Padding(2);
             this.btnGuardar.Name = "btnGuardar";
             this.btnGuardar.Size = new System.Drawing.Size(126, 32);
             this.btnGuardar.TabIndex = 18;
@@ -233,7 +235,7 @@
             this.btnActualizar.IconFont = FontAwesome.Sharp.IconFont.Auto;
             this.btnActualizar.IconSize = 25;
             this.btnActualizar.Location = new System.Drawing.Point(911, 94);
-            this.btnActualizar.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.btnActualizar.Margin = new System.Windows.Forms.Padding(2);
             this.btnActualizar.Name = "btnActualizar";
             this.btnActualizar.Size = new System.Drawing.Size(126, 32);
             this.btnActualizar.TabIndex = 17;
@@ -250,7 +252,7 @@
             this.btnCancelar.IconFont = FontAwesome.Sharp.IconFont.Auto;
             this.btnCancelar.IconSize = 25;
             this.btnCancelar.Location = new System.Drawing.Point(911, 132);
-            this.btnCancelar.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.btnCancelar.Margin = new System.Windows.Forms.Padding(2);
             this.btnCancelar.Name = "btnCancelar";
             this.btnCancelar.Size = new System.Drawing.Size(126, 32);
             this.btnCancelar.TabIndex = 16;
@@ -277,7 +279,7 @@
             this.dgvTransportes.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dgvTransportes.GridColor = System.Drawing.Color.DarkGray;
             this.dgvTransportes.Location = new System.Drawing.Point(4, 221);
-            this.dgvTransportes.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.dgvTransportes.Margin = new System.Windows.Forms.Padding(2);
             this.dgvTransportes.Name = "dgvTransportes";
             this.dgvTransportes.ReadOnly = true;
             this.dgvTransportes.RowHeadersWidth = 51;
@@ -296,7 +298,7 @@
             this.btnEliminar.IconFont = FontAwesome.Sharp.IconFont.Auto;
             this.btnEliminar.IconSize = 35;
             this.btnEliminar.Location = new System.Drawing.Point(815, 699);
-            this.btnEliminar.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.btnEliminar.Margin = new System.Windows.Forms.Padding(2);
             this.btnEliminar.Name = "btnEliminar";
             this.btnEliminar.Size = new System.Drawing.Size(142, 52);
             this.btnEliminar.TabIndex = 19;
@@ -305,17 +307,46 @@
             this.btnEliminar.UseVisualStyleBackColor = true;
             this.btnEliminar.Click += new System.EventHandler(this.btnEliminar_Click);
             // 
+            // btnBuscar
+            // 
+            this.btnBuscar.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnBuscar.IconChar = FontAwesome.Sharp.IconChar.SatelliteDish;
+            this.btnBuscar.IconColor = System.Drawing.Color.ForestGreen;
+            this.btnBuscar.IconFont = FontAwesome.Sharp.IconFont.Auto;
+            this.btnBuscar.IconSize = 25;
+            this.btnBuscar.Location = new System.Drawing.Point(915, 221);
+            this.btnBuscar.Margin = new System.Windows.Forms.Padding(2);
+            this.btnBuscar.Name = "btnBuscar";
+            this.btnBuscar.Size = new System.Drawing.Size(148, 52);
+            this.btnBuscar.TabIndex = 32;
+            this.btnBuscar.Text = "BUSCAR";
+            this.btnBuscar.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
+            this.btnBuscar.UseVisualStyleBackColor = true;
+            this.btnBuscar.Click += new System.EventHandler(this.btnBuscar_Click);
+            // 
+            // txtBuscar
+            // 
+            this.txtBuscar.BackColor = System.Drawing.SystemColors.GradientInactiveCaption;
+            this.txtBuscar.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtBuscar.Location = new System.Drawing.Point(887, 290);
+            this.txtBuscar.Margin = new System.Windows.Forms.Padding(2);
+            this.txtBuscar.Name = "txtBuscar";
+            this.txtBuscar.Size = new System.Drawing.Size(197, 26);
+            this.txtBuscar.TabIndex = 32;
+            // 
             // FrmTransportes
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.White;
             this.ClientSize = new System.Drawing.Size(1236, 788);
+            this.Controls.Add(this.txtBuscar);
+            this.Controls.Add(this.btnBuscar);
             this.Controls.Add(this.btnEliminar);
             this.Controls.Add(this.dgvTransportes);
             this.Controls.Add(this.gboxClientes);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
-            this.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.Margin = new System.Windows.Forms.Padding(2);
             this.Name = "FrmTransportes";
             this.Text = "FrmClientes";
             this.Load += new System.EventHandler(this.FrmClientes_Load);
@@ -323,6 +354,7 @@
             this.gboxClientes.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgvTransportes)).EndInit();
             this.ResumeLayout(false);
+            this.PerformLayout();
 
         }
 
@@ -348,5 +380,7 @@
         private System.Windows.Forms.TextBox txtCodigo;
         private System.Windows.Forms.ComboBox cmbEstado;
         private System.Windows.Forms.Label label7;
+        private FontAwesome.Sharp.IconButton btnBuscar;
+        private System.Windows.Forms.TextBox txtBuscar;
     }
 }

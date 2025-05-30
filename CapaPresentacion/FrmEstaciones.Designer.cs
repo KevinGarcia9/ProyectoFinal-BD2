@@ -36,6 +36,8 @@ namespace CapaPresentacion
             this.label1 = new System.Windows.Forms.Label();
             this.dgvEstaciones = new System.Windows.Forms.DataGridView();
             this.btnEliminar = new FontAwesome.Sharp.IconButton();
+            this.txtBuscar = new System.Windows.Forms.TextBox();
+            this.btnBuscar = new FontAwesome.Sharp.IconButton();
             this.gboxEstaciones.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgvEstaciones)).BeginInit();
             this.SuspendLayout();
@@ -255,10 +257,39 @@ namespace CapaPresentacion
             this.btnEliminar.Text = "Eliminar";
             this.btnEliminar.Click += new System.EventHandler(this.btnEliminar_Click_1);
             // 
+            // txtBuscar
+            // 
+            this.txtBuscar.BackColor = System.Drawing.SystemColors.GradientInactiveCaption;
+            this.txtBuscar.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtBuscar.Location = new System.Drawing.Point(995, 410);
+            this.txtBuscar.Margin = new System.Windows.Forms.Padding(2);
+            this.txtBuscar.Name = "txtBuscar";
+            this.txtBuscar.Size = new System.Drawing.Size(197, 26);
+            this.txtBuscar.TabIndex = 37;
+            // 
+            // btnBuscar
+            // 
+            this.btnBuscar.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnBuscar.IconChar = FontAwesome.Sharp.IconChar.SatelliteDish;
+            this.btnBuscar.IconColor = System.Drawing.Color.ForestGreen;
+            this.btnBuscar.IconFont = FontAwesome.Sharp.IconFont.Auto;
+            this.btnBuscar.IconSize = 25;
+            this.btnBuscar.Location = new System.Drawing.Point(1023, 341);
+            this.btnBuscar.Margin = new System.Windows.Forms.Padding(2);
+            this.btnBuscar.Name = "btnBuscar";
+            this.btnBuscar.Size = new System.Drawing.Size(148, 52);
+            this.btnBuscar.TabIndex = 38;
+            this.btnBuscar.Text = "BUSCAR";
+            this.btnBuscar.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
+            this.btnBuscar.UseVisualStyleBackColor = true;
+            this.btnBuscar.Click += new System.EventHandler(this.btnBuscar_Click);
+            // 
             // FrmEstaciones
             // 
             this.BackColor = System.Drawing.Color.White;
             this.ClientSize = new System.Drawing.Size(1236, 788);
+            this.Controls.Add(this.txtBuscar);
+            this.Controls.Add(this.btnBuscar);
             this.Controls.Add(this.btnEliminar);
             this.Controls.Add(this.dgvEstaciones);
             this.Controls.Add(this.gboxEstaciones);
@@ -270,6 +301,7 @@ namespace CapaPresentacion
             this.gboxEstaciones.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgvEstaciones)).EndInit();
             this.ResumeLayout(false);
+            this.PerformLayout();
 
         }
 
@@ -313,5 +345,7 @@ namespace CapaPresentacion
         private FontAwesome.Sharp.IconButton btnCancelar;
         private FontAwesome.Sharp.IconButton btnEliminar;
         private ComboBox cbxCodigoRuta;
+        private TextBox txtBuscar;
+        private FontAwesome.Sharp.IconButton btnBuscar;
     }
 }

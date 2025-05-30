@@ -130,5 +130,20 @@ namespace CapaPresentacion
         {
 
         }
+
+        private void btnBuscar_Click(object sender, EventArgs e)
+        {
+            string criterio = txtBuscar.Text.Trim();
+
+            if (string.IsNullOrEmpty(criterio))
+            {
+                MtdMostrarConductores(); // Si no hay búsqueda, recarga todo
+            }
+            else
+            {
+                DataTable dt = cd_conductores.MtBuscar(criterio);
+                dgvConductores.DataSource = dt;
+            }
+        }
     }
 }

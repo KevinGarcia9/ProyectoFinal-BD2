@@ -14,7 +14,7 @@ namespace CapaDatos
         // DESKTOP-9QF8HLG\\SQLEXPRESS Seleidy
         //DESKTOP-TGA3FFT\\SQLEXPRESS  Alexander
         //LAPTOP-6PG83GU4\SQLEXPRESS   Josvin
-        private SqlConnection db_conexion = new SqlConnection("Data Source=DESKTOP-9QF8HLG\\SQLEXPRESS;" +
+        private SqlConnection db_conexion = new SqlConnection("Data Source=ALEX\\SQLEXPRESS;" +
             "Initial Catalog=ElIngeVeloz;" +
             "Integrated Security=True;Encrypt=False") ;
 
