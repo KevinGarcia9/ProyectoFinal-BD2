@@ -79,6 +79,7 @@ namespace CapaPresentacion
                 cd_mantenimiento.MtActualizarMantenimiento(
                     int.Parse(txtcodigomant.Text),
                    FK,
+                
                     txtfechaingreso.Text,
                     txtfechasalida.Text,
                     decimal.Parse(txtcosto.Text),

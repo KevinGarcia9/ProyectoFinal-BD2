@@ -63,13 +63,20 @@ namespace CapaPresentacion
         private void FrmEstaciones_Load_1(object sender, EventArgs e)
         {
             MtdMostrarEstaciones();
-            
+            MtdMostrarRut();
+
         }
 
         private void iconButton1_Click(object sender, EventArgs e)
         {
             try
             {
+                if (cbxCodigoRuta.SelectedIndex == 0 || cbxCodigoRuta.SelectedValue == DBNull.Value)
+                {
+                    MessageBox.Show("Debe seleccionar una ruta válida.", "Atención", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                    cbxCodigoRuta.Focus();
+                    return;
+                }
 
                 int codigoruta = Convert.ToInt32(cbxCodigoRuta.SelectedValue.ToString());
                 int secuencia = int.Parse(txtSecuencia.Text);
@@ -161,6 +168,11 @@ namespace CapaPresentacion
         private void cbxCodigoRuta_Click(object sender, EventArgs e)
         {
             MtdMostrarRut();
+        }
+
+        private void gboxEstaciones_Enter(object sender, EventArgs e)
+        {
+
         }
     }
 }

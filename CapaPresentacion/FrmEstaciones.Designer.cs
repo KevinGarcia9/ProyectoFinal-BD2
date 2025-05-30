@@ -66,6 +66,7 @@ namespace CapaPresentacion
             this.gboxEstaciones.TabIndex = 0;
             this.gboxEstaciones.TabStop = false;
             this.gboxEstaciones.Text = "DATOS ESTACIONES";
+            this.gboxEstaciones.Enter += new System.EventHandler(this.gboxEstaciones_Enter);
             // 
             // cbxCodigoRuta
             // 
