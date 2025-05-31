@@ -29,6 +29,7 @@
         private void InitializeComponent()
         {
             this.groupBox1 = new System.Windows.Forms.GroupBox();
+            this.cbxCodigoPasajero = new System.Windows.Forms.ComboBox();
             this.datetimeFechaPago = new System.Windows.Forms.DateTimePicker();
             this.btnBuscar = new System.Windows.Forms.Button();
             this.btncancelar = new System.Windows.Forms.Button();
@@ -49,7 +50,6 @@
             this.label1 = new System.Windows.Forms.Label();
             this.btneliminar = new System.Windows.Forms.Button();
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
-            this.cbxCodigoPasajero = new System.Windows.Forms.ComboBox();
             this.groupBox1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             this.SuspendLayout();
@@ -81,6 +81,15 @@
             this.groupBox1.TabIndex = 0;
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Datos de Tarjeta de Transportes";
+            // 
+            // cbxCodigoPasajero
+            // 
+            this.cbxCodigoPasajero.FormattingEnabled = true;
+            this.cbxCodigoPasajero.Location = new System.Drawing.Point(148, 113);
+            this.cbxCodigoPasajero.Name = "cbxCodigoPasajero";
+            this.cbxCodigoPasajero.Size = new System.Drawing.Size(223, 21);
+            this.cbxCodigoPasajero.TabIndex = 21;
+            this.cbxCodigoPasajero.Click += new System.EventHandler(this.cbxCodigoPasajero_Click);
             // 
             // datetimeFechaPago
             // 
@@ -241,7 +250,7 @@
             // 
             // btneliminar
             // 
-            this.btneliminar.Location = new System.Drawing.Point(841, 694);
+            this.btneliminar.Location = new System.Drawing.Point(1033, 295);
             this.btneliminar.Name = "btneliminar";
             this.btneliminar.Size = new System.Drawing.Size(145, 41);
             this.btneliminar.TabIndex = 4;
@@ -258,15 +267,6 @@
             this.dataGridView1.Size = new System.Drawing.Size(906, 383);
             this.dataGridView1.TabIndex = 1;
             this.dataGridView1.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView1_CellClick);
-            // 
-            // cbxCodigoPasajero
-            // 
-            this.cbxCodigoPasajero.FormattingEnabled = true;
-            this.cbxCodigoPasajero.Location = new System.Drawing.Point(148, 113);
-            this.cbxCodigoPasajero.Name = "cbxCodigoPasajero";
-            this.cbxCodigoPasajero.Size = new System.Drawing.Size(223, 21);
-            this.cbxCodigoPasajero.TabIndex = 21;
-            this.cbxCodigoPasajero.Click += new System.EventHandler(this.cbxCodigoPasajero_Click);
             // 
             // FormTarjetasdetransportes
             // 

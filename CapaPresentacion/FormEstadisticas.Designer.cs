@@ -53,12 +53,16 @@
             this.btneliminar = new System.Windows.Forms.Button();
             this.dgvestadisticas = new System.Windows.Forms.DataGridView();
             this.btnSalir = new System.Windows.Forms.Button();
+            this.cbxbuscarpor = new System.Windows.Forms.ComboBox();
+            this.txtbuscarvalor = new System.Windows.Forms.TextBox();
             this.gboxestadisticos.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgvestadisticas)).BeginInit();
             this.SuspendLayout();
             // 
             // gboxestadisticos
             // 
+            this.gboxestadisticos.Controls.Add(this.txtbuscarvalor);
+            this.gboxestadisticos.Controls.Add(this.cbxbuscarpor);
             this.gboxestadisticos.Controls.Add(this.btnBuscar);
             this.gboxestadisticos.Controls.Add(this.label9);
             this.gboxestadisticos.Controls.Add(this.datetimeFechaPago);
@@ -274,9 +278,9 @@
             // 
             // btneliminar
             // 
-            this.btneliminar.Location = new System.Drawing.Point(737, 674);
+            this.btneliminar.Location = new System.Drawing.Point(1049, 333);
             this.btneliminar.Name = "btneliminar";
-            this.btneliminar.Size = new System.Drawing.Size(134, 46);
+            this.btneliminar.Size = new System.Drawing.Size(125, 46);
             this.btneliminar.TabIndex = 5;
             this.btneliminar.Text = "Eliminar";
             this.btneliminar.UseVisualStyleBackColor = true;
@@ -295,13 +299,28 @@
             // 
             // btnSalir
             // 
-            this.btnSalir.Location = new System.Drawing.Point(887, 674);
+            this.btnSalir.Location = new System.Drawing.Point(1049, 401);
             this.btnSalir.Margin = new System.Windows.Forms.Padding(2, 1, 2, 1);
             this.btnSalir.Name = "btnSalir";
-            this.btnSalir.Size = new System.Drawing.Size(134, 46);
+            this.btnSalir.Size = new System.Drawing.Size(125, 46);
             this.btnSalir.TabIndex = 26;
             this.btnSalir.Text = "Salir";
             this.btnSalir.UseVisualStyleBackColor = true;
+            // 
+            // cbxbuscarpor
+            // 
+            this.cbxbuscarpor.FormattingEnabled = true;
+            this.cbxbuscarpor.Location = new System.Drawing.Point(898, 164);
+            this.cbxbuscarpor.Name = "cbxbuscarpor";
+            this.cbxbuscarpor.Size = new System.Drawing.Size(121, 21);
+            this.cbxbuscarpor.TabIndex = 28;
+            // 
+            // txtbuscarvalor
+            // 
+            this.txtbuscarvalor.Location = new System.Drawing.Point(910, 196);
+            this.txtbuscarvalor.Name = "txtbuscarvalor";
+            this.txtbuscarvalor.Size = new System.Drawing.Size(100, 20);
+            this.txtbuscarvalor.TabIndex = 29;
             // 
             // FormEstadisticas
             // 
@@ -351,5 +370,7 @@
         private System.Windows.Forms.Label label9;
         private System.Windows.Forms.Button btnSalir;
         private System.Windows.Forms.Button btnBuscar;
+        private System.Windows.Forms.TextBox txtbuscarvalor;
+        private System.Windows.Forms.ComboBox cbxbuscarpor;
     }
 }

@@ -29,6 +29,8 @@
         private void InitializeComponent()
         {
             this.gboxincidentes = new System.Windows.Forms.GroupBox();
+            this.cbxCodigoConductor = new System.Windows.Forms.ComboBox();
+            this.cbxCodigoTransporte = new System.Windows.Forms.ComboBox();
             this.datetimeFechaPago = new System.Windows.Forms.DateTimePicker();
             this.btnBuscar = new System.Windows.Forms.Button();
             this.btnlimpiar = new System.Windows.Forms.Button();
@@ -49,8 +51,6 @@
             this.btneliminar = new System.Windows.Forms.Button();
             this.dgvincidentes = new System.Windows.Forms.DataGridView();
             this.btnSalir = new System.Windows.Forms.Button();
-            this.cbxCodigoTransporte = new System.Windows.Forms.ComboBox();
-            this.cbxCodigoConductor = new System.Windows.Forms.ComboBox();
             this.gboxincidentes.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgvincidentes)).BeginInit();
             this.SuspendLayout();
@@ -82,6 +82,24 @@
             this.gboxincidentes.TabIndex = 0;
             this.gboxincidentes.TabStop = false;
             this.gboxincidentes.Text = "Datos Incidentes";
+            // 
+            // cbxCodigoConductor
+            // 
+            this.cbxCodigoConductor.FormattingEnabled = true;
+            this.cbxCodigoConductor.Location = new System.Drawing.Point(174, 136);
+            this.cbxCodigoConductor.Name = "cbxCodigoConductor";
+            this.cbxCodigoConductor.Size = new System.Drawing.Size(243, 21);
+            this.cbxCodigoConductor.TabIndex = 21;
+            this.cbxCodigoConductor.Click += new System.EventHandler(this.cbxCodigoConductor_Click);
+            // 
+            // cbxCodigoTransporte
+            // 
+            this.cbxCodigoTransporte.FormattingEnabled = true;
+            this.cbxCodigoTransporte.Location = new System.Drawing.Point(174, 101);
+            this.cbxCodigoTransporte.Name = "cbxCodigoTransporte";
+            this.cbxCodigoTransporte.Size = new System.Drawing.Size(243, 21);
+            this.cbxCodigoTransporte.TabIndex = 20;
+            this.cbxCodigoTransporte.Click += new System.EventHandler(this.cbxCodigoTransporte_Click);
             // 
             // datetimeFechaPago
             // 
@@ -235,7 +253,7 @@
             // 
             // btneliminar
             // 
-            this.btneliminar.Location = new System.Drawing.Point(796, 679);
+            this.btneliminar.Location = new System.Drawing.Point(1059, 302);
             this.btneliminar.Name = "btneliminar";
             this.btneliminar.Size = new System.Drawing.Size(104, 57);
             this.btneliminar.TabIndex = 5;
@@ -255,30 +273,12 @@
             // 
             // btnSalir
             // 
-            this.btnSalir.Location = new System.Drawing.Point(908, 679);
+            this.btnSalir.Location = new System.Drawing.Point(1060, 405);
             this.btnSalir.Name = "btnSalir";
             this.btnSalir.Size = new System.Drawing.Size(104, 57);
             this.btnSalir.TabIndex = 6;
             this.btnSalir.Text = "Salir";
             this.btnSalir.UseVisualStyleBackColor = true;
-            // 
-            // cbxCodigoTransporte
-            // 
-            this.cbxCodigoTransporte.FormattingEnabled = true;
-            this.cbxCodigoTransporte.Location = new System.Drawing.Point(174, 101);
-            this.cbxCodigoTransporte.Name = "cbxCodigoTransporte";
-            this.cbxCodigoTransporte.Size = new System.Drawing.Size(243, 21);
-            this.cbxCodigoTransporte.TabIndex = 20;
-            this.cbxCodigoTransporte.Click += new System.EventHandler(this.cbxCodigoTransporte_Click);
-            // 
-            // cbxCodigoConductor
-            // 
-            this.cbxCodigoConductor.FormattingEnabled = true;
-            this.cbxCodigoConductor.Location = new System.Drawing.Point(174, 136);
-            this.cbxCodigoConductor.Name = "cbxCodigoConductor";
-            this.cbxCodigoConductor.Size = new System.Drawing.Size(243, 21);
-            this.cbxCodigoConductor.TabIndex = 21;
-            this.cbxCodigoConductor.Click += new System.EventHandler(this.cbxCodigoConductor_Click);
             // 
             // FormIncidentes
             // 

@@ -34,6 +34,7 @@
             this.label4 = new System.Windows.Forms.Label();
             this.label5 = new System.Windows.Forms.Label();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
+            this.cbxCodigoTrasnp = new System.Windows.Forms.ComboBox();
             this.datetimeFechaPago = new System.Windows.Forms.DateTimePicker();
             this.btnBuscar = new System.Windows.Forms.Button();
             this.btnlimpiar = new System.Windows.Forms.Button();
@@ -49,7 +50,6 @@
             this.label6 = new System.Windows.Forms.Label();
             this.btneliminar = new System.Windows.Forms.Button();
             this.dgvmatenimiento = new System.Windows.Forms.DataGridView();
-            this.cbxCodigoTrasnp = new System.Windows.Forms.ComboBox();
             this.groupBox1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgvmatenimiento)).BeginInit();
             this.SuspendLayout();
@@ -127,6 +127,15 @@
             this.groupBox1.TabIndex = 5;
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Datos de Mantenimiento";
+            // 
+            // cbxCodigoTrasnp
+            // 
+            this.cbxCodigoTrasnp.FormattingEnabled = true;
+            this.cbxCodigoTrasnp.Location = new System.Drawing.Point(175, 104);
+            this.cbxCodigoTrasnp.Name = "cbxCodigoTrasnp";
+            this.cbxCodigoTrasnp.Size = new System.Drawing.Size(243, 21);
+            this.cbxCodigoTrasnp.TabIndex = 19;
+            this.cbxCodigoTrasnp.Click += new System.EventHandler(this.cbxCodigoTrasnp_Click);
             // 
             // datetimeFechaPago
             // 
@@ -242,9 +251,9 @@
             // 
             // btneliminar
             // 
-            this.btneliminar.Location = new System.Drawing.Point(840, 687);
+            this.btneliminar.Location = new System.Drawing.Point(967, 272);
             this.btneliminar.Name = "btneliminar";
-            this.btneliminar.Size = new System.Drawing.Size(166, 64);
+            this.btneliminar.Size = new System.Drawing.Size(121, 50);
             this.btneliminar.TabIndex = 10;
             this.btneliminar.Text = "Eliminar";
             this.btneliminar.UseVisualStyleBackColor = true;
@@ -260,15 +269,6 @@
             this.dgvmatenimiento.Size = new System.Drawing.Size(873, 386);
             this.dgvmatenimiento.TabIndex = 6;
             this.dgvmatenimiento.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvmatenimiento_CellClick);
-            // 
-            // cbxCodigoTrasnp
-            // 
-            this.cbxCodigoTrasnp.FormattingEnabled = true;
-            this.cbxCodigoTrasnp.Location = new System.Drawing.Point(175, 104);
-            this.cbxCodigoTrasnp.Name = "cbxCodigoTrasnp";
-            this.cbxCodigoTrasnp.Size = new System.Drawing.Size(243, 21);
-            this.cbxCodigoTrasnp.TabIndex = 19;
-            this.cbxCodigoTrasnp.Click += new System.EventHandler(this.cbxCodigoTrasnp_Click);
             // 
             // FormMantenimieto
             // 

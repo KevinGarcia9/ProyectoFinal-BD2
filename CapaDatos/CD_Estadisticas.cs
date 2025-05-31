@@ -52,18 +52,34 @@ namespace CapaDatos
         }
 
 
-        public DataTable mtdBuscarEstadisticas(int Codigo)
+        public DataTable mtdBuscarEstadisticas
+
+            (string campo, string valor)
         {
             SqlCommand cmd = new SqlCommand("Usp_Estadisticas_Buscar", db_conexion.MtdAbrirConexion());
             cmd.CommandType = CommandType.StoredProcedure;
-            cmd.Parameters.AddWithValue("@Codigo", Codigo);
+            cmd.Parameters.AddWithValue("@Campo", campo);
+            cmd.Parameters.AddWithValue("@Valor", valor);
 
             SqlDataAdapter da = new SqlDataAdapter(cmd);
             DataTable tabla = new DataTable();
-
             da.Fill(tabla);
             return tabla;
         }
+
+
+        /*(int Codigo)
+    {
+        SqlCommand cmd = new SqlCommand("Usp_Estadisticas_Buscar", db_conexion.MtdAbrirConexion());
+        cmd.CommandType = CommandType.StoredProcedure;
+        cmd.Parameters.AddWithValue("@Codigo", Codigo);
+
+        SqlDataAdapter da = new SqlDataAdapter(cmd);
+        DataTable tabla = new DataTable();
+
+        da.Fill(tabla);
+        return tabla;
+    }*/
 
 
 

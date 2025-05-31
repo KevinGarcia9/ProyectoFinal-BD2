@@ -46,6 +46,17 @@ namespace CapaPresentacion
         private void FormEstadisticas_Load(object sender, EventArgs e)
         {
             MtdMostrarEstadistica();
+
+            // Llenar ComboBox con campos válidos
+            cbxbuscarpor.Items.Add("Codigo");
+            cbxbuscarpor.Items.Add("FechaReporte");
+            cbxbuscarpor.Items.Add("PasajerosTransportados");
+            cbxbuscarpor.Items.Add("IngresoTotal");
+            cbxbuscarpor.Items.Add("Moneda");
+            cbxbuscarpor.Items.Add("TotalIncidentes");
+            cbxbuscarpor.Items.Add("Estado");
+
+            cbxbuscarpor.SelectedIndex = 0;
         }
 
         private void btnguardar_Click(object sender, EventArgs e)
@@ -143,26 +154,42 @@ namespace CapaPresentacion
         }
 
         private void btnBuscar_Click_1(object sender, EventArgs e)
+
         {
+            string campo = cbxbuscarpor.SelectedItem.ToString();
+            string valor = txtbuscarvalor.Text.Trim();
 
-
-            if (string.IsNullOrWhiteSpace(txtcodigo.Text))
+            if (string.IsNullOrWhiteSpace(valor))
             {
-                dgvestadisticas.DataSource = cd_estadisticas.MtMostrarEstadisticas();
+                MtdMostrarEstadistica(); // Mostrar todo si está vacío
             }
             else
             {
-                int Codigo;
-                if (int.TryParse(txtcodigo.Text, out Codigo))
-                {
-                    dgvestadisticas.DataSource = cd_estadisticas.mtdBuscarEstadisticas(Codigo);
-                }
-                else
-                {
-                    MessageBox.Show("Por favor ingresa un número válido para el código de estadisticas.");
-                }
+                DataTable resultado = cd_estadisticas.mtdBuscarEstadisticas(campo, valor);
+                dgvestadisticas.DataSource = resultado;
             }
+           
+        }
+        /* {
+
+
+             if (string.IsNullOrWhiteSpace(txtcodigo.Text))
+             {
+                 dgvestadisticas.DataSource = cd_estadisticas.MtMostrarEstadisticas();
+             }
+             else
+             {
+                 int Codigo;
+                 if (int.TryParse(txtcodigo.Text, out Codigo))
+                 {
+                     dgvestadisticas.DataSource = cd_estadisticas.mtdBuscarEstadisticas(Codigo);
+                 }
+                 else
+                 {
+                     MessageBox.Show("Por favor ingresa un número válido para el código de estadisticas.");
+                 }
+             }
+     }*/
     }
-}
 
 }
